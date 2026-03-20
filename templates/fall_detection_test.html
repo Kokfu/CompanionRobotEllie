@@ -1,0 +1,1318 @@
+{% extends "layout.html" %}
+
+{% block title %}Fall Detection Test - Ellie Companion Robot{% endblock %}
+
+{% block header %}
+<div class="page-header">
+    <h1>⚠️ Fall Detection Test</h1>
+    <p>AI-powered fall detection with Telegram alerts</p>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .fall-test-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .test-panel {
+        background-color: var(--card-background);
+        border-radius: var(--border-radius);
+        padding: 1.5rem;
+        box-shadow: var(--box-shadow);
+    }
+
+    .test-panel h3 {
+        margin-bottom: 1rem;
+        color: var(--text-color);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .section-icon {
+        font-size: 1.5rem;
+    }
+
+    /* Model Upload Section */
+    .upload-area {
+        border: 2px dashed #d1d5db;
+        border-radius: var(--border-radius);
+        padding: 2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        transition: all 0.2s ease;
+        cursor: pointer;
+    }
+
+    .upload-area:hover {
+        border-color: var(--primary-color);
+        background-color: #f8fafc;
+    }
+
+    .upload-area.dragover {
+        border-color: var(--primary-color);
+        background-color: #eff6ff;
+    }
+
+    .upload-icon {
+        font-size: 3rem;
+        color: #9ca3af;
+        margin-bottom: 1rem;
+    }
+
+    .upload-text {
+        color: #6b7280;
+        margin-bottom: 0.5rem;
+    }
+
+    .upload-hint {
+        font-size: 0.875rem;
+        color: #9ca3af;
+    }
+
+    .file-input {
+        display: none;
+    }
+
+    .uploaded-file {
+        background-color: #f0fdf4;
+        border: 1px solid #22c55e;
+        border-radius: var(--border-radius);
+        padding: 1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .file-info {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .file-icon {
+        color: #22c55e;
+        font-size: 1.5rem;
+    }
+
+    .remove-file {
+        background: none;
+        border: none;
+        color: #ef4444;
+        cursor: pointer;
+        padding: 0.25rem;
+        border-radius: 4px;
+        transition: background-color 0.2s ease;
+    }
+
+    .remove-file:hover {
+        background-color: #fee2e2;
+    }
+
+    /* Model Testing Section */
+    .test-controls {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .test-button {
+        flex: 1;
+        padding: 0.75rem 1rem;
+        border: none;
+        border-radius: var(--border-radius);
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .btn-test {
+        background-color: var(--success-color);
+        color: white;
+    }
+
+    .btn-test:hover {
+        background-color: #15803d;
+        transform: translateY(-2px);
+    }
+
+    .btn-test:disabled {
+        background-color: #9ca3af;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+    .btn-reset {
+        background-color: var(--warning-color);
+        color: white;
+    }
+
+    .btn-reset:hover {
+        background-color: #d97706;
+        transform: translateY(-2px);
+    }
+
+    /* Results Display */
+    .results-panel {
+        background-color: #f8fafc;
+        border: 1px solid #e5e7eb;
+        border-radius: var(--border-radius);
+        padding: 1rem;
+        margin-top: 1rem;
+        min-height: 200px;
+    }
+
+    .result-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem;
+        margin-bottom: 0.5rem;
+        border-radius: var(--border-radius);
+        background-color: white;
+        border: 1px solid #e5e7eb;
+    }
+
+    .result-label {
+        font-weight: 500;
+        color: var(--text-color);
+    }
+
+    .result-value {
+        font-weight: 600;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+    }
+
+    .result-fall {
+        background-color: #fee2e2;
+        color: #dc2626;
+    }
+
+    .result-no-fall {
+        background-color: #dcfce7;
+        color: #16a34a;
+    }
+
+    .result-confidence {
+        background-color: #dbeafe;
+        color: var(--primary-color);
+    }
+
+    .result-angle {
+        background-color: #fef3c7;
+        color: #d97706;
+    }
+
+    .test-image {
+        max-width: 100%;
+        border-radius: var(--border-radius);
+        margin-bottom: 1rem;
+    }
+
+    .status-display {
+        padding: 1rem;
+        border-radius: var(--border-radius);
+        margin-bottom: 1rem;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .status-ready {
+        background-color: #f0fdf4;
+        border: 1px solid #22c55e;
+        color: #16a34a;
+    }
+
+    .status-processing {
+        background-color: #fffbeb;
+        border: 1px solid #f59e0b;
+        color: #d97706;
+    }
+
+    .status-error {
+        background-color: #fef2f2;
+        border: 1px solid #ef4444;
+        color: #dc2626;
+    }
+
+    .loading-spinner {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #f3f3f3;
+        border-top: 2px solid var(--primary-color);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    /* Model Information */
+    .model-info {
+        background-color: #f8fafc;
+        border: 1px solid #e5e7eb;
+        border-radius: var(--border-radius);
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .model-info h4 {
+        margin-bottom: 0.5rem;
+        color: var(--text-color);
+    }
+
+    .info-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.25rem;
+        font-size: 0.875rem;
+    }
+
+    .info-label {
+        color: #6b7280;
+    }
+
+    .info-value {
+        color: var(--text-color);
+        font-weight: 500;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 1024px) {
+        .fall-test-container {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .test-controls {
+            flex-direction: column;
+        }
+        
+        .upload-area {
+            padding: 1.5rem;
+        }
+    }
+    
+    .fall-segments {
+        margin-top: 0.5rem;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+    
+    .fall-segment {
+        background: #fef2f2;
+        border: 1px solid #fecaca;
+        border-radius: 6px;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .segment-info {
+        font-size: 0.9rem;
+        color: #dc2626;
+        font-weight: 500;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="fall-test-container">
+    <!-- Video Upload Panel -->
+    <div class="test-panel">
+        <h3><span class="section-icon">🎥</span>Video Upload</h3>
+        
+        <div class="model-info">
+            <h4>Fall Detection Testing</h4>
+            <div class="info-item">
+                <span class="info-label">Model Status:</span>
+                <span class="info-value" id="model-status">Ready</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Selected Model:</span>
+                <span class="info-value" id="selected-model">fall-detection-main</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Input Format:</span>
+                <span class="info-value">Video frames (MP4, AVI, MOV)</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Output:</span>
+                <span class="info-value">Fall classification + confidence</span>
+            </div>
+        </div>
+
+        <!-- Model Selection -->
+        <div class="model-selection" style="margin-bottom: 1rem;">
+            <h4 style="margin-bottom: 0.5rem; color: var(--text-color);">AI Model Selection</h4>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <label style="display: flex; align-items: center; gap: 0.5rem;">
+                    <input type="radio" name="model-selection" value="fall-detection-main" checked>
+                    <span>Fall Detection Main (PoseNet)</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 0.5rem;">
+                    <input type="radio" name="model-selection" value="human-fall-detection">
+                    <span>Human Fall Detection (OpenPifPaf)</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 0.5rem;">
+                    <input type="radio" name="model-selection" value="dual-model">
+                    <span>Both Models (Compare Results)</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="upload-area" id="upload-area">
+            <div class="upload-icon">🎥</div>
+            <div class="upload-text">Click to upload or drag & drop video file</div>
+            <div class="upload-hint">Supported formats: .mp4, .avi, .mov, .mkv</div>
+            <input type="file" class="file-input" id="file-input" accept=".mp4,.avi,.mov,.mkv" single>
+        </div>
+
+        <div id="uploaded-files" style="display: none;"></div>
+
+        <div class="test-controls">
+            <button class="test-button btn-test" id="process-video-btn" disabled>
+                <span class="loading-spinner" style="display: none;"></span>
+                <span>Process Video with AI</span>
+            </button>
+            <button class="test-button btn-reset" id="clear-files-btn">
+                Clear Files
+            </button>
+        </div>
+
+        <div class="status-display status-ready" id="upload-status">
+            Ready to upload video file and process with AI
+        </div>
+    </div>
+
+    <!-- Video Testing Panel -->
+    <div class="test-panel">
+        <h3><span class="section-icon">🧪</span>Video Testing</h3>
+        
+        <div class="test-controls">
+            <button class="test-button btn-test" id="test-video-btn" disabled>
+                <span class="loading-spinner" style="display: none;"></span>
+                <span>Test with Live Camera</span>
+            </button>
+            <button class="test-button btn-reset" id="reset-test-btn">
+                Reset Test
+            </button>
+        </div>
+
+        <div class="status-display status-ready" id="test-status">
+            Test with live camera feed or process uploaded video
+        </div>
+
+        <div class="results-panel" id="results-panel" style="display: none;">
+            <h4 style="margin-bottom: 1rem; color: var(--text-color);">Test Results</h4>
+            <div id="results-content"></div>
+            
+            <!-- Telegram Alert Button -->
+            <div style="margin-top: 1rem; text-align: center;">
+                <button class="test-button btn-danger" id="send-telegram-btn" style="display: none;">
+                    📱 Send Fall Alert to Telegram
+                </button>
+            </div>
+        </div>
+
+        <div id="test-image-container" style="display: none;">
+            <h4 style="margin-bottom: 1rem; color: var(--text-color);">Test Frame</h4>
+            <img class="test-image" id="test-image" alt="Test frame">
+        </div>
+
+        <!-- JSON Results Section -->
+        <div class="test-panel" style="margin-top: 1rem;">
+            <h3><span class="section-icon">📄</span>JSON Results</h3>
+            
+            <div class="test-controls">
+                <button class="test-button btn-test" id="view-json-btn" disabled>
+                    <span class="loading-spinner" style="display: none;"></span>
+                    <span>View JSON Results</span>
+                </button>
+                <button class="test-button btn-reset" id="refresh-json-btn">
+                    Refresh List
+                </button>
+            </div>
+
+            <div id="json-files-list" style="display: none;">
+                <h4 style="margin-bottom: 1rem; color: var(--text-color);">Available JSON Files</h4>
+                <div id="json-files-content"></div>
+            </div>
+
+            <div id="json-content-display" style="display: none;">
+                <h4 style="margin-bottom: 1rem; color: var(--text-color);">JSON Content</h4>
+                <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                    <button class="test-button btn-test" id="view-summary-btn">View Summary</button>
+                    <button class="test-button btn-reset" id="view-full-btn">View Full JSON</button>
+                    <button class="test-button btn-reset" id="download-json-btn">Download JSON</button>
+                </div>
+                <div id="json-summary" style="display: none;">
+                    <div class="result-item">
+                        <span class="result-label">Overall Result:</span>
+                        <span class="result-value" id="summary-result">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Model Used:</span>
+                        <span class="result-value result-confidence" id="summary-model">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Frames Analyzed:</span>
+                        <span class="result-value result-confidence" id="summary-frames">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Processing Time:</span>
+                        <span class="result-value result-confidence" id="summary-time">-</span>
+                    </div>
+                </div>
+                <pre id="json-content" style="background: #f8fafc; padding: 1rem; border-radius: 8px; overflow-x: auto; max-height: 400px; display: none;"></pre>
+            </div>
+        </div>
+
+        <!-- Manual Telegram Button -->
+        <div class="test-panel" style="margin-top: 1rem;">
+            <h3><span class="section-icon">📱</span>Manual Telegram Test</h3>
+            
+            <div class="test-controls">
+                <button class="test-button btn-danger" id="manual-telegram-btn">
+                    <span class="loading-spinner" style="display: none;"></span>
+                    <span>Send Manual Telegram Alert</span>
+                </button>
+            </div>
+            
+            <div class="status-display status-ready" id="manual-telegram-status">
+                Click to send a test Telegram message with current camera frame
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+class FallDetectionTester {
+    constructor() {
+        this.uploadedVideo = null;
+        this.isTesting = false;
+        this.lastTestResults = null;
+        this.selectedModel = 'fall-detection-main';
+        this.currentJsonData = null;
+        this.currentJsonFilename = null;
+        
+        this.initializeEventListeners();
+        this.checkModelStatus();
+    }
+
+    initializeEventListeners() {
+        // File upload
+        const uploadArea = document.getElementById('upload-area');
+        const fileInput = document.getElementById('file-input');
+        
+        uploadArea.addEventListener('click', () => fileInput.click());
+        uploadArea.addEventListener('dragover', this.handleDragOver.bind(this));
+        uploadArea.addEventListener('dragleave', this.handleDragLeave.bind(this));
+        uploadArea.addEventListener('drop', this.handleDrop.bind(this));
+        
+        fileInput.addEventListener('change', this.handleFileSelect.bind(this));
+        
+        // Buttons
+        document.getElementById('process-video-btn').addEventListener('click', this.processVideo.bind(this));
+        document.getElementById('clear-files-btn').addEventListener('click', this.clearFiles.bind(this));
+        document.getElementById('test-video-btn').addEventListener('click', this.testVideo.bind(this));
+        document.getElementById('reset-test-btn').addEventListener('click', this.resetTest.bind(this));
+        document.getElementById('send-telegram-btn').addEventListener('click', this.sendTelegramAlert.bind(this));
+        document.getElementById('view-json-btn').addEventListener('click', this.viewJsonFiles.bind(this));
+        document.getElementById('refresh-json-btn').addEventListener('click', this.refreshJsonFiles.bind(this));
+        document.getElementById('manual-telegram-btn').addEventListener('click', this.sendManualTelegram.bind(this));
+        document.getElementById('view-summary-btn').addEventListener('click', this.viewJsonSummary.bind(this));
+        document.getElementById('view-full-btn').addEventListener('click', this.viewFullJson.bind(this));
+        document.getElementById('download-json-btn').addEventListener('click', this.downloadJson.bind(this));
+        
+        // Model selection
+        document.querySelectorAll('input[name="model-selection"]').forEach(radio => {
+            radio.addEventListener('change', this.handleModelSelection.bind(this));
+        });
+    }
+
+    handleDragOver(e) {
+        e.preventDefault();
+        e.currentTarget.classList.add('dragover');
+    }
+
+    handleDragLeave(e) {
+        e.preventDefault();
+        e.currentTarget.classList.remove('dragover');
+    }
+
+    handleDrop(e) {
+        e.preventDefault();
+        e.currentTarget.classList.remove('dragover');
+        const files = Array.from(e.dataTransfer.files);
+        this.addFiles(files);
+    }
+
+    handleFileSelect(e) {
+        const files = Array.from(e.target.files);
+        this.addFiles(files);
+    }
+
+    addFiles(files) {
+        if (files.length > 0) {
+            const file = files[0]; // Only take the first file
+            if (this.isValidVideoFile(file)) {
+                this.uploadedVideo = file;
+            } else {
+                alert(`Invalid file format: ${file.name}. Please upload .mp4, .avi, .mov, or .mkv files.`);
+            }
+        }
+        
+        this.updateFileDisplay();
+        this.updateUploadStatus();
+    }
+
+    isValidVideoFile(file) {
+        const validExtensions = ['.mp4', '.avi', '.mov', '.mkv'];
+        return validExtensions.some(ext => file.name.toLowerCase().endsWith(ext));
+    }
+
+    updateFileDisplay() {
+        const container = document.getElementById('uploaded-files');
+        
+        if (!this.uploadedVideo) {
+            container.style.display = 'none';
+            return;
+        }
+        
+        container.style.display = 'block';
+        container.innerHTML = '';
+        
+        const fileDiv = document.createElement('div');
+        fileDiv.className = 'uploaded-file';
+        
+        fileDiv.innerHTML = `
+            <div class="file-info">
+                <span class="file-icon">🎥</span>
+                <span>${this.uploadedVideo.name} (${this.formatFileSize(this.uploadedVideo.size)})</span>
+            </div>
+            <button class="remove-file" onclick="fallDetectionTester.removeFile()">×</button>
+        `;
+        
+        container.appendChild(fileDiv);
+    }
+
+    removeFile() {
+        this.uploadedVideo = null;
+        this.updateFileDisplay();
+        this.updateUploadStatus();
+    }
+
+    formatFileSize(bytes) {
+        if (bytes === 0) return '0 Bytes';
+        const k = 1024;
+        const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    }
+
+    updateUploadStatus() {
+        const status = document.getElementById('upload-status');
+        const processBtn = document.getElementById('process-video-btn');
+        
+        if (!this.uploadedVideo) {
+            status.textContent = 'Ready to upload video file and process with AI';
+            status.className = 'status-display status-ready';
+            processBtn.disabled = true;
+        } else {
+            status.textContent = `Video ready to process with ${this.selectedModel}: ${this.uploadedVideo.name}`;
+            status.className = 'status-display status-ready';
+            processBtn.disabled = false;
+        }
+    }
+
+    async processVideo() {
+        const processBtn = document.getElementById('process-video-btn');
+        const spinner = processBtn.querySelector('.loading-spinner');
+        const status = document.getElementById('upload-status');
+        const resultsPanel = document.getElementById('results-panel');
+        const resultsContent = document.getElementById('results-content');
+        
+        try {
+            processBtn.disabled = true;
+            spinner.style.display = 'inline-block';
+            status.textContent = 'Processing video with AI model...';
+            status.className = 'status-display status-processing';
+            
+            // Map frontend model selection to backend model type
+            let modelType = 'internal';
+            if (this.selectedModel === 'human-fall-detection') {
+                modelType = 'humanfall';
+            } else if (this.selectedModel === 'dual-model') {
+                modelType = 'both';
+            }
+            
+            // Create FormData with video file and parameters
+            const formData = new FormData();
+            formData.append('video', this.uploadedVideo);
+            formData.append('test_type', 'video');
+            formData.append('model_type', modelType);
+            
+            // Process video directly with AI model
+            const response = await fetch('/api/fall-detection/test', {
+                method: 'POST',
+                body: formData
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                status.textContent = 'Video processed successfully with AI!';
+                status.className = 'status-display status-ready';
+                
+                // Display results immediately
+                this.lastTestResults = result.results;
+                this.displayResults(result.results);
+                resultsPanel.style.display = 'block';
+                
+                // Show Telegram button if fall was detected
+                if (this.hasFallDetected(result.results)) {
+                    document.getElementById('send-telegram-btn').style.display = 'inline-block';
+                }
+                
+                // Enable JSON viewing
+                document.getElementById('view-json-btn').disabled = false;
+                
+                // Update test status
+                document.getElementById('test-status').textContent = 'Video processed successfully!';
+                document.getElementById('test-status').className = 'status-display status-ready';
+                
+            } else {
+                throw new Error(result.error || 'Failed to process video');
+            }
+        } catch (error) {
+            console.error('Video processing error:', error);
+            status.textContent = `Error: ${error.message}`;
+            status.className = 'status-display status-error';
+        } finally {
+            processBtn.disabled = false;
+            spinner.style.display = 'none';
+        }
+    }
+    
+    hasFallDetected(results) {
+        // Check if any model detected a fall
+        if (results.internal && results.internal.is_fall) return true;
+        if (results.humanfall && results.humanfall.is_fall) return true;
+        return false;
+    }
+
+    handleModelSelection(e) {
+        this.selectedModel = e.target.value;
+        document.getElementById('selected-model').textContent = this.selectedModel;
+        this.updateUploadStatus(); // Update status to show selected model
+    }
+
+    async testVideo() {
+        const testBtn = document.getElementById('test-video-btn');
+        const spinner = testBtn.querySelector('.loading-spinner');
+        const status = document.getElementById('test-status');
+        const resultsPanel = document.getElementById('results-panel');
+        
+        try {
+            testBtn.disabled = true;
+            spinner.style.display = 'inline-block';
+            status.textContent = 'Testing with live camera feed...';
+            status.className = 'status-display status-processing';
+            
+            // Map frontend model selection to backend model type
+            let modelType = 'internal';
+            if (this.selectedModel === 'human-fall-detection') {
+                modelType = 'humanfall';
+            } else if (this.selectedModel === 'dual-model') {
+                modelType = 'both';
+            }
+            
+            const response = await fetch('/api/fall-detection/test', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    test_type: 'live_camera',
+                    model_type: modelType
+                })
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                this.lastTestResults = result.results;
+                this.displayResults(result.results);
+                status.textContent = 'Live camera test completed successfully';
+                status.className = 'status-display status-ready';
+                resultsPanel.style.display = 'block';
+                
+                // Show Telegram button if fall was detected
+                if (this.hasFallDetected(result.results)) {
+                    document.getElementById('send-telegram-btn').style.display = 'inline-block';
+                }
+            } else {
+                throw new Error(result.error || 'Live camera test failed');
+            }
+        } catch (error) {
+            console.error('Live camera testing error:', error);
+            status.textContent = `Error: ${error.message}`;
+            status.className = 'status-display status-error';
+        } finally {
+            testBtn.disabled = false;
+            spinner.style.display = 'none';
+        }
+    }
+
+    displayResults(results) {
+        const resultsPanel = document.getElementById('results-panel');
+        const resultsContent = document.getElementById('results-content');
+        
+        resultsPanel.style.display = 'block';
+        
+        let resultsHTML = '';
+        
+        // Handle different result formats
+        if (results.internal || results.humanfall) {
+            // New format with multiple models
+            if (results.internal && !results.internal.error) {
+                const internalData = results.internal.results || [];
+                const totalFrames = results.internal.total_frames_processed || 0;
+                
+                // Calculate summary statistics
+                const fallFrames = internalData.filter(r => r.is_fall).length;
+                const avgConfidence = internalData.length > 0 ? 
+                    internalData.reduce((sum, r) => sum + r.confidence, 0) / internalData.length : 0;
+                const avgAngle = internalData.length > 0 ? 
+                    internalData.reduce((sum, r) => sum + r.angle, 0) / internalData.length : 0;
+                const avgProcessingTime = internalData.length > 0 ? 
+                    internalData.reduce((sum, r) => sum + r.processing_time, 0) / internalData.length : 0;
+                
+                resultsHTML += `
+                    <div class="result-item">
+                        <span class="result-label">Internal Model (PoseNet):</span>
+                        <span class="result-value ${fallFrames > 0 ? 'result-fall' : 'result-no-fall'}">
+                            ${fallFrames > 0 ? 'FALL DETECTED' : 'NO FALL'} (${fallFrames}/${totalFrames} frames)
+                        </span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Internal Average Confidence:</span>
+                        <span class="result-value result-confidence">
+                            ${(avgConfidence * 100).toFixed(1)}%
+                        </span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Internal Average Angle:</span>
+                        <span class="result-value result-angle">
+                            ${avgAngle.toFixed(1)}°
+                        </span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Internal Average Processing Time:</span>
+                        <span class="result-value result-confidence">
+                            ${avgProcessingTime.toFixed(2)}ms
+                        </span>
+                    </div>
+                `;
+            } else if (results.internal && results.internal.error) {
+                resultsHTML += `
+                    <div class="result-item">
+                        <span class="result-label">Internal Model Error:</span>
+                        <span class="result-value result-error">${results.internal.error}</span>
+                    </div>
+                `;
+            }
+            
+            if (results.humanfall && !results.humanfall.error) {
+                const humanfallData = results.humanfall.results || [];
+                const totalFrames = results.humanfall.total_frames_processed || 0;
+                
+                // Calculate summary statistics
+                const fallFrames = humanfallData.filter(r => r.is_fall).length;
+                const avgConfidence = humanfallData.length > 0 ? 
+                    humanfallData.reduce((sum, r) => sum + r.confidence, 0) / humanfallData.length : 0;
+                const avgAngle = humanfallData.length > 0 ? 
+                    humanfallData.reduce((sum, r) => sum + r.angle, 0) / humanfallData.length : 0;
+                const avgProcessingTime = humanfallData.length > 0 ? 
+                    humanfallData.reduce((sum, r) => sum + r.processing_time, 0) / humanfallData.length : 0;
+                const avgKeypoints = humanfallData.length > 0 ? 
+                    humanfallData.reduce((sum, r) => sum + (r.keypoints_detected || 0), 0) / humanfallData.length : 0;
+                
+                resultsHTML += `
+                    <div class="result-item">
+                        <span class="result-label">HumanFall Model (OpenPifPaf):</span>
+                        <span class="result-value ${fallFrames > 0 ? 'result-fall' : 'result-no-fall'}">
+                            ${fallFrames > 0 ? 'FALL DETECTED' : 'NO FALL'} (${fallFrames}/${totalFrames} frames)
+                        </span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">HumanFall Average Confidence:</span>
+                        <span class="result-value result-confidence">
+                            ${(avgConfidence * 100).toFixed(1)}%
+                        </span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">HumanFall Average Angle:</span>
+                        <span class="result-value result-angle">
+                            ${avgAngle.toFixed(1)}°
+                        </span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">HumanFall Average Processing Time:</span>
+                        <span class="result-value result-confidence">
+                            ${avgProcessingTime.toFixed(2)}ms
+                        </span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Average Keypoints Detected:</span>
+                        <span class="result-value result-confidence">
+                            ${avgKeypoints.toFixed(1)}
+                        </span>
+                    </div>
+                `;
+            } else if (results.humanfall && results.humanfall.error) {
+                resultsHTML += `
+                    <div class="result-item">
+                        <span class="result-label">HumanFall Model Error:</span>
+                        <span class="result-value result-error">${results.humanfall.error}</span>
+                    </div>
+                `;
+            }
+        } else {
+            // Legacy format
+            resultsHTML = `
+                <div class="result-item">
+                    <span class="result-label">Detection Result:</span>
+                    <span class="result-value ${results.is_fall ? 'result-fall' : 'result-no-fall'}">
+                        ${results.is_fall ? 'FALL DETECTED' : 'NO FALL'}
+                    </span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Confidence:</span>
+                    <span class="result-value result-confidence">
+                        ${(results.confidence * 100).toFixed(1)}%
+                    </span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Angle:</span>
+                    <span class="result-value result-angle">
+                        ${results.angle.toFixed(1)}°
+                    </span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Processing Time:</span>
+                    <span class="result-value result-confidence">
+                        ${results.processing_time.toFixed(2)}ms
+                    </span>
+                </div>
+            `;
+        }
+        
+        // Add timestamp
+        resultsHTML += `
+            <div class="result-item">
+                <span class="result-label">Timestamp:</span>
+                <span class="result-value result-confidence">
+                    ${new Date(results.timestamp || Date.now()).toLocaleString()}
+                </span>
+            </div>
+        `;
+        
+        // Add video-specific results if available
+        if (results.video_summary) {
+            resultsHTML += `
+                <div class="result-item">
+                    <span class="result-label">Video Analysis:</span>
+                    <span class="result-value result-confidence">
+                        ${results.video_summary.frames_analyzed}/${results.video_summary.total_frames} frames
+                    </span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Analysis Method:</span>
+                    <span class="result-value result-confidence">
+                        ${results.video_summary.analysis_method || 'sliding_window'}
+                    </span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Fall Frames:</span>
+                    <span class="result-value ${results.video_summary.fall_detected_frames > 0 ? 'result-fall' : 'result-no-fall'}">
+                        ${results.video_summary.fall_detected_frames} frames
+                    </span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Average Confidence:</span>
+                    <span class="result-value result-confidence">
+                        ${(results.video_summary.average_confidence * 100).toFixed(1)}%
+                    </span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Best Confidence:</span>
+                    <span class="result-value result-confidence">
+                        ${(results.video_summary.best_confidence * 100).toFixed(1)}% (Frame ${results.video_summary.best_frame_number})
+                    </span>
+                </div>
+            `;
+            
+            // Add fall segments if available
+            if (results.video_summary.fall_segments && results.video_summary.fall_segments.length > 0) {
+                resultsHTML += `
+                    <div class="result-item">
+                        <span class="result-label">Fall Segments:</span>
+                        <div class="fall-segments">
+                `;
+                
+                results.video_summary.fall_segments.forEach((segment, index) => {
+                    resultsHTML += `
+                        <div class="fall-segment">
+                            <span class="segment-info">
+                                Segment ${index + 1}: Frames ${segment.start_frame}-${segment.end_frame} 
+                                (Confidence: ${(segment.max_confidence * 100).toFixed(1)}%)
+                            </span>
+                        </div>
+                    `;
+                });
+                
+                resultsHTML += `
+                        </div>
+                    </div>
+                `;
+            }
+        }
+        
+        // Add dual model results if available
+        if (results.dual_model_results) {
+            const model1 = results.dual_model_results.model1;
+            const model2 = results.dual_model_results.model2;
+            
+            resultsHTML += `
+                <div class="result-item">
+                    <span class="result-label">Model 1 (${model1.model_name}):</span>
+                    <span class="result-value ${model1.is_fall ? 'result-fall' : 'result-no-fall'}">
+                        ${model1.is_fall ? 'FALL' : 'NO FALL'} (${(model1.confidence * 100).toFixed(1)}%)
+                    </span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Model 2 (${model2.model_name}):</span>
+                    <span class="result-value ${model2.is_fall ? 'result-fall' : 'result-no-fall'}">
+                        ${model2.is_fall ? 'FALL' : 'NO FALL'} (${(model2.confidence * 100).toFixed(1)}%)
+                    </span>
+                </div>
+            `;
+        }
+        
+        resultsContent.innerHTML = resultsHTML;
+        
+        // Show test image if available
+        if (results.test_image) {
+            const imageContainer = document.getElementById('test-image-container');
+            const testImage = document.getElementById('test-image');
+            testImage.src = `data:image/jpeg;base64,${results.test_image}`;
+            imageContainer.style.display = 'block';
+        }
+    }
+
+    async sendTelegramAlert() {
+        if (!this.lastTestResults) {
+            alert('No test results available to send');
+            return;
+        }
+        
+        try {
+            const response = await fetch('/api/fall-detection/send-telegram', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    results: this.lastTestResults,
+                    message: `⚠️ FALL DETECTED in video test!\nConfidence: ${(this.lastTestResults.confidence * 100).toFixed(1)}%\nAngle: ${this.lastTestResults.angle.toFixed(1)}°\nTime: ${new Date(this.lastTestResults.timestamp).toLocaleString()}`
+                })
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                alert('Fall alert sent to Telegram successfully!');
+            } else {
+                throw new Error(result.error || 'Failed to send Telegram alert');
+            }
+        } catch (error) {
+            console.error('Telegram alert error:', error);
+            alert(`Error sending Telegram alert: ${error.message}`);
+        }
+    }
+
+    clearFiles() {
+        this.uploadedVideo = null;
+        this.processedVideoData = null;
+        this.updateFileDisplay();
+        this.updateUploadStatus();
+        document.getElementById('file-input').value = '';
+    }
+
+    resetTest() {
+        document.getElementById('results-panel').style.display = 'none';
+        document.getElementById('test-image-container').style.display = 'none';
+        document.getElementById('send-telegram-btn').style.display = 'none';
+        document.getElementById('test-status').textContent = 'Upload a video file to start testing';
+        document.getElementById('test-status').className = 'status-display status-ready';
+        this.lastTestResults = null;
+    }
+
+    async checkModelStatus() {
+        try {
+            const response = await fetch('/api/fall-detection/status');
+            const result = await response.json();
+            
+            if (result.success) {
+                document.getElementById('model-status').textContent = 'Ready';
+                document.getElementById('test-status').textContent = 'Upload a video file to start testing';
+            }
+        } catch (error) {
+            console.error('Error checking model status:', error);
+            document.getElementById('model-status').textContent = 'Error';
+        }
+    }
+
+    async viewJsonFiles() {
+        const viewBtn = document.getElementById('view-json-btn');
+        const spinner = viewBtn.querySelector('.loading-spinner');
+        const filesList = document.getElementById('json-files-list');
+        const filesContent = document.getElementById('json-files-content');
+        
+        try {
+            viewBtn.disabled = true;
+            spinner.style.display = 'inline-block';
+            
+            const response = await fetch('/api/fall-detection/json-files');
+            const result = await response.json();
+            
+            if (result.success) {
+                if (result.files.length === 0) {
+                    filesContent.innerHTML = '<p>No JSON files found. Process a video first.</p>';
+                } else {
+                    filesContent.innerHTML = '';
+                    
+                    // Sort files by creation date (newest first) and take only the latest 3
+                    const sortedFiles = result.files.sort((a, b) => new Date(b.created) - new Date(a.created));
+                    const latestFiles = sortedFiles.slice(0, 3);
+                    
+                    latestFiles.forEach(file => {
+                        const fileDiv = document.createElement('div');
+                        fileDiv.className = 'result-item';
+                        fileDiv.innerHTML = `
+                            <div style="flex: 1;">
+                                <strong>${file.filename}</strong><br>
+                                <small>Size: ${this.formatFileSize(file.size)} | Created: ${new Date(file.created).toLocaleString()}</small>
+                            </div>
+                            <button class="test-button btn-test" onclick="fallDetectionTester.loadJsonFile('${file.filename}')" style="margin-left: 1rem;">
+                                View
+                            </button>
+                        `;
+                        filesContent.appendChild(fileDiv);
+                    });
+                    
+                    // Add "Show More" button if there are more than 3 files
+                    if (result.files.length > 3) {
+                        const showMoreDiv = document.createElement('div');
+                        showMoreDiv.style.textAlign = 'center';
+                        showMoreDiv.style.padding = '1rem';
+                        showMoreDiv.innerHTML = `
+                            <button class="test-button btn-reset" onclick="fallDetectionTester.showAllJsonFiles()">
+                                Show All ${result.files.length} Files
+                            </button>
+                        `;
+                        filesContent.appendChild(showMoreDiv);
+                    }
+                }
+                filesList.style.display = 'block';
+            } else {
+                throw new Error(result.error || 'Failed to load JSON files');
+            }
+        } catch (error) {
+            console.error('Error loading JSON files:', error);
+            alert(`Error loading JSON files: ${error.message}`);
+        } finally {
+            viewBtn.disabled = false;
+            spinner.style.display = 'none';
+        }
+    }
+
+    async loadJsonFile(filename) {
+        try {
+            const response = await fetch(`/api/fall-detection/json-files/${filename}`);
+            const result = await response.json();
+            
+            if (result.success) {
+                this.currentJsonData = result.content;
+                this.currentJsonFilename = filename;
+                const contentDisplay = document.getElementById('json-content-display');
+                contentDisplay.style.display = 'block';
+                
+                // Show summary by default
+                this.viewJsonSummary();
+            } else {
+                throw new Error(result.error || 'Failed to load JSON file');
+            }
+        } catch (error) {
+            console.error('Error loading JSON file:', error);
+            alert(`Error loading JSON file: ${error.message}`);
+        }
+    }
+
+    viewJsonSummary() {
+        if (!this.currentJsonData) return;
+        
+        const summary = document.getElementById('json-summary');
+        const fullContent = document.getElementById('json-content');
+        
+        // Hide full content, show summary
+        fullContent.style.display = 'none';
+        summary.style.display = 'block';
+        
+        // Populate summary data
+        document.getElementById('summary-result').textContent = this.currentJsonData.is_fall ? 'FALL DETECTED' : 'NO FALL';
+        document.getElementById('summary-result').className = `result-value ${this.currentJsonData.is_fall ? 'result-fall' : 'result-no-fall'}`;
+        document.getElementById('summary-model').textContent = this.currentJsonData.model_used || 'Unknown';
+        document.getElementById('summary-frames').textContent = this.currentJsonData.frames_analyzed || 'N/A';
+        document.getElementById('summary-time').textContent = `${(this.currentJsonData.processing_time || 0).toFixed(2)}ms`;
+    }
+
+    viewFullJson() {
+        if (!this.currentJsonData) return;
+        
+        const summary = document.getElementById('json-summary');
+        const fullContent = document.getElementById('json-content');
+        
+        // Hide summary, show full content
+        summary.style.display = 'none';
+        fullContent.style.display = 'block';
+        fullContent.textContent = JSON.stringify(this.currentJsonData, null, 2);
+    }
+
+    downloadJson() {
+        if (!this.currentJsonData || !this.currentJsonFilename) return;
+        
+        const dataStr = JSON.stringify(this.currentJsonData, null, 2);
+        const dataBlob = new Blob([dataStr], {type: 'application/json'});
+        const url = URL.createObjectURL(dataBlob);
+        
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = this.currentJsonFilename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+    }
+
+    async showAllJsonFiles() {
+        const filesContent = document.getElementById('json-files-content');
+        
+        try {
+            const response = await fetch('/api/fall-detection/json-files');
+            const result = await response.json();
+            
+            if (result.success && result.files.length > 0) {
+                filesContent.innerHTML = '';
+                
+                // Sort files by creation date (newest first)
+                const sortedFiles = result.files.sort((a, b) => new Date(b.created) - new Date(a.created));
+                
+                sortedFiles.forEach(file => {
+                    const fileDiv = document.createElement('div');
+                    fileDiv.className = 'result-item';
+                    fileDiv.innerHTML = `
+                        <div style="flex: 1;">
+                            <strong>${file.filename}</strong><br>
+                            <small>Size: ${this.formatFileSize(file.size)} | Created: ${new Date(file.created).toLocaleString()}</small>
+                        </div>
+                        <button class="test-button btn-test" onclick="fallDetectionTester.loadJsonFile('${file.filename}')" style="margin-left: 1rem;">
+                            View
+                        </button>
+                    `;
+                    filesContent.appendChild(fileDiv);
+                });
+                
+                // Add "Show Less" button
+                const showLessDiv = document.createElement('div');
+                showLessDiv.style.textAlign = 'center';
+                showLessDiv.style.padding = '1rem';
+                showLessDiv.innerHTML = `
+                    <button class="test-button btn-reset" onclick="fallDetectionTester.viewJsonFiles()">
+                        Show Latest 3 Only
+                    </button>
+                `;
+                filesContent.appendChild(showLessDiv);
+            }
+        } catch (error) {
+            console.error('Error loading all JSON files:', error);
+            alert(`Error loading JSON files: ${error.message}`);
+        }
+    }
+
+    async refreshJsonFiles() {
+        await this.viewJsonFiles();
+    }
+
+    async sendManualTelegram() {
+        const manualBtn = document.getElementById('manual-telegram-btn');
+        const spinner = manualBtn.querySelector('.loading-spinner');
+        const status = document.getElementById('manual-telegram-status');
+        
+        try {
+            manualBtn.disabled = true;
+            spinner.style.display = 'inline-block';
+            status.textContent = 'Sending manual Telegram alert...';
+            status.className = 'status-display status-processing';
+            
+            const response = await fetch('/api/fall-detection/manual-telegram', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                status.textContent = 'Manual Telegram alert sent successfully!';
+                status.className = 'status-display status-ready';
+            } else {
+                throw new Error(result.error || 'Failed to send manual Telegram alert');
+            }
+        } catch (error) {
+            console.error('Manual Telegram error:', error);
+            status.textContent = `Error: ${error.message}`;
+            status.className = 'status-display status-error';
+        } finally {
+            manualBtn.disabled = false;
+            spinner.style.display = 'none';
+        }
+    }
+}
+
+// Initialize the fall detection tester
+let fallDetectionTester;
+document.addEventListener('DOMContentLoaded', () => {
+    fallDetectionTester = new FallDetectionTester();
+});
+</script>
+{% endblock %}

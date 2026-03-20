@@ -1,0 +1,9 @@
+build/
+install/
+log/
+__pycache__/
+*.pyc
+.env
+video_results/
+uploaded_videos/
+

@@ -1,0 +1,554 @@
+{% extends "layout.html" %}
+
+{% block title %}Navigation - Ellie Companion Robot{% endblock %}
+
+
+{% block extra_css %}
+<style>
+    .navigation-grid {
+        display: grid;
+        grid-template-columns: 1fr 350px;
+        gap: 30px;
+        align-items: start;
+    }
+
+    .map-section {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        padding: 25px;
+        border: 1px solid #e0e0e0;
+    }
+
+    .map-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #f0f0f0;
+    }
+
+    .map-title {
+        font-size: 1.5em;
+        font-weight: 600;
+        color: #333;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .map-info {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .info-badge {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.9em;
+        font-weight: 500;
+    }
+
+    #canvas {
+        border: 2px solid #e0e0e0;
+        border-radius: 15px;
+        max-width: 100%;
+        height: auto;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+
+    #canvas:hover {
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .toolbar {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        padding: 15px;
+        background: #f8f9fa;
+        border-radius: 10px;
+    }
+
+    .modebtn {
+        padding: 10px 16px;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        background: white;
+        cursor: pointer;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .modebtn:hover {
+        border-color: #667eea;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+    }
+
+    .modebtn.active {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-color: #667eea;
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .control-panel {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        padding: 25px;
+        border: 1px solid #e0e0e0;
+    }
+
+    .panel-title {
+        font-size: 1.3em;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #f0f0f0;
+    }
+
+    .status-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .status-item {
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        border: 2px solid #e0e0e0;
+        transition: all 0.3s ease;
+    }
+
+    .status-item:hover {
+        border-color: #667eea;
+        transform: translateY(-2px);
+    }
+
+    .status-label {
+        font-size: 0.9em;
+        color: #666;
+        margin-bottom: 5px;
+    }
+
+    .status-value {
+        font-size: 1.2em;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .status-value.connected {
+        color: #27ae60;
+    }
+
+    .status-value.disconnected {
+        color: #e74c3c;
+    }
+
+    .points-section {
+        margin-top: 20px;
+    }
+
+    .points {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .pill {
+        padding: 8px 16px;
+        border: 2px solid #e0e0e0;
+        border-radius: 25px;
+        background: white;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .pill:hover {
+        border-color: #667eea;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+    }
+
+    .pill button {
+        padding: 4px 8px;
+        border: none;
+        border-radius: 15px;
+        background: #e74c3c;
+        color: white;
+        cursor: pointer;
+        font-size: 0.8em;
+        transition: all 0.3s ease;
+    }
+
+    .pill button:hover {
+        background: #c0392b;
+        transform: scale(1.1);
+    }
+
+    .log-section {
+        background: #f8f9fa;
+        border-radius: 10px;
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    pre#log {
+        white-space: pre-wrap;
+        background: white;
+        border-radius: 8px;
+        padding: 15px;
+        border: 1px solid #e0e0e0;
+        font-family: 'Courier New', monospace;
+        font-size: 0.9em;
+        max-height: 200px;
+        overflow-y: auto;
+        box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .action-buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+        flex-wrap: wrap;
+    }
+
+    .btn-nav {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    .btn-danger {
+        background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+        color: white;
+    }
+
+    .btn-danger:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+    }
+
+    .btn-success {
+        background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+        color: white;
+    }
+
+    .btn-success:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .navigation-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .map-info {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .toolbar {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .modebtn {
+            justify-content: center;
+        }
+
+        .status-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .action-buttons {
+            flex-direction: column;
+        }
+
+        .btn-nav {
+            justify-content: center;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block header %}
+<div class="page-header">
+    <h1>🗺️ Navigation System</h1>
+    <p>Autonomous navigation and waypoint management</p>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="page-content">
+    <div class="navigation-grid">
+    <div class="map-section">
+        <div class="map-header">
+            <div class="map-title">
+                🗺️ Interactive Navigation Map
+            </div>
+            <div class="map-info">
+                <div class="info-badge">{{ model }}</div>
+                <div class="info-badge">{{ map_yaml }}</div>
+            </div>
+        </div>
+        
+        <div class="toolbar">
+            <span style="font-weight: 600; color: #333;">Mode:</span>
+            <button id="modeInit" class="modebtn active">📍 Init Pose</button>
+            <button id="modeGoal" class="modebtn">🚀 Nav Goal</button>
+            <button id="modeSaveClick" class="modebtn">💾 Save From Click</button>
+            <button id="btnTogglePose" class="modebtn">👁️ Toggle Pose</button>
+            <span id="poseTxt" style="color: #666; font-style: italic;"></span>
+        </div>
+        
+        <canvas id="canvas"></canvas>
+        <div style="margin-top: 10px; color: #666; font-size: 0.9em;">
+            💡 <strong>Tip:</strong> Click‑drag to set yaw. Just click = yaw 0°.
+        </div>
+    </div>
+    
+    <div class="sidebar">
+        <div class="control-panel">
+            <div class="panel-title">
+                ⚡ Quick Actions
+            </div>
+            <div class="action-buttons">
+                <button id="btnCancel" class="btn-nav btn-warning">❌ Cancel</button>
+                <button id="btnEstop" class="btn-nav btn-danger">🛑 Force STOP</button>
+            </div>
+        </div>
+        
+        <div class="control-panel">
+            <div class="panel-title">
+                💾 Save Current Pose
+            </div>
+            <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                <input id="saveHereName" placeholder="Name e.g. Dock" 
+                       style="flex: 1; padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 0.9em;" />
+                <button id="btnSaveHere" class="btn-nav btn-primary">Save Here</button>
+            </div>
+            <small style="color: #666;">Robot must have a valid AMCL pose.</small>
+        </div>
+        
+        <div class="control-panel">
+            <div class="panel-title">
+                📍 Saved Points
+            </div>
+            <div class="action-buttons">
+                <button id="btnRefreshPoints" class="btn-nav btn-success">🔄 Refresh</button>
+            </div>
+            <div id="points" class="points"></div>
+            <small style="color: #666;">Use Save From Click mode to add via map.</small>
+        </div>
+        
+        <div class="control-panel">
+            <div class="panel-title">
+                📊 Navigation Log
+            </div>
+            <div class="log-section">
+                <pre id="log"></pre>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+{% raw %}
+<script>
+let meta=null, img=null, mode='init';
+let canvas, ctx;
+let dragging=false, start={x:0,y:0}, end={x:0,y:0};
+let showPose=true, lastPose=null;
+let pointsCache = {};
+
+function log(s){ document.getElementById('log').textContent = s; }
+
+async function postJSON(url, data){
+  const r = await fetch(url, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data||{})});
+  const t = await r.text(); log(t);
+}
+
+async function getJSON(url){
+  const r = await fetch(url);
+  return await r.json();
+}
+
+async function loadMap(){
+  const r=await fetch('/api/nav/mapmeta'); meta=await r.json();
+  img=new Image(); img.src=meta.image;
+  await new Promise(res=>{img.onload=res;});
+  canvas.width=img.width; canvas.height=img.height;
+  document.getElementById('poseTxt').textContent='(pose ON)';
+  draw(); pollPose();
+}
+
+function draw(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.drawImage(img,0,0);
+  if (showPose && lastPose && lastPose.has_pose){ drawRobot(lastPose.x, lastPose.y, lastPose.yaw); }
+  if (dragging){ drawArrow(start.x, start.y, end.x, end.y); }
+}
+function drawArrow(x1,y1,x2,y2){
+  const dx=x2-x1, dy=y2-y1, ang=Math.atan2(dy,dx), head=10;
+  ctx.lineWidth=2; ctx.strokeStyle='#0066cc'; ctx.fillStyle='#0066cc';
+  ctx.beginPath(); ctx.moveTo(x1,y1); ctx.lineTo(x2,y2); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(x2,y2);
+  ctx.lineTo(x2-head*Math.cos(ang-Math.PI/6), y2-head*Math.sin(ang-Math.PI/6));
+  ctx.lineTo(x2-head*Math.cos(ang+Math.PI/6), y2-head*Math.sin(ang+Math.PI/6));
+  ctx.closePath(); ctx.fill();
+}
+function mapToPx(mx,my){
+  const px = (mx - meta.origin[0]) / meta.resolution;
+  const py = (meta.origin[1] + (meta.height_px - 1) * meta.resolution - my) / meta.resolution;
+  return {x:px, y:py};
+}
+function pxToMap(px,py){
+  const mx = meta.origin[0] + px * meta.resolution;
+  const my = meta.origin[1] + (meta.height_px - 1 - py) * meta.resolution;
+  return {x:mx, y:my};
+}
+function drawRobot(mx,my,yaw){
+  const p=mapToPx(mx,my), r=12;
+  ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(-yaw);
+  ctx.fillStyle='#00aa00'; ctx.strokeStyle='#004400'; ctx.lineWidth=2;
+  ctx.beginPath(); ctx.moveTo(r,0); ctx.lineTo(-r*0.5, r*0.6); ctx.lineTo(-r*0.5,-r*0.6); ctx.closePath();
+  ctx.fill(); ctx.stroke(); ctx.restore();
+}
+
+async function pollPose(){
+  try{ const r=await fetch('/api/nav/pose'); lastPose=await r.json(); draw(); } catch(_){}
+  setTimeout(pollPose, 400);
+}
+
+function wireUI(){
+  document.getElementById('modeInit').onclick = ()=>{mode='init'; setActive('modeInit');};
+  document.getElementById('modeGoal').onclick = ()=>{mode='goal'; setActive('modeGoal');};
+  document.getElementById('btnCancel').onclick = async()=>{ await postJSON('/api/nav/cancel'); };
+  document.getElementById('btnEstop').onclick = async()=>{ await postJSON('/api/nav/estop'); };
+  document.getElementById('btnTogglePose').onclick = ()=>{ showPose=!showPose; document.getElementById('poseTxt').textContent=showPose?'(pose ON)':'(pose OFF)'; draw(); };
+  document.getElementById('modeSaveClick').onclick = ()=>{mode='saveclick'; setActive('modeSaveClick');};
+  document.getElementById('btnSaveHere').onclick = async()=>{
+    const name = document.getElementById('saveHereName').value.trim();
+    if(!name){ alert('Enter a name'); return; }
+    await postJSON('/api/nav/save_here', {name});
+    await refreshPoints();
+  };
+  document.getElementById('btnRefreshPoints').onclick = refreshPoints;
+}
+
+function setActive(id){
+  for (const el of [document.getElementById('modeInit'), document.getElementById('modeGoal'), document.getElementById('modeSaveClick')]){
+    el.classList.toggle('active', el.id===id);
+  }
+}
+
+async function refreshPoints(){
+  try{
+    pointsCache = await getJSON('/api/nav/points');
+  }catch(e){ pointsCache = {}; }
+  const wrap = document.getElementById('points');
+  wrap.innerHTML = '';
+  const names = Object.keys(pointsCache).sort();
+  if(names.length===0){ wrap.textContent = '(no saved points)'; return; }
+  for(const n of names){
+    const div = document.createElement('div');
+    div.className = 'pill';
+    const btnGo = document.createElement('button'); btnGo.textContent = 'Go'; btnGo.onclick = async()=>{ await postJSON('/api/nav/goto_point', {name:n}); };
+    const btnDel = document.createElement('button'); btnDel.textContent = 'Delete'; btnDel.onclick = async()=>{ if(confirm('Delete '+n+'?')){ await postJSON('/api/nav/points/delete', {name:n}); await refreshPoints(); } };
+    const label = document.createElement('span'); label.textContent = n;
+    div.appendChild(label); div.appendChild(btnGo); div.appendChild(btnDel);
+    wrap.appendChild(div);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', async ()=>{
+  canvas = document.getElementById('canvas');
+  ctx = canvas.getContext('2d');
+  wireUI();
+
+  canvas.addEventListener('mousedown', (e)=>{
+    const rect=canvas.getBoundingClientRect();
+    start.x = e.clientX-rect.left; start.y = e.clientY-rect.top;
+    end.x=start.x; end.y=start.y; dragging=true; draw();
+  });
+  canvas.addEventListener('mousemove', (e)=>{
+    if(!dragging) return;
+    const rect=canvas.getBoundingClientRect();
+    end.x = e.clientX-rect.left; end.y = e.clientY-rect.top;
+    draw();
+  });
+  canvas.addEventListener('mouseup', async(e)=>{
+    if(!dragging) return; dragging=false; draw();
+    const dx=end.x-start.x, dy=end.y-start.y;
+    const yaw_map = Math.atan2(-(dy), dx); // flip Y for canvas->map
+    const pos = pxToMap(start.x, start.y);
+    log(`Mode=${mode}  map(x=${pos.x.toFixed(3)}, y=${pos.y.toFixed(3)}, yaw=${(yaw_map*180/Math.PI).toFixed(1)}°)`);
+    if (mode==='init'){
+      await postJSON('/api/nav/init_pose', {x:pos.x, y:pos.y, yaw:yaw_map});
+    } else if (mode==='goal'){
+      await postJSON('/api/nav/goal', {x:pos.x, y:pos.y, yaw:yaw_map});
+    } else if (mode==='saveclick'){
+      const n = prompt('Name for this point?');
+      if(n && n.trim().length>0){ await postJSON('/api/nav/save_from_click', {name:n.trim(), px:start.x, py:start.y, yaw_deg: -(yaw_map*180/Math.PI)}); await refreshPoints(); }
+    }
+  });
+
+  await loadMap();
+  await refreshPoints();
+});
+</script>
+{% endraw %}
+{% endblock %}
+

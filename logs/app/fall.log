@@ -1,0 +1,251 @@
+2025-09-19 02:58:24 - fall - INFO - [02:58:24] Analyzing 10 frames - conf=0.000 angle=0.0
+2025-09-19 02:58:29 - fall - INFO - [02:58:29] Processed 3/10 frames - conf=0.000 angle=0.0
+2025-09-19 02:58:54 - fall - INFO - [02:58:54] Video analysis complete - 0 falls detected - conf=0.000 angle=0.0
+2025-09-19 02:59:13 - fall - INFO - [02:59:13] Analyzing 10 frames - conf=0.000 angle=0.0
+2025-09-19 02:59:17 - fall - INFO - [02:59:17] Processed 3/10 frames - conf=0.000 angle=0.0
+2025-09-19 02:59:41 - fall - INFO - [02:59:41] Video analysis complete - 0 falls detected - conf=0.000 angle=0.0
+2025-09-19 03:02:48 - fall - INFO - [03:02:48] Analyzing 10 frames - conf=0.000 angle=0.0
+2025-09-19 03:02:52 - fall - INFO - [03:02:52] Processed 3/10 frames - conf=0.000 angle=0.0
+2025-09-19 03:03:15 - fall - INFO - [03:03:15] Video analysis complete - 0 falls detected - conf=0.000 angle=0.0
+2025-09-19 03:04:21 - fall - INFO - [03:04:21] Analyzing 10 frames - conf=0.000 angle=0.0
+2025-09-19 03:04:24 - fall - INFO - [03:04:24] Processed 3/10 frames - conf=0.000 angle=0.0
+2025-09-19 03:04:52 - fall - INFO - [03:04:52] Video analysis complete - 0 falls detected - conf=0.000 angle=0.0
+2025-09-19 03:05:24 - fall - INFO - [03:05:24] Analyzing 10 frames - conf=0.000 angle=0.0
+2025-09-19 03:05:27 - fall - INFO - [03:05:27] Processed 3/10 frames - conf=0.000 angle=0.0
+2025-09-19 03:05:29 - fall - INFO - [03:05:29] FALL DETECTED - Frame 1 - conf=0.887 angle=68.8
+2025-09-19 03:05:53 - fall - INFO - [03:05:53] FALL DETECTED - Frame 7 - conf=0.872 angle=75.3
+2025-09-19 03:05:53 - fall - INFO - [03:05:53] Video analysis complete - 2 falls detected - conf=0.887 angle=68.8
+2025-09-19 03:06:38 - fall - INFO - [03:06:38] Analyzing 10 frames - conf=0.000 angle=0.0
+2025-09-19 03:06:41 - fall - INFO - [03:06:41] Processed 3/10 frames - conf=0.000 angle=0.0
+2025-09-19 03:06:43 - fall - INFO - [03:06:43] FALL DETECTED - Frame 1 - conf=0.887 angle=68.8
+2025-09-19 03:07:00 - fall - INFO - [03:07:00] FALL DETECTED - Frame 7 - conf=0.872 angle=75.3
+2025-09-19 03:07:00 - fall - INFO - [03:07:00] Video analysis complete - 2 falls detected - conf=0.887 angle=68.8
+2025-09-19 03:07:07 - fall - INFO - [03:07:07] Analyzing 10 frames - conf=0.000 angle=0.0
+2025-09-19 03:07:10 - fall - INFO - [03:07:10] Processed 3/10 frames - conf=0.000 angle=0.0
+2025-09-19 03:07:12 - fall - INFO - [03:07:12] FALL DETECTED - Frame 1 - conf=0.887 angle=68.8
+2025-09-19 03:07:29 - fall - INFO - [03:07:29] FALL DETECTED - Frame 7 - conf=0.872 angle=75.3
+2025-09-19 03:07:29 - fall - INFO - [03:07:29] Video analysis complete - 2 falls detected - conf=0.887 angle=68.8
+2025-09-19 03:07:47 - fall - INFO - [03:07:47] Analyzing 10 frames - conf=0.000 angle=0.0
+2025-09-19 03:07:49 - fall - INFO - [03:07:49] Processed 3/10 frames - conf=0.000 angle=0.0
+2025-09-19 03:07:52 - fall - INFO - [03:07:52] FALL DETECTED - Frame 1 - conf=0.887 angle=68.8
+2025-09-19 03:08:09 - fall - INFO - [03:08:09] FALL DETECTED - Frame 7 - conf=0.872 angle=75.3
+2025-09-19 03:08:09 - fall - INFO - [03:08:09] Video analysis complete - 2 falls detected - conf=0.887 angle=68.8
+2025-09-19 03:18:25 - fall - INFO - [03:18:25] Extracted 264 frames from video - conf=0.000 angle=0.0
+2025-09-19 03:18:26 - fall - INFO - [03:18:26] Analyzing 264 frames - conf=0.000 angle=0.0
+2025-09-19 03:18:29 - fall - INFO - [03:18:29] Processed 3/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:18:58 - fall - INFO - [03:18:58] Processed 13/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:19:32 - fall - INFO - [03:19:32] Processed 23/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:20:07 - fall - INFO - [03:20:07] Processed 33/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:20:42 - fall - INFO - [03:20:42] Processed 43/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:21:20 - fall - INFO - [03:21:20] Processed 53/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:22:00 - fall - INFO - [03:22:00] Processed 63/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:22:37 - fall - INFO - [03:22:37] Processed 73/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:23:14 - fall - INFO - [03:23:14] Processed 83/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:23:49 - fall - INFO - [03:23:49] Processed 93/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:24:25 - fall - INFO - [03:24:25] Processed 103/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:25:01 - fall - INFO - [03:25:01] Processed 113/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:25:35 - fall - INFO - [03:25:35] Processed 123/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:26:08 - fall - INFO - [03:26:08] Processed 133/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:26:41 - fall - INFO - [03:26:41] Processed 143/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:27:03 - fall - INFO - [03:27:03] Analyzing 264 frames - conf=0.000 angle=0.0
+2025-09-19 03:27:08 - fall - INFO - [03:27:08] Processed 3/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:27:14 - fall - INFO - [03:27:14] Processed 153/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:27:45 - fall - INFO - [03:27:45] Processed 13/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:27:53 - fall - INFO - [03:27:53] Processed 163/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:28:50 - fall - INFO - [03:28:50] Processed 23/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:28:55 - fall - INFO - [03:28:55] Processed 173/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:29:40 - fall - INFO - [03:29:40] Processed 33/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:29:53 - fall - INFO - [03:29:53] Processed 183/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:30:46 - fall - INFO - [03:30:46] Processed 43/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:30:57 - fall - INFO - [03:30:57] Processed 193/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:31:49 - fall - INFO - [03:31:49] Processed 53/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:32:03 - fall - INFO - [03:32:03] Processed 203/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:32:59 - fall - INFO - [03:32:59] Processed 63/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:33:14 - fall - INFO - [03:33:14] Processed 213/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:34:11 - fall - INFO - [03:34:11] Processed 73/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:34:26 - fall - INFO - [03:34:26] Processed 223/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:34:52 - fall - INFO - [03:34:52] Processed 83/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:35:02 - fall - INFO - [03:35:02] Processed 233/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:35:29 - fall - INFO - [03:35:29] Processed 93/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:35:38 - fall - INFO - [03:35:38] Processed 243/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:36:03 - fall - INFO - [03:36:03] Processed 103/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:36:14 - fall - INFO - [03:36:14] Processed 253/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:36:39 - fall - INFO - [03:36:39] Processed 113/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:36:50 - fall - INFO - [03:36:50] Processed 263/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:36:54 - fall - INFO - [03:36:54] Video analysis complete - 0 falls detected - conf=0.000 angle=0.0
+2025-09-19 03:37:14 - fall - INFO - [03:37:14] Processed 123/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:37:28 - fall - INFO - [03:37:28] Analyzing 264 frames - conf=0.000 angle=0.0
+2025-09-19 03:37:32 - fall - INFO - [03:37:32] Processed 3/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:37:50 - fall - INFO - [03:37:50] Processed 133/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:38:07 - fall - INFO - [03:38:07] Processed 13/264 frames - conf=0.000 angle=0.0
+2025-09-19 03:38:40 - fall - INFO - [03:38:40] Extracted 10 frames from video - conf=0.000 angle=0.0
+2025-09-19 03:38:44 - fall - INFO - [03:38:44] Extracted 200 frames from video - conf=0.000 angle=0.0
+2025-09-19 03:38:47 - fall - INFO - [03:38:47] Analyzing 200 frames with step size 4 - conf=0.000 angle=0.0
+2025-09-19 03:38:51 - fall - INFO - [03:38:51] Processed 3/100 frames (3.9s) - conf=0.000 angle=0.0
+2025-09-19 03:38:54 - fall - INFO - [03:38:54] Extracted 200 frames from video - conf=0.000 angle=0.0
+2025-09-19 03:38:57 - fall - INFO - [03:38:57] Analyzing 200 frames with step size 4 - conf=0.000 angle=0.0
+2025-09-19 03:39:00 - fall - INFO - [03:39:00] Processed 3/100 frames (3.5s) - conf=0.000 angle=0.0
+2025-09-19 03:39:09 - fall - INFO - [03:39:09] Processed 23/100 frames (22.5s) - conf=0.000 angle=0.0
+2025-09-19 03:39:21 - fall - INFO - [03:39:21] Processed 23/100 frames (24.6s) - conf=0.000 angle=0.0
+2025-09-19 03:39:30 - fall - INFO - [03:39:30] Processed 43/100 frames (43.2s) - conf=0.000 angle=0.0
+2025-09-19 03:39:39 - fall - INFO - [03:39:39] Processed 43/100 frames (41.8s) - conf=0.000 angle=0.0
+2025-09-19 03:39:50 - fall - INFO - [03:39:50] Processed 63/100 frames (62.7s) - conf=0.000 angle=0.0
+2025-09-19 03:39:50 - fall - INFO - [03:39:50] Processing timeout after 60s, stopping at frame 64 - conf=0.000 angle=0.0
+2025-09-19 03:39:50 - fall - INFO - [03:39:50] Video analysis complete - 0 falls detected in 62.7s - conf=0.000 angle=0.0
+2025-09-19 03:39:56 - fall - INFO - [03:39:56] Processed 63/100 frames (59.2s) - conf=0.000 angle=0.0
+2025-09-19 03:39:59 - fall - INFO - [03:39:59] Processing timeout after 60s, stopping at frame 68 - conf=0.000 angle=0.0
+2025-09-19 03:39:59 - fall - INFO - [03:39:59] Video analysis complete - 0 falls detected in 62.0s - conf=0.000 angle=0.0
+2025-09-19 03:41:29 - fall - INFO - [03:41:29] Extracted 150 frames from video - conf=0.000 angle=0.0
+2025-09-19 03:41:32 - fall - INFO - [03:41:32] Analyzing 150 frames with step size 3 - conf=0.000 angle=0.0
+2025-09-19 03:41:35 - fall - INFO - [03:41:35] Processed 3/100 frames (3.4s) - conf=0.000 angle=0.0
+2025-09-19 03:41:52 - fall - INFO - [03:41:52] Processed 18/100 frames (20.7s) - conf=0.000 angle=0.0
+2025-09-19 03:42:10 - fall - INFO - [03:42:10] Processed 33/100 frames (38.2s) - conf=0.000 angle=0.0
+2025-09-19 03:42:26 - fall - INFO - [03:42:26] Processed 48/100 frames (54.5s) - conf=0.000 angle=0.0
+2025-09-19 03:42:32 - fall - INFO - [03:42:32] Processing timeout after 60s, stopping at frame 54 - conf=0.000 angle=0.0
+2025-09-19 03:42:32 - fall - INFO - [03:42:32] Video analysis complete - 0 falls detected in 60.2s - conf=0.000 angle=0.0
+2025-09-19 03:42:40 - fall - INFO - [03:42:40] Analyzing 150 frames with step size 3 - conf=0.000 angle=0.0
+2025-09-19 03:42:44 - fall - INFO - [03:42:44] Processed 3/100 frames (4.0s) - conf=0.000 angle=0.0
+2025-09-19 03:43:01 - fall - INFO - [03:43:01] Processed 18/100 frames (21.4s) - conf=0.000 angle=0.0
+2025-09-19 03:43:03 - fall - INFO - [03:43:03] Extracted 10 frames from video - conf=0.000 angle=0.0
+2025-09-19 03:43:05 - fall - INFO - [03:43:05] Analyzing 10 frames with step size 1 - conf=0.000 angle=0.0
+2025-09-19 03:43:08 - fall - INFO - [03:43:08] Processed 3/8 frames (2.7s) - conf=0.000 angle=0.0
+2025-09-19 03:43:11 - fall - INFO - [03:43:11] FALL DETECTED - Frame 1 - conf=0.887 angle=68.8
+2025-09-19 03:43:22 - fall - INFO - [03:43:22] Processed 33/100 frames (41.9s) - conf=0.000 angle=0.0
+2025-09-19 03:43:24 - fall - INFO - [03:43:24] Processed 8/8 frames (18.7s) - conf=0.000 angle=0.0
+2025-09-19 03:43:33 - fall - INFO - [03:43:33] FALL DETECTED - Frame 7 - conf=0.872 angle=75.3
+2025-09-19 03:43:33 - fall - INFO - [03:43:33] Video analysis complete - 2 falls detected in 27.6s - conf=0.887 angle=68.8
+2025-09-19 03:43:42 - fall - INFO - [03:43:42] Processing timeout after 60s, stopping at frame 45 - conf=0.000 angle=0.0
+2025-09-19 03:43:42 - fall - INFO - [03:43:42] Video analysis complete - 0 falls detected in 62.2s - conf=0.000 angle=0.0
+2025-09-19 03:48:35 - fall - INFO - [03:48:35] Extracted 10 frames from video - conf=0.000 angle=0.0
+2025-09-19 03:48:37 - fall - INFO - [03:48:37] Analyzing 10 frames with step size 1 (max 8 groups) - conf=0.000 angle=0.0
+2025-09-19 03:49:03 - fall - INFO - [03:49:03] Video analysis complete - 2 falls detected in 25.6s - conf=0.000 angle=68.8
+2025-09-19 18:41:32 - fall - INFO - [18:41:32] Extracted 200 frames from video - conf=0.000 angle=0.0
+2025-09-21 18:53:34 - fall - INFO - [18:53:34] Extracted 200 frames from video - conf=0.000 angle=0.0
+2025-09-21 18:53:46 - fall - INFO - [18:53:46] Extracted 200 frames from video - conf=0.000 angle=0.0
+2025-09-21 18:53:55 - fall - INFO - [18:53:55] Extracted 200 frames from video - conf=0.000 angle=0.0
+2025-09-21 18:57:46 - fall - INFO - [18:57:46] Extracted 200 frames from video - conf=0.000 angle=0.0
+2025-09-21 18:58:07 - fall - INFO - [18:58:07] Extracted 200 frames from video - conf=0.000 angle=0.0
+2025-09-21 19:02:37 - fall - INFO - [19:02:37] Extracted 200 frames from video - conf=0.000 angle=0.0
+2025-09-21 19:02:50 - fall - INFO - [19:02:50] Extracted 200 frames from video - conf=0.000 angle=0.0
+2025-09-21 19:02:54 - fall - INFO - [19:02:54] Extracted 200 frames from video - conf=0.000 angle=0.0
+2025-09-21 19:02:57 - fall - INFO - [19:02:57] Extracted 200 frames from video - conf=0.000 angle=0.0
+2025-09-21 19:58:54 - fall - INFO - [19:58:54] Extracted 200 frames from video - conf=0.000 angle=0.0
+2025-09-21 20:04:06 - fall - INFO - [20:04:06] Extracted 200 frames from video - conf=0.000 angle=0.0
+2025-09-21 20:10:30 - fall - INFO - [20:10:30] Extracted 200 frames from video - conf=0.000 angle=0.0
+2025-09-21 20:14:56 - fall - INFO - [20:14:56] Extracted 200 frames from video - conf=0.000 angle=0.0
+2025-09-21 20:18:01 - fall - INFO - [20:18:01] Extracted 200 frames from video - conf=0.000 angle=0.0
+2025-09-21 20:31:34 - fall - INFO - [20:31:34] Extracted 10 frames from video - conf=0.000 angle=0.0
+2025-09-21 20:32:05 - fall - INFO - [20:32:05] Extracted 10 frames from video - conf=0.000 angle=0.0
+2025-09-21 20:37:09 - fall - INFO - [20:37:09] Extracted 150 frames from video - conf=0.000 angle=0.0
+2025-09-21 20:37:21 - fall - INFO - [20:37:21] Extracted 150 frames from video - conf=0.000 angle=0.0
+2025-09-21 21:08:43 - fall - INFO - [21:08:43] Extracted 116 frames from video - conf=0.000 angle=0.0
+2025-09-21 21:29:50 - fall - INFO - [21:29:50] Extracted 116 frames from video - conf=0.000 angle=0.0
+2025-09-21 21:29:55 - fall - INFO - [21:29:55] Video frame 0:  (conf=0.000) - conf=0.000 angle=0.0
+2025-09-21 21:30:00 - fall - INFO - [21:30:00] Video frame 1:  (conf=0.000) - conf=0.000 angle=0.0
+2025-09-21 21:30:05 - fall - INFO - [21:30:05] Video frame 2:  (conf=0.000) - conf=0.000 angle=0.0
+2025-09-21 21:33:09 - fall - INFO - [21:33:09] Extracted 10 frames from video - conf=0.000 angle=0.0
+2025-09-21 21:33:12 - fall - INFO - [21:33:12] Video frame 0:  (conf=0.000) - conf=0.000 angle=0.0
+2025-09-21 21:33:14 - fall - INFO - [21:33:14] Video frame 1: FALL (conf=0.887) - conf=0.887 angle=68.8
+2025-09-21 21:33:16 - fall - INFO - [21:33:16] Video frame 2:  (conf=0.000) - conf=0.000 angle=0.0
+2025-09-22 01:40:05 - fall - INFO - [01:40:05] Extracted 116 frames from video - conf=0.000 angle=0.0
+2025-09-22 01:40:09 - fall - INFO - [01:40:09] Video frame 0:  (conf=0.000) - conf=0.000 angle=0.0
+2025-09-22 01:40:11 - fall - INFO - [01:40:11] Video frame 1:  (conf=0.000) - conf=0.000 angle=0.0
+2025-09-22 01:40:15 - fall - INFO - [01:40:15] Video frame 2:  (conf=0.000) - conf=0.000 angle=0.0
+2025-09-23 11:34:34 - fall - INFO - [11:34:34] Extracted 150 frames from video - conf=0.000 angle=0.0
+2025-09-23 11:34:39 - fall - INFO - [11:34:39] Video frame 0:  (conf=0.000) - conf=0.000 angle=0.0
+2025-09-23 11:34:43 - fall - INFO - [11:34:43] Video frame 1:  (conf=0.000) - conf=0.000 angle=0.0
+2025-09-23 11:34:48 - fall - INFO - [11:34:48] Video frame 2:  (conf=0.000) - conf=0.000 angle=0.0
+2025-09-23 12:23:02 - fall - INFO - [12:23:02] Extracted 150 frames from video - conf=0.000 angle=0.0
+2025-09-23 12:25:33 - fall - INFO - [12:25:33] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:26:00 - fall - INFO - [12:26:00] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:26:06 - fall - INFO - [12:26:06] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:26:18 - fall - INFO - [12:26:18] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:26:24 - fall - INFO - [12:26:24] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:26:34 - fall - INFO - [12:26:34] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:26:40 - fall - INFO - [12:26:40] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:26:52 - fall - INFO - [12:26:52] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:26:57 - fall - INFO - [12:26:57] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:27:09 - fall - INFO - [12:27:09] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:27:16 - fall - INFO - [12:27:16] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:27:28 - fall - INFO - [12:27:28] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:27:35 - fall - INFO - [12:27:35] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:27:48 - fall - INFO - [12:27:48] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:27:55 - fall - INFO - [12:27:55] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:28:08 - fall - INFO - [12:28:08] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:28:14 - fall - INFO - [12:28:14] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:28:26 - fall - INFO - [12:28:26] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:28:33 - fall - INFO - [12:28:33] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:28:48 - fall - INFO - [12:28:48] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:28:55 - fall - INFO - [12:28:55] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:29:09 - fall - INFO - [12:29:09] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:29:17 - fall - INFO - [12:29:17] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:29:30 - fall - INFO - [12:29:30] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:29:37 - fall - INFO - [12:29:37] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:29:54 - fall - INFO - [12:29:54] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:30:01 - fall - INFO - [12:30:01] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:30:14 - fall - INFO - [12:30:14] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:30:22 - fall - INFO - [12:30:22] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:30:35 - fall - INFO - [12:30:35] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:30:42 - fall - INFO - [12:30:42] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:30:54 - fall - INFO - [12:30:54] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:31:01 - fall - INFO - [12:31:01] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:31:15 - fall - INFO - [12:31:15] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:31:22 - fall - INFO - [12:31:22] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:31:37 - fall - INFO - [12:31:37] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:31:44 - fall - INFO - [12:31:44] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:31:58 - fall - INFO - [12:31:58] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:32:05 - fall - INFO - [12:32:05] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:32:18 - fall - INFO - [12:32:18] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:32:25 - fall - INFO - [12:32:25] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:32:41 - fall - INFO - [12:32:41] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:32:48 - fall - INFO - [12:32:48] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:33:04 - fall - INFO - [12:33:04] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:33:11 - fall - INFO - [12:33:11] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:33:26 - fall - INFO - [12:33:26] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:33:34 - fall - INFO - [12:33:34] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:33:45 - fall - INFO - [12:33:45] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:33:51 - fall - INFO - [12:33:51] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:33:59 - fall - INFO - [12:33:59] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:34:03 - fall - INFO - [12:34:03] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:34:13 - fall - INFO - [12:34:13] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:34:17 - fall - INFO - [12:34:17] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:34:27 - fall - INFO - [12:34:27] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:34:32 - fall - INFO - [12:34:32] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:34:44 - fall - INFO - [12:34:44] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:34:48 - fall - INFO - [12:34:48] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:34:58 - fall - INFO - [12:34:58] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:35:02 - fall - INFO - [12:35:02] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:35:11 - fall - INFO - [12:35:11] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:35:15 - fall - INFO - [12:35:15] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:35:22 - fall - INFO - [12:35:22] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:35:26 - fall - INFO - [12:35:26] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:35:30 - fall - INFO - [12:35:30] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:35:34 - fall - INFO - [12:35:34] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:35:39 - fall - INFO - [12:35:39] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:35:43 - fall - INFO - [12:35:43] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:35:48 - fall - INFO - [12:35:48] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:35:51 - fall - INFO - [12:35:51] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:35:57 - fall - INFO - [12:35:57] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:36:00 - fall - INFO - [12:36:00] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:36:07 - fall - INFO - [12:36:07] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:36:10 - fall - INFO - [12:36:10] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:36:22 - fall - INFO - [12:36:22] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:36:26 - fall - INFO - [12:36:26] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:36:33 - fall - INFO - [12:36:33] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:36:36 - fall - INFO - [12:36:36] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:36:44 - fall - INFO - [12:36:44] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:36:48 - fall - INFO - [12:36:48] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:36:54 - fall - INFO - [12:36:54] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:36:58 - fall - INFO - [12:36:58] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:37:09 - fall - INFO - [12:37:09] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:37:14 - fall - INFO - [12:37:14] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:37:20 - fall - INFO - [12:37:20] [humanfall] FALL - conf=0.000 angle=0.0
+2025-09-23 12:37:24 - fall - INFO - [12:37:24] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:37:35 - fall - INFO - [12:37:35] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:37:48 - fall - INFO - [12:37:48] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:38:08 - fall - INFO - [12:38:08] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:38:23 - fall - INFO - [12:38:23] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:38:37 - fall - INFO - [12:38:37] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:38:51 - fall - INFO - [12:38:51] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:39:03 - fall - INFO - [12:39:03] [internal] no fall - conf=0.000 angle=0.0
+2025-09-23 12:39:15 - fall - INFO - [12:39:15] [internal] no fall - conf=0.000 angle=0.0

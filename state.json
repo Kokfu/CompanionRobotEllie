@@ -1,0 +1,15 @@
+{
+  "speed": 0.1,
+  "rosbridge_ip": "192.168.68.201",
+  "rosbridge_port": 9090,
+  "connected": false,
+  "last_update": "2025-09-10T16:10:51.339662",
+  "settings": {
+    "base_speed": 0.2,
+    "turn_speed": 0.5,
+    "dark_mode": false,
+    "keyboard_control": true,
+    "mouse_control": false,
+    "show_fps": true
+  }
+}

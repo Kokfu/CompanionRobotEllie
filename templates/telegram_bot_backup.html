@@ -1,0 +1,408 @@
+{% extends "layout.html" %}
+
+{% block title %}Telegram Bot Management - Ellie Companion Robot{% endblock %}
+
+{% block extra_css %}
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+
+        .section-icon {
+            font-size: 1.2em;
+        }
+
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+
+        .commands-list {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .command-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .command-item:last-child {
+            border-bottom: none;
+        }
+
+        .command-name {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .command-desc {
+            color: #666;
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #764ba2;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 10px;
+            }
+
+            .header {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block header %}
+<div class="page-header">
+    <h1>🤖 Telegram Bot Management</h1>
+    <p>Control and monitor your TurtleBot3 Telegram bot</p>
+</div>
+{% endblock %}
+
+{% block content %}
+<a href="/" class="back-link">
+    ← Back to Main Interface
+</a>
+
+            <!-- Bot Status Section -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">
+                        <span class="section-icon">📊</span>Bot Status
+                    </h2>
+                </div>
+                <div class="status-grid">
+                    <div class="status-card">
+                        <h3>Bot Token</h3>
+                        <div class="status-value" id="bot-token-status">Checking...</div>
+                    </div>
+                    <div class="status-card">
+                        <h3>Chat ID</h3>
+                        <div class="status-value" id="chat-id-status">Checking...</div>
+                    </div>
+                    <div class="status-card">
+                        <h3>Connection</h3>
+                        <div class="status-value" id="connection-status">Checking...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bot Control Section -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">
+                        <span class="section-icon">🎮</span>Bot Control
+                    </h2>
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="testBot()">
+                        🧪 Test Bot
+                    </button>
+                    <button class="btn btn-success" onclick="sendWelcomeMessage()">
+                        👋 Send Welcome
+                    </button>
+                    <button class="btn btn-warning" onclick="sendStatusUpdate()">
+                        📊 Send Status
+                    </button>
+                    <button class="btn btn-primary" onclick="sendPhoto()">
+                        📸 Send Photo
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- Available Commands -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">
+                        <span class="section-icon">📋</span>Available Commands
+                    </h2>
+                </div>
+                <div class="commands-list">
+                    <div class="command-item">
+                        <span class="command-name">/start</span>
+                        <span class="command-desc">Welcome message and introduction</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="command-name">/help</span>
+                        <span class="command-desc">Show available commands</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="command-name">/status</span>
+                        <span class="command-desc">Get robot status (battery, connection, camera)</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="command-name">/photo</span>
+                        <span class="command-desc">Capture and send current photo</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="command-name">/chat</span>
+                        <span class="command-desc">Start interactive chat with AI</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="command-name">/test</span>
+                        <span class="command-desc">Test bot connectivity</span>
+                    </div>
+                </div>
+                <div class="alert alert-info">
+                    <strong>💡 Tip:</strong> Users can also send regular text messages to chat with the AI assistant!
+                </div>
+            </div>
+
+<!-- Loading Indicator -->
+<div class="loading" id="loading">
+    <div class="spinner"></div>
+    <p>Processing...</p>
+</div>
+
+    <script>
+        // Show/hide loading indicator
+        function showLoading() {
+            document.getElementById('loading').style.display = 'block';
+        }
+
+        function hideLoading() {
+            document.getElementById('loading').style.display = 'none';
+        }
+
+        // Show alert message
+        function showAlert(message, type = 'info') {
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert alert-${type}`;
+            alertDiv.textContent = message;
+            
+            const content = document.querySelector('.content');
+            content.insertBefore(alertDiv, content.firstChild);
+            
+            setTimeout(() => {
+                alertDiv.remove();
+            }, 5000);
+        }
+
+        // Test bot functionality
+        async function testBot() {
+            showLoading();
+            try {
+                const response = await fetch('/api/telegram/test-bot', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    showAlert('✅ Bot test successful! Check your Telegram chat.', 'success');
+                    updateConnectionStatus('success', 'Connected');
+                } else {
+                    showAlert(`❌ Bot test failed: ${result.error}`, 'error');
+                    updateConnectionStatus('error', 'Failed');
+                }
+            } catch (error) {
+                showAlert(`❌ Error testing bot: ${error.message}`, 'error');
+                updateConnectionStatus('error', 'Error');
+            } finally {
+                hideLoading();
+            }
+        }
+
+        // Send welcome message
+        async function sendWelcomeMessage() {
+            showLoading();
+            try {
+                const response = await fetch('/api/telegram/test-bot', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    showAlert('✅ Welcome message sent!', 'success');
+                } else {
+                    showAlert(`❌ Failed to send welcome message: ${result.error}`, 'error');
+                }
+            } catch (error) {
+                showAlert(`❌ Error sending welcome message: ${error.message}`, 'error');
+            } finally {
+                hideLoading();
+            }
+        }
+
+        // Send status update
+        async function sendStatusUpdate() {
+            showLoading();
+            try {
+                const response = await fetch('/api/telegram/send-status', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    showAlert('✅ Status update sent to Telegram!', 'success');
+                } else {
+                    showAlert(`❌ Failed to send status: ${result.error}`, 'error');
+                }
+            } catch (error) {
+                showAlert(`❌ Error sending status update: ${error.message}`, 'error');
+            } finally {
+                hideLoading();
+            }
+        }
+
+        // Send photo
+        async function sendPhoto() {
+            showLoading();
+            try {
+                const response = await fetch('/api/telegram/send-photo', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    showAlert('✅ Photo sent to Telegram!', 'success');
+                } else {
+                    showAlert(`❌ Failed to send photo: ${result.error}`, 'error');
+                }
+            } catch (error) {
+                showAlert(`❌ Error sending photo: ${error.message}`, 'error');
+            } finally {
+                hideLoading();
+            }
+        }
+
+
+        // Update status indicators
+        function updateConnectionStatus(type, text) {
+            const element = document.getElementById('connection-status');
+            element.className = `status-value ${type}`;
+            element.textContent = text;
+        }
+
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check bot configuration
+            const botToken = '{{ "Configured" if TELEGRAM_BOT_TOKEN else "Not Set" }}';
+            const chatId = '{{ "Configured" if TELEGRAM_CHAT_ID else "Not Set" }}';
+            
+            document.getElementById('bot-token-status').textContent = botToken;
+            document.getElementById('bot-token-status').className = `status-value ${botToken === 'Configured' ? 'success' : 'error'}`;
+            
+            document.getElementById('chat-id-status').textContent = chatId;
+            document.getElementById('chat-id-status').className = `status-value ${chatId === 'Configured' ? 'success' : 'error'}`;
+        });
+    </script>
+{% endblock %}

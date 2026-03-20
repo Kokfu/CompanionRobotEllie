@@ -1,0 +1,19 @@
+{
+  "robot": {
+    "rosbridge_ip": "192.168.1.100",
+    "rosbridge_port": 9090,
+    "base_speed": 0.2,
+    "turn_speed": 0.5,
+    "max_speed": 1.0,
+    "min_speed": 0.1
+  },
+  "ui": {
+    "dark_mode": true,
+    "show_fps": true,
+    "keyboard_control": true,
+    "mouse_control": false,
+    "auto_reconnect": true,
+    "reconnect_interval": 5
+  },
+  "last_updated": "2025-09-19T01:06:01.100297"
+}

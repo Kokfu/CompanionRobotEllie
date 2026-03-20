@@ -1,0 +1,1720 @@
+2025-09-07 03:30:36 - app - INFO - TurtleBot Web UI starting up
+2025-09-07 03:30:36 - app - INFO - No state file found, using defaults
+2025-09-07 03:30:36 - app - INFO - TurtleBot Web UI starting up
+2025-09-07 03:30:36 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-07 03:30:37 - app - INFO - TurtleBot Web UI starting up
+2025-09-07 03:30:37 - app - INFO - No state file found, using defaults
+2025-09-07 03:30:37 - app - INFO - TurtleBot Web UI starting up
+2025-09-07 03:30:37 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 00:29:46 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 00:29:47 - app - INFO - No state file found, using defaults
+2025-09-08 00:29:47 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 00:29:47 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 00:29:48 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 00:29:48 - app - INFO - stt_tts_bridge started
+2025-09-08 00:29:48 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 00:29:48 - app - INFO - No state file found, using defaults
+2025-09-08 00:29:48 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 00:29:48 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 00:32:55 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 00:32:56 - app - INFO - No state file found, using defaults
+2025-09-08 00:32:56 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 00:32:56 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 00:32:57 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 00:32:57 - app - INFO - stt_tts_bridge started
+2025-09-08 00:32:57 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 00:32:57 - app - INFO - No state file found, using defaults
+2025-09-08 00:32:57 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 00:32:57 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 00:42:54 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 00:42:54 - app - INFO - No state file found, using defaults
+2025-09-08 00:42:54 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 00:42:54 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 00:42:54 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-08 00:45:37 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 00:45:37 - app - INFO - No state file found, using defaults
+2025-09-08 00:45:37 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 00:45:37 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 00:45:39 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 00:45:39 - app - INFO - stt_tts_bridge started
+2025-09-08 00:45:39 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 00:45:39 - app - INFO - No state file found, using defaults
+2025-09-08 00:45:39 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 00:45:39 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 00:45:54 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 00:45:54 - app - INFO - No state file found, using defaults
+2025-09-08 00:45:54 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 00:45:54 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 00:45:54 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-08 00:58:13 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 00:58:13 - app - INFO - No state file found, using defaults
+2025-09-08 00:58:13 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 00:58:13 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 00:58:13 - app - INFO - stt_tts_bridge started
+2025-09-08 00:58:13 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 00:58:13 - app - INFO - stt_tts_bridge started
+2025-09-08 00:58:13 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 00:58:13 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-08 00:59:11 - app - INFO - Robot configuration updated: {'rosbridge_ip': '10.10.68.201', 'rosbridge_port': 9090, 'base_speed': 0.2, 'turn_speed': 0.5}
+2025-09-08 00:59:11 - app - INFO - UI configuration updated: {'dark_mode': False, 'show_fps': True, 'keyboard_control': True, 'mouse_control': False}
+2025-09-08 00:59:20 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 00:59:20 - app - INFO - No state file found, using defaults
+2025-09-08 00:59:20 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 00:59:20 - app - INFO - ROS Bridge configured: 10.10.68.201:9090
+2025-09-08 00:59:20 - app - INFO - stt_tts_bridge started
+2025-09-08 00:59:20 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 00:59:20 - app - INFO - stt_tts_bridge started
+2025-09-08 00:59:20 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 00:59:20 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 10.10.68.201:9090
+2025-09-08 00:59:30 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 00:59:30 - app - INFO - No state file found, using defaults
+2025-09-08 00:59:30 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 00:59:30 - app - INFO - ROS Bridge configured: 10.10.68.201:9090
+2025-09-08 00:59:30 - app - INFO - stt_tts_bridge started
+2025-09-08 00:59:30 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 00:59:30 - app - INFO - stt_tts_bridge started
+2025-09-08 00:59:30 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 00:59:30 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 10.10.68.201:9090
+2025-09-08 00:59:57 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 00:59:57 - app - INFO - No state file found, using defaults
+2025-09-08 00:59:57 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 00:59:57 - app - INFO - ROS Bridge configured: 10.10.68.201:9090
+2025-09-08 00:59:57 - app - INFO - stt_tts_bridge started
+2025-09-08 00:59:57 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 00:59:58 - app - INFO - stt_tts_bridge started
+2025-09-08 00:59:58 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 00:59:58 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 10.10.68.201:9090
+2025-09-08 01:16:25 - app - INFO - No state file found, using defaults
+2025-09-08 01:16:25 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 01:16:25 - app - INFO - ROS Bridge configured: 10.10.68.201:9090
+2025-09-08 01:16:25 - app - INFO - stt_tts_bridge started
+2025-09-08 01:16:25 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 01:16:25 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 10.10.68.201:9090
+2025-09-08 01:16:52 - app - INFO - Robot configuration updated: {'rosbridge_ip': '192.168.68.201', 'rosbridge_port': 9090, 'base_speed': 0.2, 'turn_speed': 0.5}
+2025-09-08 01:16:52 - app - INFO - UI configuration updated: {'dark_mode': False, 'show_fps': True, 'keyboard_control': True, 'mouse_control': False}
+2025-09-08 01:17:28 - app - INFO - No state file found, using defaults
+2025-09-08 01:17:28 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 01:17:28 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 01:17:28 - app - INFO - stt_tts_bridge started
+2025-09-08 01:17:28 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 01:17:28 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-08 01:18:54 - app - INFO - No state file found, using defaults
+2025-09-08 01:18:54 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 01:18:54 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 01:18:54 - app - INFO - stt_tts_bridge started
+2025-09-08 01:18:54 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 01:18:54 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-08 01:19:57 - app - INFO - No state file found, using defaults
+2025-09-08 01:19:57 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 01:19:57 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 01:19:57 - app - INFO - stt_tts_bridge started
+2025-09-08 01:19:57 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 01:19:57 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-08 01:20:27 - app - INFO - No state file found, using defaults
+2025-09-08 01:20:27 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 01:20:27 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 01:20:27 - app - INFO - stt_tts_bridge started
+2025-09-08 01:20:27 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 01:20:27 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-08 01:21:12 - app - INFO - No state file found, using defaults
+2025-09-08 01:21:12 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 01:21:12 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 01:21:12 - app - INFO - stt_tts_bridge started
+2025-09-08 01:21:12 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 01:21:12 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-08 01:30:38 - app - INFO - No state file found, using defaults
+2025-09-08 01:30:38 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 01:30:38 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 01:30:38 - app - INFO - stt_tts_bridge started
+2025-09-08 01:30:38 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 01:30:38 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-08 01:37:04 - app - INFO - No state file found, using defaults
+2025-09-08 01:37:04 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 01:37:04 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 01:37:04 - app - INFO - stt_tts_bridge started
+2025-09-08 01:37:04 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 01:37:04 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-08 01:37:24 - app - INFO - No state file found, using defaults
+2025-09-08 01:37:24 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 01:37:24 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 01:37:24 - app - INFO - stt_tts_bridge started
+2025-09-08 01:37:24 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 01:37:24 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-08 01:40:55 - app - INFO - No state file found, using defaults
+2025-09-08 01:40:55 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 01:40:55 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 01:40:55 - app - INFO - stt_tts_bridge started
+2025-09-08 01:40:55 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 01:40:55 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-08 01:54:51 - app - INFO - No state file found, using defaults
+2025-09-08 01:54:51 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 01:54:51 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 01:54:51 - app - INFO - stt_tts_bridge started
+2025-09-08 01:54:51 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 01:54:51 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-08 01:55:09 - app - INFO - No state file found, using defaults
+2025-09-08 01:55:09 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 01:55:09 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 01:55:09 - app - INFO - stt_tts_bridge started
+2025-09-08 01:55:09 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 01:55:09 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-08 01:58:21 - app - INFO - No state file found, using defaults
+2025-09-08 01:58:21 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 01:58:21 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 01:58:21 - app - INFO - stt_tts_bridge started
+2025-09-08 01:58:21 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 01:58:21 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-08 02:00:53 - app - INFO - No state file found, using defaults
+2025-09-08 02:00:53 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 02:00:53 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 02:01:43 - app - INFO - No state file found, using defaults
+2025-09-08 02:01:43 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 02:01:43 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 02:01:43 - app - INFO - stt_tts_bridge started
+2025-09-08 02:01:43 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 02:01:43 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-08 02:03:06 - app - INFO - No state file found, using defaults
+2025-09-08 02:03:06 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 02:03:06 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 02:03:06 - app - INFO - stt_tts_bridge started
+2025-09-08 02:03:06 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 02:03:06 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-08 02:05:29 - app - INFO - No state file found, using defaults
+2025-09-08 02:05:29 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 02:05:29 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 02:05:29 - app - INFO - stt_tts_bridge started
+2025-09-08 02:05:29 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 02:05:29 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-08 02:07:42 - app - INFO - No state file found, using defaults
+2025-09-08 02:07:42 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 02:07:42 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 02:07:42 - app - INFO - stt_tts_bridge started
+2025-09-08 02:07:42 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 02:07:42 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-08 02:07:53 - app - INFO - Robot configuration updated: {'rosbridge_ip': '10.10.16.100', 'rosbridge_port': 9090, 'base_speed': 0.2, 'turn_speed': 0.5}
+2025-09-08 02:07:53 - app - INFO - UI configuration updated: {'dark_mode': False, 'show_fps': True, 'keyboard_control': True, 'mouse_control': False}
+2025-09-08 02:09:29 - app - INFO - No state file found, using defaults
+2025-09-08 02:09:29 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 02:09:29 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 02:09:29 - app - INFO - stt_tts_bridge started
+2025-09-08 02:09:29 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 02:09:29 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-08 02:11:07 - app - INFO - No state file found, using defaults
+2025-09-08 02:11:07 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 02:11:07 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 02:11:07 - app - INFO - stt_tts_bridge started
+2025-09-08 02:11:07 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 02:11:07 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-08 02:25:48 - app - INFO - No state file found, using defaults
+2025-09-08 02:25:48 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 02:25:48 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 02:25:48 - app - INFO - stt_tts_bridge started
+2025-09-08 02:25:48 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 02:25:48 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-08 02:43:36 - app - INFO - No state file found, using defaults
+2025-09-08 02:43:36 - app - INFO - TurtleBot Web UI starting up
+2025-09-08 02:43:36 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-08 02:43:36 - app - INFO - stt_tts_bridge started
+2025-09-08 02:43:36 - app - INFO - pan_tilt_ros_onefile started
+2025-09-08 02:43:36 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-10 14:18:15 - app - INFO - No state file found, using defaults
+2025-09-10 14:18:15 - app - INFO - TurtleBot Web UI starting up
+2025-09-10 14:18:15 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-10 14:18:15 - app - INFO - stt_tts_bridge started
+2025-09-10 14:18:15 - app - INFO - pan_tilt_ros_onefile started
+2025-09-10 14:18:15 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-10 15:41:07 - app - INFO - No state file found, using defaults
+2025-09-10 15:41:07 - app - INFO - TurtleBot Web UI starting up
+2025-09-10 15:41:07 - app - INFO - ROS Bridge configured: 192.168.1.201:9090
+2025-09-10 15:41:07 - app - INFO - stt_tts_bridge started
+2025-09-10 15:41:07 - app - INFO - pan_tilt_ros_onefile started
+2025-09-10 15:41:07 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.201:9090
+2025-09-10 15:42:12 - app - INFO - No state file found, using defaults
+2025-09-10 15:42:12 - app - INFO - TurtleBot Web UI starting up
+2025-09-10 15:42:12 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-10 15:42:12 - app - INFO - stt_tts_bridge started
+2025-09-10 15:42:12 - app - INFO - pan_tilt_ros_onefile started
+2025-09-10 15:42:12 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-10 15:42:22 - app - INFO - No state file found, using defaults
+2025-09-10 15:42:22 - app - INFO - TurtleBot Web UI starting up
+2025-09-10 15:42:22 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-10 15:42:22 - app - INFO - stt_tts_bridge started
+2025-09-10 15:42:22 - app - INFO - pan_tilt_ros_onefile started
+2025-09-10 15:42:22 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-10 15:46:36 - app - INFO - State updated: speed = 0.2
+2025-09-10 15:46:36 - app - INFO - Speed updated to 0.2
+2025-09-10 15:52:36 - app - INFO - State loaded from file
+2025-09-10 15:52:36 - app - INFO - TurtleBot Web UI starting up
+2025-09-10 15:52:36 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-10 15:52:36 - app - INFO - stt_tts_bridge started
+2025-09-10 15:52:36 - app - INFO - pan_tilt_ros_onefile started
+2025-09-10 15:52:36 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-10 15:54:22 - app - INFO - State loaded from file
+2025-09-10 15:54:22 - app - INFO - TurtleBot Web UI starting up
+2025-09-10 15:54:22 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-10 15:54:22 - app - INFO - stt_tts_bridge started
+2025-09-10 15:54:22 - app - INFO - pan_tilt_ros_onefile started
+2025-09-10 15:54:22 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-10 15:55:40 - app - INFO - State loaded from file
+2025-09-10 15:55:40 - app - INFO - TurtleBot Web UI starting up
+2025-09-10 15:55:40 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-10 15:55:40 - app - INFO - stt_tts_bridge started
+2025-09-10 15:55:40 - app - INFO - pan_tilt_ros_onefile started
+2025-09-10 15:55:40 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-10 16:02:55 - app - INFO - State loaded from file
+2025-09-10 16:02:55 - app - INFO - TurtleBot Web UI starting up
+2025-09-10 16:02:55 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-10 16:02:55 - app - INFO - stt_tts_bridge started
+2025-09-10 16:02:55 - app - INFO - pan_tilt_ros_onefile started
+2025-09-10 16:02:55 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-10 16:06:38 - app - INFO - State loaded from file
+2025-09-10 16:06:38 - app - INFO - TurtleBot Web UI starting up
+2025-09-10 16:06:38 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-10 16:06:39 - app - INFO - stt_tts_bridge started
+2025-09-10 16:06:39 - app - INFO - pan_tilt_ros_onefile started
+2025-09-10 16:06:39 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-10 16:08:00 - app - INFO - Robot configuration updated: {'rosbridge_ip': '10.10.10.10', 'rosbridge_port': 9090, 'base_speed': 0.2, 'turn_speed': 0.5}
+2025-09-10 16:08:00 - app - INFO - UI configuration updated: {'dark_mode': False, 'show_fps': True, 'keyboard_control': True, 'mouse_control': False}
+2025-09-10 16:08:04 - app - INFO - Robot configuration updated: {'rosbridge_ip': '10.10.10.10', 'rosbridge_port': 9090, 'base_speed': 0.2, 'turn_speed': 0.5}
+2025-09-10 16:08:04 - app - INFO - UI configuration updated: {'dark_mode': True, 'show_fps': True, 'keyboard_control': True, 'mouse_control': False}
+2025-09-10 16:08:24 - app - INFO - Robot configuration updated: {'rosbridge_ip': '192.168.1.100', 'rosbridge_port': 9090, 'base_speed': 0.2, 'turn_speed': 0.5}
+2025-09-10 16:08:24 - app - INFO - UI configuration updated: {'dark_mode': True, 'show_fps': True, 'keyboard_control': True, 'mouse_control': False}
+2025-09-10 16:10:51 - app - INFO - State updated: speed = 0.1
+2025-09-10 16:10:51 - app - INFO - Speed updated to 0.1
+2025-09-10 16:11:15 - app - INFO - State loaded from file
+2025-09-10 16:11:15 - app - INFO - TurtleBot Web UI starting up
+2025-09-10 16:11:15 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-10 16:11:15 - app - INFO - stt_tts_bridge started
+2025-09-10 16:11:15 - app - INFO - pan_tilt_ros_onefile started
+2025-09-10 16:11:15 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-10 16:25:44 - app - INFO - State loaded from file
+2025-09-10 16:25:44 - app - INFO - TurtleBot Web UI starting up
+2025-09-10 16:25:44 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-10 16:25:44 - app - INFO - stt_tts_bridge started
+2025-09-10 16:25:44 - app - INFO - pan_tilt_ros_onefile started
+2025-09-10 16:25:44 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-11 00:42:28 - app - INFO - State loaded from file
+2025-09-11 00:42:28 - app - INFO - TurtleBot Web UI starting up
+2025-09-11 00:42:28 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-11 00:42:28 - app - INFO - stt_tts_bridge started
+2025-09-11 00:42:28 - app - INFO - pan_tilt_ros_onefile started
+2025-09-11 00:42:28 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-11 00:42:49 - app - INFO - State loaded from file
+2025-09-11 00:42:49 - app - INFO - TurtleBot Web UI starting up
+2025-09-11 00:42:49 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-11 00:42:49 - app - INFO - stt_tts_bridge started
+2025-09-11 00:42:49 - app - INFO - pan_tilt_ros_onefile started
+2025-09-11 00:42:49 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-11 14:56:24 - app - INFO - State loaded from file
+2025-09-11 14:56:24 - app - INFO - TurtleBot Web UI starting up
+2025-09-11 14:56:24 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-11 14:56:24 - app - INFO - stt_tts_bridge started
+2025-09-11 14:56:24 - app - INFO - pan_tilt_ros_onefile started
+2025-09-11 14:56:24 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-11 14:57:42 - app - INFO - State loaded from file
+2025-09-11 14:57:42 - app - INFO - TurtleBot Web UI starting up
+2025-09-11 14:57:42 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-11 14:57:42 - app - INFO - stt_tts_bridge started
+2025-09-11 14:57:42 - app - INFO - pan_tilt_ros_onefile started
+2025-09-11 14:57:42 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-11 16:13:35 - app - INFO - State loaded from file
+2025-09-11 16:13:35 - app - INFO - TurtleBot Web UI starting up
+2025-09-11 16:13:35 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-11 16:13:35 - app - INFO - stt_tts_bridge started
+2025-09-11 16:13:35 - app - INFO - pan_tilt_ros_onefile started
+2025-09-11 16:13:35 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-11 16:32:20 - app - INFO - State loaded from file
+2025-09-11 16:32:20 - app - INFO - TurtleBot Web UI starting up
+2025-09-11 16:32:20 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-11 16:32:20 - app - INFO - stt_tts_bridge started
+2025-09-11 16:32:20 - app - INFO - pan_tilt_ros_onefile started
+2025-09-11 16:32:20 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-11 16:33:10 - app - ERROR - Exception on /api/nav/goal [POST]
+Traceback (most recent call last):
+  File "/home/kokfu/.local/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kokfu/.local/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kokfu/.local/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kokfu/.local/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/kokfu/turtlebot_webui/v3/nav_backend.py", line 242, in api_goal
+    result = _node.navigate_to_sync(x, y, yaw)
+  File "/home/kokfu/turtlebot_webui/v3/nav_backend.py", line 182, in navigate_to_sync
+    'status': _name(result),          # e.g. "SUCCEEDED" / "CANCELED" / "FAILED"
+UnboundLocalError: local variable 'result' referenced before assignment
+2025-09-16 17:20:34 - app - INFO - State loaded from file
+2025-09-16 17:20:34 - app - INFO - TurtleBot Web UI starting up
+2025-09-16 17:20:34 - app - INFO - ROS Bridge configured: 192.168..201:9090
+2025-09-16 17:20:34 - app - INFO - stt_tts_bridge started
+2025-09-16 17:20:34 - app - INFO - pan_tilt_ros_onefile started
+2025-09-16 17:20:34 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168..201:9090
+2025-09-16 17:20:57 - app - INFO - State loaded from file
+2025-09-16 17:20:57 - app - INFO - TurtleBot Web UI starting up
+2025-09-16 17:20:57 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-16 17:20:57 - app - INFO - stt_tts_bridge started
+2025-09-16 17:20:57 - app - INFO - pan_tilt_ros_onefile started
+2025-09-16 17:20:57 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-17 16:34:23 - app - INFO - State loaded from file
+2025-09-17 16:34:23 - app - INFO - TurtleBot Web UI starting up
+2025-09-17 16:34:23 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-17 16:34:23 - app - INFO - stt_tts_bridge started
+2025-09-17 16:34:23 - app - INFO - pan_tilt_ros_onefile started
+2025-09-17 16:34:23 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-18 15:02:33 - app - INFO - State loaded from file
+2025-09-18 15:02:33 - app - INFO - TurtleBot Web UI starting up
+2025-09-18 15:02:33 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-18 15:02:33 - app - INFO - stt_tts_bridge started
+2025-09-18 15:02:33 - app - INFO - pan_tilt_ros_onefile started
+2025-09-18 15:02:33 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-18 15:04:47 - app - INFO - State loaded from file
+2025-09-18 15:04:47 - app - INFO - TurtleBot Web UI starting up
+2025-09-18 15:04:47 - app - INFO - ROS Bridge configured: 192.168.68.102:9090
+2025-09-18 15:04:47 - app - INFO - stt_tts_bridge started
+2025-09-18 15:04:47 - app - INFO - pan_tilt_ros_onefile started
+2025-09-18 15:04:47 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.102:9090
+2025-09-18 15:05:25 - app - INFO - State loaded from file
+2025-09-18 15:05:25 - app - INFO - TurtleBot Web UI starting up
+2025-09-18 15:05:25 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-18 15:05:25 - app - INFO - stt_tts_bridge started
+2025-09-18 15:05:25 - app - INFO - pan_tilt_ros_onefile started
+2025-09-18 15:05:25 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-18 22:43:34 - app - INFO - State loaded from file
+2025-09-18 22:43:34 - app - INFO - TurtleBot Web UI starting up
+2025-09-18 22:43:34 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-18 22:43:34 - app - INFO - stt_tts_bridge started
+2025-09-18 22:43:34 - app - INFO - pan_tilt_ros_onefile started
+2025-09-18 22:43:34 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-18 23:00:19 - app - INFO - State loaded from file
+2025-09-18 23:00:19 - app - INFO - TurtleBot Web UI starting up
+2025-09-18 23:00:19 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-18 23:00:19 - app - INFO - stt_tts_bridge started
+2025-09-18 23:00:19 - app - INFO - pan_tilt_ros_onefile started
+2025-09-18 23:00:19 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-18 23:21:58 - app - INFO - State loaded from file
+2025-09-18 23:21:58 - app - INFO - TurtleBot Web UI starting up
+2025-09-18 23:21:58 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-18 23:21:58 - app - INFO - stt_tts_bridge started
+2025-09-18 23:21:58 - app - INFO - pan_tilt_ros_onefile started
+2025-09-18 23:21:58 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-19 00:55:10 - app - INFO - State loaded from file
+2025-09-19 00:55:10 - app - INFO - TurtleBot Web UI starting up
+2025-09-19 00:55:10 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-19 00:55:11 - app - INFO - stt_tts_bridge started
+2025-09-19 00:55:11 - app - INFO - pan_tilt_ros_onefile started
+2025-09-19 00:55:11 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-19 01:05:53 - app - INFO - Robot configuration updated: {'rosbridge_ip': '192.168.1.100', 'rosbridge_port': 9090, 'base_speed': 0.2, 'turn_speed': 0.5}
+2025-09-19 01:05:53 - app - INFO - UI configuration updated: {'dark_mode': True, 'show_fps': False, 'keyboard_control': True, 'mouse_control': False}
+2025-09-19 01:06:01 - app - INFO - Robot configuration updated: {'rosbridge_ip': '192.168.1.100', 'rosbridge_port': 9090, 'base_speed': 0.2, 'turn_speed': 0.5}
+2025-09-19 01:06:01 - app - INFO - UI configuration updated: {'dark_mode': True, 'show_fps': True, 'keyboard_control': True, 'mouse_control': False}
+2025-09-19 01:07:09 - app - INFO - State loaded from file
+2025-09-19 01:07:09 - app - INFO - TurtleBot Web UI starting up
+2025-09-19 01:07:09 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-19 01:07:10 - app - INFO - stt_tts_bridge started
+2025-09-19 01:07:10 - app - INFO - pan_tilt_ros_onefile started
+2025-09-19 01:07:10 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-19 01:20:46 - app - INFO - State loaded from file
+2025-09-19 01:20:46 - app - INFO - TurtleBot Web UI starting up
+2025-09-19 01:20:46 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-19 01:20:46 - app - INFO - stt_tts_bridge started
+2025-09-19 01:20:46 - app - INFO - pan_tilt_ros_onefile started
+2025-09-19 01:20:46 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-19 01:50:20 - app - INFO - State loaded from file
+2025-09-19 01:50:20 - app - INFO - TurtleBot Web UI starting up
+2025-09-19 01:50:20 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-19 01:50:20 - app - INFO - stt_tts_bridge started
+2025-09-19 01:50:20 - app - INFO - pan_tilt_ros_onefile started
+2025-09-19 01:50:20 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-19 02:01:04 - app - INFO - State loaded from file
+2025-09-19 02:01:04 - app - INFO - TurtleBot Web UI starting up
+2025-09-19 02:01:04 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-19 02:01:04 - app - INFO - stt_tts_bridge started
+2025-09-19 02:01:04 - app - INFO - pan_tilt_ros_onefile started
+2025-09-19 02:01:04 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-19 02:12:57 - app - INFO - State loaded from file
+2025-09-19 02:12:57 - app - INFO - TurtleBot Web UI starting up
+2025-09-19 02:12:57 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-19 02:12:57 - app - INFO - stt_tts_bridge started
+2025-09-19 02:12:57 - app - INFO - pan_tilt_ros_onefile started
+2025-09-19 02:12:57 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-19 02:30:13 - app - INFO - State loaded from file
+2025-09-19 02:30:13 - app - INFO - TurtleBot Web UI starting up
+2025-09-19 02:30:13 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-19 02:30:13 - app - INFO - stt_tts_bridge started
+2025-09-19 02:30:13 - app - INFO - pan_tilt_ros_onefile started
+2025-09-19 02:30:13 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-19 02:55:06 - app - INFO - State loaded from file
+2025-09-19 02:55:06 - app - INFO - TurtleBot Web UI starting up
+2025-09-19 02:55:06 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-19 02:55:06 - app - INFO - stt_tts_bridge started
+2025-09-19 02:55:06 - app - INFO - pan_tilt_ros_onefile started
+2025-09-19 02:55:06 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-19 02:58:14 - app - INFO - State loaded from file
+2025-09-19 02:58:14 - app - INFO - TurtleBot Web UI starting up
+2025-09-19 02:58:14 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-19 02:58:14 - app - INFO - stt_tts_bridge started
+2025-09-19 02:58:14 - app - INFO - pan_tilt_ros_onefile started
+2025-09-19 02:58:14 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-19 03:18:17 - app - INFO - State loaded from file
+2025-09-19 03:18:17 - app - INFO - TurtleBot Web UI starting up
+2025-09-19 03:18:17 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-19 03:18:17 - app - INFO - stt_tts_bridge started
+2025-09-19 03:18:17 - app - INFO - pan_tilt_ros_onefile started
+2025-09-19 03:18:17 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-19 03:38:24 - app - INFO - State loaded from file
+2025-09-19 03:38:24 - app - INFO - TurtleBot Web UI starting up
+2025-09-19 03:38:24 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-19 03:38:24 - app - INFO - stt_tts_bridge started
+2025-09-19 03:38:24 - app - INFO - pan_tilt_ros_onefile started
+2025-09-19 03:38:24 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-19 03:41:19 - app - INFO - State loaded from file
+2025-09-19 03:41:19 - app - INFO - TurtleBot Web UI starting up
+2025-09-19 03:41:19 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-19 03:41:19 - app - INFO - stt_tts_bridge started
+2025-09-19 03:41:19 - app - INFO - pan_tilt_ros_onefile started
+2025-09-19 03:41:19 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-19 03:48:30 - app - INFO - State loaded from file
+2025-09-19 03:48:30 - app - INFO - TurtleBot Web UI starting up
+2025-09-19 03:48:30 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-19 03:48:30 - app - INFO - stt_tts_bridge started
+2025-09-19 03:48:30 - app - INFO - pan_tilt_ros_onefile started
+2025-09-19 03:48:30 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-19 03:51:13 - app - INFO - State loaded from file
+2025-09-19 03:51:13 - app - INFO - TurtleBot Web UI starting up
+2025-09-19 03:51:13 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-19 03:51:13 - app - INFO - stt_tts_bridge started
+2025-09-19 03:51:13 - app - INFO - pan_tilt_ros_onefile started
+2025-09-19 03:51:13 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-19 03:57:03 - app - INFO - State loaded from file
+2025-09-19 03:57:03 - app - INFO - TurtleBot Web UI starting up
+2025-09-19 03:57:03 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-19 03:57:03 - app - INFO - stt_tts_bridge started
+2025-09-19 03:57:03 - app - INFO - pan_tilt_ros_onefile started
+2025-09-19 03:57:03 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-19 03:57:13 - app - INFO - State loaded from file
+2025-09-19 03:57:13 - app - INFO - TurtleBot Web UI starting up
+2025-09-19 03:57:13 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-19 03:57:13 - app - INFO - stt_tts_bridge started
+2025-09-19 03:57:14 - app - INFO - pan_tilt_ros_onefile started
+2025-09-19 03:57:14 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-19 04:01:33 - app - INFO - State loaded from file
+2025-09-19 04:01:33 - app - INFO - TurtleBot Web UI starting up
+2025-09-19 04:01:33 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-19 04:01:33 - app - INFO - stt_tts_bridge started
+2025-09-19 04:01:33 - app - INFO - pan_tilt_ros_onefile started
+2025-09-19 04:01:33 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-19 18:19:57 - app - INFO - State loaded from file
+2025-09-19 18:19:57 - app - INFO - TurtleBot Web UI starting up
+2025-09-19 18:19:57 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-19 18:19:57 - app - INFO - stt_tts_bridge started
+2025-09-19 18:19:57 - app - INFO - pan_tilt_ros_onefile started
+2025-09-19 18:19:57 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-19 18:32:16 - app - INFO - State loaded from file
+2025-09-19 18:32:16 - app - INFO - TurtleBot Web UI starting up
+2025-09-19 18:32:16 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-19 18:32:16 - app - INFO - stt_tts_bridge started
+2025-09-19 18:32:16 - app - INFO - pan_tilt_ros_onefile started
+2025-09-19 18:32:16 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-19 18:34:07 - app - INFO - State loaded from file
+2025-09-19 18:34:07 - app - INFO - TurtleBot Web UI starting up
+2025-09-19 18:34:07 - app - INFO - ROS Bridge configured: \:9090
+2025-09-19 18:34:07 - app - INFO - stt_tts_bridge started
+2025-09-19 18:34:07 - app - INFO - pan_tilt_ros_onefile started
+2025-09-19 18:34:07 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: \:9090
+2025-09-19 18:40:54 - app - INFO - State loaded from file
+2025-09-19 18:40:54 - app - INFO - TurtleBot Web UI starting up
+2025-09-19 18:40:54 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-19 18:40:54 - app - INFO - stt_tts_bridge started
+2025-09-19 18:40:54 - app - INFO - pan_tilt_ros_onefile started
+2025-09-19 18:40:54 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-19 18:48:22 - app - INFO - State loaded from file
+2025-09-19 18:48:22 - app - INFO - TurtleBot Web UI starting up
+2025-09-19 18:48:22 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-19 18:48:22 - app - INFO - stt_tts_bridge started
+2025-09-19 18:48:22 - app - INFO - pan_tilt_ros_onefile started
+2025-09-19 18:48:22 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-19 18:50:22 - app - INFO - State loaded from file
+2025-09-19 18:50:22 - app - INFO - TurtleBot Web UI starting up
+2025-09-19 18:50:22 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-19 18:50:22 - app - INFO - stt_tts_bridge started
+2025-09-19 18:50:22 - app - INFO - pan_tilt_ros_onefile started
+2025-09-19 18:50:22 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 01:28:51 - app - INFO - State loaded from file
+2025-09-20 01:28:51 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 01:28:51 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 01:28:51 - app - INFO - stt_tts_bridge started
+2025-09-20 01:28:51 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 01:28:51 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 01:41:34 - app - INFO - State loaded from file
+2025-09-20 01:41:34 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 01:41:34 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 01:41:34 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 01:41:34 - app - INFO - Telegram bot polling started
+2025-09-20 01:41:34 - app - INFO - stt_tts_bridge started
+2025-09-20 01:41:34 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 01:41:34 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 01:41:34 - app - INFO - Telegram message from 5388617645: /start
+2025-09-20 01:41:35 - app - INFO - Telegram message from 5388617645: /status
+2025-09-20 01:41:36 - app - INFO - Telegram message from 5388617645: /start
+2025-09-20 01:41:37 - app - INFO - Telegram message from 5388617645: /help
+2025-09-20 01:41:37 - app - INFO - Telegram message from 5388617645: /status
+2025-09-20 01:41:38 - app - INFO - Telegram message from 5388617645: /photo
+2025-09-20 01:41:39 - app - INFO - Telegram message from 5388617645: /chat
+2025-09-20 01:41:40 - app - INFO - Telegram message from 5388617645: Hello
+2025-09-20 01:41:48 - app - INFO - Telegram message from 5388617645: /help
+2025-09-20 01:41:52 - app - INFO - Telegram message from 5388617645: /start
+2025-09-20 02:07:38 - app - INFO - State loaded from file
+2025-09-20 02:07:38 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 02:07:38 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 02:07:38 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 02:07:38 - app - INFO - Telegram bot polling started
+2025-09-20 02:07:38 - app - INFO - stt_tts_bridge started
+2025-09-20 02:07:38 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 02:07:38 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 02:11:11 - app - INFO - Telegram message from 5388617645: /start
+2025-09-20 02:11:15 - app - INFO - Telegram message from 5388617645: /help
+2025-09-20 02:11:21 - app - INFO - Telegram message from 5388617645: /chat
+2025-09-20 02:11:41 - app - INFO - Telegram message from 5388617645: Tell me the current news about empty nest elderly
+2025-09-20 02:12:21 - app - INFO - Telegram message from 5388617645: You are now given capabilities to talk accompanying me and talk to me, tell me some current news
+2025-09-20 02:12:38 - app - INFO - Telegram message from 5388617645: Tell me current status and take pjoyo
+2025-09-20 02:16:55 - app - INFO - State loaded from file
+2025-09-20 02:16:55 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 02:16:55 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 02:16:55 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 02:16:55 - app - INFO - Telegram bot polling started
+2025-09-20 02:16:55 - app - INFO - stt_tts_bridge started
+2025-09-20 02:16:55 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 02:16:55 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 02:31:46 - app - INFO - State loaded from file
+2025-09-20 02:31:46 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 02:31:46 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 02:31:46 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 02:31:46 - app - INFO - Telegram bot polling started
+2025-09-20 02:31:46 - app - INFO - stt_tts_bridge started
+2025-09-20 02:31:46 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 02:31:46 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 02:38:55 - app - INFO - State loaded from file
+2025-09-20 02:38:55 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 02:38:55 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 02:38:55 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 02:38:55 - app - INFO - Telegram bot polling started
+2025-09-20 02:38:55 - app - INFO - stt_tts_bridge started
+2025-09-20 02:38:55 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 02:38:55 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 02:44:14 - app - INFO - State loaded from file
+2025-09-20 02:44:14 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 02:44:14 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 02:44:14 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 02:44:14 - app - INFO - Telegram bot polling started
+2025-09-20 02:44:14 - app - INFO - stt_tts_bridge started
+2025-09-20 02:44:14 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 02:44:14 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 02:47:00 - app - INFO - State loaded from file
+2025-09-20 02:47:00 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 02:47:00 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 02:47:00 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 02:47:00 - app - INFO - Telegram bot polling started
+2025-09-20 02:47:00 - app - INFO - stt_tts_bridge started
+2025-09-20 02:47:00 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 02:47:00 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 02:51:50 - app - INFO - State loaded from file
+2025-09-20 02:51:50 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 02:51:50 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 02:51:50 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 02:51:50 - app - INFO - Telegram bot polling started
+2025-09-20 02:51:50 - app - INFO - stt_tts_bridge started
+2025-09-20 02:51:50 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 02:51:50 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 03:02:27 - app - INFO - State loaded from file
+2025-09-20 03:02:27 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 03:02:27 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 03:02:27 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 03:02:27 - app - INFO - Telegram bot polling started
+2025-09-20 03:02:27 - app - INFO - stt_tts_bridge started
+2025-09-20 03:02:27 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 03:02:27 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 03:07:39 - app - INFO - State loaded from file
+2025-09-20 03:07:39 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 03:07:39 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 03:07:40 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 03:07:40 - app - INFO - Telegram bot polling started
+2025-09-20 03:07:40 - app - INFO - stt_tts_bridge started
+2025-09-20 03:07:40 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 03:07:40 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 03:09:46 - app - INFO - State loaded from file
+2025-09-20 03:09:46 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 03:09:46 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 03:09:46 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 03:09:46 - app - INFO - Telegram bot polling started
+2025-09-20 03:09:46 - app - INFO - stt_tts_bridge started
+2025-09-20 03:09:46 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 03:09:46 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 03:18:55 - app - INFO - State loaded from file
+2025-09-20 03:18:55 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 03:18:55 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 03:18:55 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 03:18:55 - app - INFO - Telegram bot polling started
+2025-09-20 03:18:55 - app - INFO - stt_tts_bridge started
+2025-09-20 03:18:55 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 03:18:55 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 03:19:31 - app - INFO - Telegram message from 1077920139: /start
+2025-09-20 03:20:02 - app - INFO - Telegram message from 1077920139: /help
+2025-09-20 03:20:38 - app - INFO - Telegram message from 1077920139: Hello
+2025-09-20 03:22:31 - app - INFO - Telegram message from 1077920139: /chat
+2025-09-20 03:22:34 - app - INFO - Telegram message from 1077920139: /help
+2025-09-20 03:22:39 - app - INFO - Telegram message from 1077920139: /mode
+2025-09-20 03:22:43 - app - INFO - Telegram message from 1077920139: /mode
+2025-09-20 03:23:00 - app - INFO - Telegram message from 1077920139: /status
+2025-09-20 03:23:06 - app - INFO - Telegram message from 1077920139: What are you
+2025-09-20 03:23:15 - app - INFO - Telegram message from 1077920139: /mode
+2025-09-20 03:23:21 - app - INFO - Telegram message from 1077920139: Tell me the current nees
+2025-09-20 03:23:27 - app - INFO - Telegram message from 1077920139: Tell me the current news
+2025-09-20 03:23:38 - app - INFO - Telegram message from 1077920139: /chat
+2025-09-20 03:23:53 - app - INFO - Telegram message from 1077920139: Tell me current news
+2025-09-20 03:27:21 - app - INFO - State loaded from file
+2025-09-20 03:27:21 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 03:27:21 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 03:27:21 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 03:27:21 - app - INFO - Telegram bot polling started
+2025-09-20 03:27:21 - app - INFO - stt_tts_bridge started
+2025-09-20 03:27:21 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 03:27:21 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 03:27:40 - app - INFO - Telegram message from 1077920139: /help
+2025-09-20 03:27:44 - app - INFO - Telegram message from 1077920139: Tell me
+2025-09-20 03:27:49 - app - INFO - Telegram message from 1077920139: /chat
+2025-09-20 03:27:53 - app - INFO - Telegram message from 1077920139: Talk to me
+2025-09-20 03:27:58 - app - INFO - Telegram message from 1077920139: What are you doing
+2025-09-20 03:28:06 - app - INFO - Telegram message from 1077920139: Tell me the current ai trend
+2025-09-20 03:30:36 - app - INFO - State loaded from file
+2025-09-20 03:30:36 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 03:30:36 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 03:30:36 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 03:30:36 - app - INFO - Telegram bot polling started
+2025-09-20 03:30:36 - app - INFO - stt_tts_bridge started
+2025-09-20 03:30:36 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 03:30:36 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 03:30:56 - app - INFO - Telegram message from 1077920139: Tell me the current ai trend
+2025-09-20 03:31:17 - app - INFO - Telegram message from 1077920139: /mode
+2025-09-20 03:31:21 - app - INFO - Telegram message from 1077920139: INFO:app:Telegram message from 1077920139: Tell me the current ai trend
+2025-09-20 03:30:56 - error - ERROR - Telegram polling error: name 'log_info' is not defined
+2025-09-20 03:31:28 - app - INFO - Telegram message from 1077920139: hello
+2025-09-20 03:31:34 - app - INFO - Telegram message from 1077920139: /help
+2025-09-20 03:31:36 - app - INFO - Telegram message from 1077920139: /start
+2025-09-20 03:31:39 - app - INFO - Telegram message from 1077920139: /help
+2025-09-20 03:31:56 - app - INFO - Telegram message from 1077920139: /start
+2025-09-20 03:32:04 - app - INFO - Telegram message from 1077920139: Tell me the current ai trend
+2025-09-20 03:32:11 - app - INFO - Telegram message from 1077920139: /chat
+2025-09-20 03:33:44 - app - INFO - State loaded from file
+2025-09-20 03:33:44 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 03:33:44 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 03:33:44 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 03:33:44 - app - INFO - Telegram bot polling started
+2025-09-20 03:33:44 - app - INFO - stt_tts_bridge started
+2025-09-20 03:33:44 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 03:33:44 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 03:34:04 - app - INFO - Telegram message from 1077920139: /chat
+2025-09-20 03:34:07 - app - INFO - Telegram message from 1077920139: hello
+2025-09-20 03:34:24 - app - INFO - Telegram message from 1077920139: what is the current status of this robot?
+2025-09-20 03:34:35 - app - INFO - Telegram message from 1077920139: tell me the battery status
+2025-09-20 03:34:56 - app - INFO - Telegram message from 1077920139: /mode
+2025-09-20 03:35:03 - app - INFO - Telegram message from 1077920139: tell me the battery status
+2025-09-20 03:35:08 - app - INFO - Telegram message from 1077920139: /help
+2025-09-20 03:35:11 - app - INFO - Telegram message from 1077920139: /status
+2025-09-20 03:35:21 - app - INFO - Telegram message from 1077920139: take photo
+2025-09-20 03:35:42 - app - INFO - Telegram message from 1077920139: /mode
+2025-09-20 03:36:02 - app - INFO - Telegram message from 1077920139: Tell me the current ai trend and what is the current news for nested elderly
+2025-09-20 03:39:53 - app - INFO - State loaded from file
+2025-09-20 03:39:53 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 03:39:53 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 03:39:53 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 03:39:53 - app - INFO - Telegram bot polling started
+2025-09-20 03:39:53 - app - INFO - stt_tts_bridge started
+2025-09-20 03:39:53 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 03:39:53 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 03:40:12 - app - INFO - Telegram message from 1077920139: hi
+2025-09-20 03:40:18 - app - INFO - Telegram message from 1077920139: tell me robot status
+2025-09-20 03:40:21 - app - INFO - Telegram message from 1077920139: /mode
+2025-09-20 03:40:26 - app - INFO - Telegram message from 1077920139: /help
+2025-09-20 03:40:28 - app - INFO - Telegram message from 1077920139: /mode
+2025-09-20 03:40:33 - app - INFO - Telegram message from 1077920139: /photo
+2025-09-20 16:33:58 - app - INFO - Meditation schedule system loaded
+2025-09-20 16:33:58 - app - INFO - State loaded from file
+2025-09-20 16:33:58 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 16:33:58 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 16:33:58 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 16:33:58 - app - INFO - Telegram bot polling started
+2025-09-20 16:33:58 - app - INFO - stt_tts_bridge started
+2025-09-20 16:33:58 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 16:33:58 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 16:35:18 - app - INFO - Meditation schedule system loaded
+2025-09-20 16:35:18 - app - INFO - State loaded from file
+2025-09-20 16:35:18 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 16:35:18 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 16:35:18 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 16:35:18 - app - INFO - Telegram bot polling started
+2025-09-20 16:35:18 - app - INFO - stt_tts_bridge started
+2025-09-20 16:35:18 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 16:35:18 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 16:40:23 - app - INFO - Meditation schedule system loaded
+2025-09-20 16:40:23 - app - INFO - State loaded from file
+2025-09-20 16:40:23 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 16:40:23 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 16:40:23 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 16:40:23 - app - INFO - Telegram bot polling started
+2025-09-20 16:40:23 - app - INFO - stt_tts_bridge started
+2025-09-20 16:40:23 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 16:40:23 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 16:42:05 - app - INFO - Meditation schedule system loaded
+2025-09-20 16:42:05 - app - INFO - State loaded from file
+2025-09-20 16:42:05 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 16:42:05 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 16:42:05 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 16:42:05 - app - INFO - Telegram bot polling started
+2025-09-20 16:42:05 - app - INFO - stt_tts_bridge started
+2025-09-20 16:42:05 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 16:42:05 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 16:44:05 - app - INFO - Meditation schedule system loaded
+2025-09-20 16:44:05 - app - INFO - State loaded from file
+2025-09-20 16:44:05 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 16:44:05 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 16:44:05 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 16:44:05 - app - INFO - Telegram bot polling started
+2025-09-20 16:44:05 - app - INFO - stt_tts_bridge started
+2025-09-20 16:44:05 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 16:44:05 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 16:46:44 - app - INFO - Meditation schedule system loaded
+2025-09-20 16:46:44 - app - INFO - State loaded from file
+2025-09-20 16:46:44 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 16:46:44 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 16:46:44 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 16:46:44 - app - INFO - Telegram bot polling started
+2025-09-20 16:46:44 - app - INFO - stt_tts_bridge started
+2025-09-20 16:46:44 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 16:46:44 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 16:48:57 - app - INFO - Meditation schedule system loaded
+2025-09-20 16:48:57 - app - INFO - State loaded from file
+2025-09-20 16:48:57 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 16:48:57 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 16:48:57 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 16:48:57 - app - INFO - Telegram bot polling started
+2025-09-20 16:48:57 - app - INFO - stt_tts_bridge started
+2025-09-20 16:48:58 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 16:48:58 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 16:51:01 - app - INFO - Meditation schedule system loaded
+2025-09-20 16:51:01 - app - INFO - Meditation manager initialized with Telegram function
+2025-09-20 16:51:01 - app - INFO - State loaded from file
+2025-09-20 16:51:01 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 16:51:01 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 16:51:01 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 16:51:01 - app - INFO - Telegram bot polling started
+2025-09-20 16:51:01 - app - INFO - stt_tts_bridge started
+2025-09-20 16:51:01 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 16:51:01 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 16:51:36 - app - INFO - Meditation schedule system loaded
+2025-09-20 16:51:36 - app - INFO - Meditation manager initialized with Telegram function
+2025-09-20 16:51:36 - app - INFO - Meditation monitoring started
+2025-09-20 16:51:36 - app - INFO - State loaded from file
+2025-09-20 16:51:36 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 16:51:36 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 16:51:36 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 16:51:36 - app - INFO - Telegram bot polling started
+2025-09-20 16:51:36 - app - INFO - stt_tts_bridge started
+2025-09-20 16:51:36 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 16:51:36 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 16:53:29 - app - INFO - Meditation schedule system loaded
+2025-09-20 16:53:29 - app - INFO - Meditation manager initialized with Telegram function
+2025-09-20 16:53:29 - app - INFO - State loaded from file
+2025-09-20 16:53:29 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 16:53:29 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 16:53:29 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 16:53:29 - app - INFO - Telegram bot polling started
+2025-09-20 16:53:29 - app - INFO - stt_tts_bridge started
+2025-09-20 16:53:29 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 16:53:29 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 16:56:58 - app - INFO - Meditation schedule system loaded
+2025-09-20 16:56:58 - app - INFO - Meditation manager initialized with Telegram function
+2025-09-20 16:56:58 - app - INFO - State loaded from file
+2025-09-20 16:56:58 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 16:56:58 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 16:56:58 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 16:56:58 - app - INFO - Telegram bot polling started
+2025-09-20 16:56:58 - app - INFO - stt_tts_bridge started
+2025-09-20 16:56:58 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 16:56:58 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 17:03:36 - app - INFO - State loaded from file
+2025-09-20 17:03:36 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:03:36 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 17:03:36 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:03:36 - app - INFO - Telegram bot polling started
+2025-09-20 17:03:36 - app - INFO - stt_tts_bridge started
+2025-09-20 17:03:36 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:03:36 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 17:05:42 - app - INFO - Meditation schedule system loaded
+2025-09-20 17:05:42 - app - INFO - Meditation manager initialized with Telegram function
+2025-09-20 17:05:42 - app - INFO - State loaded from file
+2025-09-20 17:05:42 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:05:42 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 17:05:42 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:05:42 - app - INFO - Telegram bot polling started
+2025-09-20 17:05:42 - app - INFO - stt_tts_bridge started
+2025-09-20 17:05:42 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:05:42 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 17:09:44 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:09:44 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:10:03 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:10:03 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:10:03 - app - INFO - State loaded from file
+2025-09-20 17:10:03 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:10:03 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 17:10:03 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:10:03 - app - INFO - Telegram bot polling started
+2025-09-20 17:10:03 - app - INFO - stt_tts_bridge started
+2025-09-20 17:10:03 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:10:03 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 17:12:04 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:12:04 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:12:04 - app - INFO - State loaded from file
+2025-09-20 17:12:04 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:12:04 - app - INFO - ROS Bridge configured: 192.168.1.101:9090
+2025-09-20 17:12:04 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:12:04 - app - INFO - Telegram bot polling started
+2025-09-20 17:12:04 - app - INFO - stt_tts_bridge started
+2025-09-20 17:12:04 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:12:04 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.101:9090
+2025-09-20 17:17:04 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:17:04 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:17:04 - app - INFO - State loaded from file
+2025-09-20 17:17:04 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:17:04 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 17:17:04 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:17:04 - app - INFO - Telegram bot polling started
+2025-09-20 17:17:04 - app - INFO - stt_tts_bridge started
+2025-09-20 17:17:04 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:17:04 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 17:18:32 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:18:32 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:18:32 - app - INFO - State loaded from file
+2025-09-20 17:18:32 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:18:32 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 17:18:32 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:18:32 - app - INFO - Telegram bot polling started
+2025-09-20 17:18:32 - app - INFO - stt_tts_bridge started
+2025-09-20 17:18:32 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:18:32 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 17:19:32 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:19:32 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:19:32 - app - INFO - State loaded from file
+2025-09-20 17:19:32 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:19:32 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 17:19:32 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:19:32 - app - INFO - Telegram bot polling started
+2025-09-20 17:19:32 - app - INFO - stt_tts_bridge started
+2025-09-20 17:19:32 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:19:32 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 17:22:52 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:22:52 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:22:52 - app - INFO - State loaded from file
+2025-09-20 17:22:52 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:22:52 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 17:22:52 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:22:52 - app - INFO - Telegram bot polling started
+2025-09-20 17:22:52 - app - INFO - stt_tts_bridge started
+2025-09-20 17:22:52 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:22:52 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 17:23:58 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:23:58 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:23:58 - app - INFO - State loaded from file
+2025-09-20 17:23:58 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:23:58 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 17:23:58 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:23:58 - app - INFO - Telegram bot polling started
+2025-09-20 17:23:58 - app - INFO - stt_tts_bridge started
+2025-09-20 17:23:58 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:23:58 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 17:24:41 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:24:41 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:24:41 - app - INFO - State loaded from file
+2025-09-20 17:24:41 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:24:41 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 17:24:41 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:24:41 - app - INFO - Telegram bot polling started
+2025-09-20 17:24:41 - app - INFO - stt_tts_bridge started
+2025-09-20 17:24:41 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:24:41 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 17:28:17 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:28:17 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:28:31 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:28:31 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:28:31 - app - INFO - State loaded from file
+2025-09-20 17:28:31 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:28:31 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 17:28:31 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:28:31 - app - INFO - Telegram bot polling started
+2025-09-20 17:28:31 - app - INFO - stt_tts_bridge started
+2025-09-20 17:28:31 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:28:31 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 17:29:32 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:29:32 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:29:32 - app - INFO - State loaded from file
+2025-09-20 17:29:32 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:29:32 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 17:29:32 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:29:32 - app - INFO - Telegram bot polling started
+2025-09-20 17:29:32 - app - INFO - stt_tts_bridge started
+2025-09-20 17:29:32 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:29:32 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 17:30:12 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:30:12 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:30:12 - app - INFO - State loaded from file
+2025-09-20 17:30:12 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:30:12 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 17:30:12 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:30:12 - app - INFO - Telegram bot polling started
+2025-09-20 17:30:12 - app - INFO - stt_tts_bridge started
+2025-09-20 17:30:12 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:30:12 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 17:31:17 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:31:17 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:31:27 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:31:27 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:31:27 - app - INFO - State loaded from file
+2025-09-20 17:31:27 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:31:27 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 17:31:27 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:31:27 - app - INFO - Telegram bot polling started
+2025-09-20 17:31:27 - app - INFO - stt_tts_bridge started
+2025-09-20 17:31:27 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:31:27 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 17:31:58 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:31:58 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:31:58 - app - INFO - State loaded from file
+2025-09-20 17:31:58 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:31:58 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 17:31:58 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:31:58 - app - INFO - Telegram bot polling started
+2025-09-20 17:31:58 - app - INFO - stt_tts_bridge started
+2025-09-20 17:31:58 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:31:58 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 17:32:24 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:32:24 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:32:24 - app - INFO - State loaded from file
+2025-09-20 17:32:24 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:32:24 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 17:32:24 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:32:24 - app - INFO - Telegram bot polling started
+2025-09-20 17:32:24 - app - INFO - stt_tts_bridge started
+2025-09-20 17:32:24 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:32:24 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 17:33:21 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:33:21 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:33:21 - app - INFO - State loaded from file
+2025-09-20 17:33:21 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:33:21 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 17:33:21 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:33:21 - app - INFO - Telegram bot polling started
+2025-09-20 17:33:22 - app - INFO - stt_tts_bridge started
+2025-09-20 17:33:22 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:33:22 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 17:36:18 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:36:18 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:36:18 - app - INFO - State loaded from file
+2025-09-20 17:36:18 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:36:18 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 17:36:18 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:36:18 - app - INFO - Telegram bot polling started
+2025-09-20 17:36:18 - app - INFO - stt_tts_bridge started
+2025-09-20 17:36:18 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:36:18 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 17:36:48 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:36:48 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:36:48 - app - INFO - State loaded from file
+2025-09-20 17:36:48 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:36:48 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 17:36:48 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:36:48 - app - INFO - Telegram bot polling started
+2025-09-20 17:36:48 - app - INFO - stt_tts_bridge started
+2025-09-20 17:36:48 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:36:48 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 17:43:35 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:43:35 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:43:35 - app - INFO - State loaded from file
+2025-09-20 17:43:35 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:43:35 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 17:43:35 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:43:35 - app - INFO - Telegram bot polling started
+2025-09-20 17:43:35 - app - INFO - stt_tts_bridge started
+2025-09-20 17:43:35 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:43:35 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 17:45:41 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:45:41 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:45:41 - app - INFO - State loaded from file
+2025-09-20 17:45:41 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:45:41 - app - INFO - ROS Bridge configured: 111.111.11.111:9090
+2025-09-20 17:45:41 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:45:42 - app - INFO - Telegram bot polling started
+2025-09-20 17:45:42 - app - INFO - stt_tts_bridge started
+2025-09-20 17:45:42 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:45:42 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 111.111.11.111:9090
+2025-09-20 17:48:58 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:48:58 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:48:58 - app - INFO - State loaded from file
+2025-09-20 17:48:58 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:48:58 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 17:48:58 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:48:58 - app - INFO - Telegram bot polling started
+2025-09-20 17:48:59 - app - INFO - stt_tts_bridge started
+2025-09-20 17:48:59 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:48:59 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 17:49:17 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:49:17 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:49:17 - app - INFO - State loaded from file
+2025-09-20 17:49:17 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:49:17 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 17:49:17 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:49:17 - app - INFO - Telegram bot polling started
+2025-09-20 17:49:17 - app - INFO - stt_tts_bridge started
+2025-09-20 17:49:17 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:49:17 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 17:50:51 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:50:51 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:50:51 - app - INFO - State loaded from file
+2025-09-20 17:50:51 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:50:51 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 17:50:51 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:50:51 - app - INFO - Telegram bot polling started
+2025-09-20 17:50:51 - app - INFO - stt_tts_bridge started
+2025-09-20 17:50:51 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:50:51 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 17:52:50 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:52:50 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:52:50 - app - INFO - State loaded from file
+2025-09-20 17:52:50 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:52:50 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 17:52:50 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:52:50 - app - INFO - Telegram bot polling started
+2025-09-20 17:52:50 - app - INFO - stt_tts_bridge started
+2025-09-20 17:52:50 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:52:50 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 17:56:28 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 17:56:28 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 17:56:28 - app - INFO - State loaded from file
+2025-09-20 17:56:28 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 17:56:28 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-20 17:56:28 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 17:56:28 - app - INFO - Telegram bot polling started
+2025-09-20 17:56:28 - app - INFO - stt_tts_bridge started
+2025-09-20 17:56:29 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 17:56:29 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-20 18:03:08 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 18:03:08 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 18:03:08 - app - INFO - State loaded from file
+2025-09-20 18:03:08 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 18:03:08 - app - INFO - ROS Bridge configured: 192.168.68.201:9090
+2025-09-20 18:03:08 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 18:03:08 - app - INFO - Telegram bot polling started
+2025-09-20 18:03:08 - app - INFO - stt_tts_bridge started
+2025-09-20 18:03:08 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 18:03:08 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.68.201:9090
+2025-09-20 18:19:40 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 18:19:40 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 18:19:40 - app - INFO - State loaded from file
+2025-09-20 18:19:40 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 18:19:40 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 18:19:41 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 18:19:41 - app - INFO - Telegram bot polling started
+2025-09-20 18:19:41 - app - INFO - stt_tts_bridge started
+2025-09-20 18:19:41 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 18:19:41 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 18:32:43 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 18:32:43 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 18:32:43 - app - INFO - State loaded from file
+2025-09-20 18:32:43 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 18:32:43 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 18:32:43 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 18:32:43 - app - INFO - Telegram bot polling started
+2025-09-20 18:32:43 - app - INFO - stt_tts_bridge started
+2025-09-20 18:32:43 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 18:32:43 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 18:35:05 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 18:35:05 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 18:35:05 - app - INFO - State loaded from file
+2025-09-20 18:35:05 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 18:35:05 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 18:35:05 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 18:35:05 - app - INFO - Telegram bot polling started
+2025-09-20 18:35:05 - app - INFO - stt_tts_bridge started
+2025-09-20 18:35:05 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 18:35:05 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 18:35:43 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 18:35:43 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 18:35:43 - app - INFO - State loaded from file
+2025-09-20 18:35:43 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 18:35:43 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 18:35:43 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 18:35:43 - app - INFO - Telegram bot polling started
+2025-09-20 18:35:43 - app - INFO - stt_tts_bridge started
+2025-09-20 18:35:43 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 18:35:43 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-20 18:37:05 - app - INFO - Simple meditation schedule system loaded
+2025-09-20 18:37:05 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-20 18:37:05 - app - INFO - State loaded from file
+2025-09-20 18:37:05 - app - INFO - TurtleBot Web UI starting up
+2025-09-20 18:37:05 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-20 18:37:05 - app - INFO - Starting Telegram bot polling worker
+2025-09-20 18:37:05 - app - INFO - Telegram bot polling started
+2025-09-20 18:37:05 - app - INFO - stt_tts_bridge started
+2025-09-20 18:37:05 - app - INFO - pan_tilt_ros_onefile started
+2025-09-20 18:37:05 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-21 18:51:53 - app - INFO - Simple meditation schedule system loaded
+2025-09-21 18:51:53 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-21 18:53:18 - app - INFO - Simple meditation schedule system loaded
+2025-09-21 18:53:18 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-21 18:53:18 - app - INFO - State loaded from file
+2025-09-21 18:53:18 - app - INFO - TurtleBot Web UI starting up
+2025-09-21 18:53:18 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-21 18:53:18 - app - INFO - Starting Telegram bot polling worker
+2025-09-21 18:53:18 - app - INFO - Telegram bot polling started
+2025-09-21 18:53:18 - app - INFO - stt_tts_bridge started
+2025-09-21 18:53:18 - app - INFO - pan_tilt_ros_onefile started
+2025-09-21 18:53:18 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-21 18:53:18 - app - INFO - HumanFallDetection initialized successfully
+2025-09-21 18:57:13 - app - INFO - Simple meditation schedule system loaded
+2025-09-21 18:57:13 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-21 18:57:13 - app - INFO - State loaded from file
+2025-09-21 18:57:13 - app - INFO - TurtleBot Web UI starting up
+2025-09-21 18:57:13 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-21 18:57:13 - app - INFO - Starting Telegram bot polling worker
+2025-09-21 18:57:13 - app - INFO - Telegram bot polling started
+2025-09-21 18:57:13 - app - INFO - stt_tts_bridge started
+2025-09-21 18:57:13 - app - INFO - pan_tilt_ros_onefile started
+2025-09-21 18:57:13 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-21 18:57:13 - app - INFO - HumanFallDetection initialized successfully
+2025-09-21 19:01:51 - app - INFO - Simple meditation schedule system loaded
+2025-09-21 19:01:51 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-21 19:02:19 - app - INFO - Simple meditation schedule system loaded
+2025-09-21 19:02:19 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-21 19:02:19 - app - INFO - State loaded from file
+2025-09-21 19:02:19 - app - INFO - TurtleBot Web UI starting up
+2025-09-21 19:02:19 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-21 19:02:19 - app - INFO - Starting Telegram bot polling worker
+2025-09-21 19:02:19 - app - INFO - Telegram bot polling started
+2025-09-21 19:02:19 - app - INFO - stt_tts_bridge started
+2025-09-21 19:02:19 - app - INFO - pan_tilt_ros_onefile started
+2025-09-21 19:02:19 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-21 19:02:19 - app - INFO - HumanFallDetection initialized successfully
+2025-09-21 19:05:25 - app - INFO - Simple meditation schedule system loaded
+2025-09-21 19:05:25 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-21 19:05:25 - app - INFO - State loaded from file
+2025-09-21 19:05:25 - app - INFO - TurtleBot Web UI starting up
+2025-09-21 19:05:25 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-21 19:05:25 - app - INFO - Starting Telegram bot polling worker
+2025-09-21 19:05:25 - app - INFO - Telegram bot polling started
+2025-09-21 19:05:25 - app - INFO - stt_tts_bridge started
+2025-09-21 19:05:25 - app - INFO - pan_tilt_ros_onefile started
+2025-09-21 19:05:25 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-21 19:05:25 - app - INFO - HumanFallDetection initialized successfully
+2025-09-21 19:58:42 - app - INFO - Simple meditation schedule system loaded
+2025-09-21 19:58:42 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-21 19:58:42 - app - INFO - State loaded from file
+2025-09-21 19:58:42 - app - INFO - TurtleBot Web UI starting up
+2025-09-21 19:58:42 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-21 19:58:42 - app - INFO - Starting Telegram bot polling worker
+2025-09-21 19:58:42 - app - INFO - Telegram bot polling started
+2025-09-21 19:58:42 - app - INFO - stt_tts_bridge started
+2025-09-21 19:58:42 - app - INFO - pan_tilt_ros_onefile started
+2025-09-21 19:58:42 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-21 19:58:43 - app - INFO - HumanFallDetection initialized successfully
+2025-09-21 19:58:51 - app - INFO - Processing video test with model_type: internal
+2025-09-21 20:04:04 - app - INFO - Processing video test with model_type: humanfall
+2025-09-21 20:10:16 - app - INFO - Simple meditation schedule system loaded
+2025-09-21 20:10:16 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-21 20:10:16 - app - INFO - State loaded from file
+2025-09-21 20:10:16 - app - INFO - TurtleBot Web UI starting up
+2025-09-21 20:10:16 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-21 20:10:16 - app - INFO - Starting Telegram bot polling worker
+2025-09-21 20:10:16 - app - INFO - Telegram bot polling started
+2025-09-21 20:10:16 - app - INFO - stt_tts_bridge started
+2025-09-21 20:10:16 - app - INFO - pan_tilt_ros_onefile started
+2025-09-21 20:10:16 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-21 20:10:17 - app - INFO - HumanFallDetection initialized successfully
+2025-09-21 20:10:29 - app - INFO - Processing video test with model_type: internal
+2025-09-21 20:14:54 - app - INFO - Processing video test with model_type: humanfall
+2025-09-21 20:17:59 - app - INFO - Processing video test with model_type: both
+2025-09-21 20:31:21 - app - INFO - Simple meditation schedule system loaded
+2025-09-21 20:31:21 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-21 20:31:21 - app - INFO - State loaded from file
+2025-09-21 20:31:21 - app - INFO - TurtleBot Web UI starting up
+2025-09-21 20:31:21 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-21 20:31:21 - app - INFO - Starting Telegram bot polling worker
+2025-09-21 20:31:21 - app - INFO - Telegram bot polling started
+2025-09-21 20:31:21 - app - INFO - stt_tts_bridge started
+2025-09-21 20:31:21 - app - INFO - pan_tilt_ros_onefile started
+2025-09-21 20:31:21 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-21 20:31:22 - app - INFO - HumanFallDetection initialized successfully
+2025-09-21 20:31:33 - app - INFO - Processing video test with model_type: internal
+2025-09-21 20:32:05 - app - INFO - Processing video test with model_type: humanfall
+2025-09-21 20:36:59 - app - INFO - Simple meditation schedule system loaded
+2025-09-21 20:36:59 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-21 20:36:59 - app - INFO - State loaded from file
+2025-09-21 20:36:59 - app - INFO - TurtleBot Web UI starting up
+2025-09-21 20:36:59 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-21 20:36:59 - app - INFO - Starting Telegram bot polling worker
+2025-09-21 20:36:59 - app - INFO - Telegram bot polling started
+2025-09-21 20:36:59 - app - INFO - stt_tts_bridge started
+2025-09-21 20:36:59 - app - INFO - pan_tilt_ros_onefile started
+2025-09-21 20:36:59 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-21 20:36:59 - app - INFO - HumanFallDetection initialized successfully
+2025-09-21 20:37:08 - app - INFO - Processing video test with model_type: internal
+2025-09-21 20:37:20 - app - INFO - Processing video test with model_type: both
+2025-09-21 21:08:36 - app - INFO - Simple meditation schedule system loaded
+2025-09-21 21:08:36 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-21 21:08:36 - app - INFO - State loaded from file
+2025-09-21 21:08:36 - app - INFO - TurtleBot Web UI starting up
+2025-09-21 21:08:36 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-21 21:08:36 - app - INFO - Starting Telegram bot polling worker
+2025-09-21 21:08:36 - app - INFO - Telegram bot polling started
+2025-09-21 21:08:36 - app - INFO - stt_tts_bridge started
+2025-09-21 21:08:36 - app - INFO - pan_tilt_ros_onefile started
+2025-09-21 21:08:36 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-21 21:08:36 - app - INFO - HumanFallDetection initialized successfully
+2025-09-21 21:08:42 - app - INFO - Processing video test with model_type: both
+2025-09-21 21:29:41 - app - INFO - Simple meditation schedule system loaded
+2025-09-21 21:29:41 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-21 21:29:41 - app - INFO - State loaded from file
+2025-09-21 21:29:41 - app - INFO - TurtleBot Web UI starting up
+2025-09-21 21:29:41 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-21 21:29:41 - app - INFO - Starting Telegram bot polling worker
+2025-09-21 21:29:41 - app - INFO - Telegram bot polling started
+2025-09-21 21:29:41 - app - INFO - stt_tts_bridge started
+2025-09-21 21:29:41 - app - INFO - pan_tilt_ros_onefile started
+2025-09-21 21:29:41 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-21 21:29:45 - app - INFO - HumanFallDetection initialized successfully
+2025-09-21 21:29:49 - app - INFO - Processing video test with model_type: internal
+2025-09-21 21:33:09 - app - INFO - Processing video test with model_type: internal
+2025-09-21 22:51:56 - app - INFO - Simple meditation schedule system loaded
+2025-09-21 22:51:56 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-21 22:51:56 - app - INFO - State loaded from file
+2025-09-21 22:51:56 - app - INFO - TurtleBot Web UI starting up
+2025-09-21 22:51:56 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-21 22:51:56 - app - INFO - Starting Telegram bot polling worker
+2025-09-21 22:51:56 - app - INFO - Telegram bot polling started
+2025-09-21 22:51:56 - app - INFO - stt_tts_bridge started
+2025-09-21 22:51:56 - app - INFO - pan_tilt_ros_onefile started
+2025-09-21 22:51:56 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-21 22:51:57 - app - INFO - HumanFallDetection initialized successfully
+2025-09-21 22:55:46 - app - INFO - Simple meditation schedule system loaded
+2025-09-21 22:55:46 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-21 22:55:46 - app - INFO - State loaded from file
+2025-09-21 22:55:46 - app - INFO - TurtleBot Web UI starting up
+2025-09-21 22:55:46 - app - INFO - ROS Bridge configured: 10.101.110.248:9090
+2025-09-21 22:55:46 - app - INFO - Starting Telegram bot polling worker
+2025-09-21 22:55:46 - app - INFO - Telegram bot polling started
+2025-09-21 22:55:46 - app - INFO - stt_tts_bridge started
+2025-09-21 22:55:46 - app - INFO - pan_tilt_ros_onefile started
+2025-09-21 22:55:46 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 10.101.110.248:9090
+2025-09-21 22:55:47 - app - INFO - HumanFallDetection initialized successfully
+2025-09-21 23:33:58 - app - INFO - Simple meditation schedule system loaded
+2025-09-21 23:33:58 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-21 23:33:58 - app - INFO - State loaded from file
+2025-09-21 23:33:58 - app - INFO - TurtleBot Web UI starting up
+2025-09-21 23:33:58 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-21 23:33:58 - app - INFO - Starting Telegram bot polling worker
+2025-09-21 23:33:58 - app - INFO - Telegram bot polling started
+2025-09-21 23:33:58 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-21 23:33:58 - app - INFO - pan_tilt_ros_onefile started
+2025-09-21 23:33:58 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-21 23:33:58 - app - INFO - HumanFallDetection initialized successfully
+2025-09-21 23:45:24 - app - INFO - Simple meditation schedule system loaded
+2025-09-21 23:45:24 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-21 23:45:24 - app - INFO - State loaded from file
+2025-09-21 23:45:24 - app - INFO - TurtleBot Web UI starting up
+2025-09-21 23:45:24 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-21 23:45:24 - app - INFO - Starting Telegram bot polling worker
+2025-09-21 23:45:25 - app - INFO - Telegram bot polling started
+2025-09-21 23:45:25 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-21 23:45:25 - app - INFO - pan_tilt_ros_onefile started
+2025-09-21 23:45:25 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-21 23:45:44 - app - INFO - HumanFallDetection initialized successfully
+2025-09-22 00:33:29 - app - INFO - Simple meditation schedule system loaded
+2025-09-22 00:33:29 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-22 00:33:29 - app - INFO - State loaded from file
+2025-09-22 00:33:29 - app - INFO - TurtleBot Web UI starting up
+2025-09-22 00:33:29 - app - INFO - ROS Bridge configured: 10.101.110.248:9090
+2025-09-22 00:33:29 - app - INFO - Starting Telegram bot polling worker
+2025-09-22 00:33:29 - app - INFO - Telegram bot polling started
+2025-09-22 00:33:29 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-22 00:33:29 - app - INFO - pan_tilt_ros_onefile started
+2025-09-22 00:33:29 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 10.101.110.248:9090
+2025-09-22 00:33:30 - app - INFO - HumanFallDetection initialized successfully
+2025-09-22 00:38:29 - app - INFO - Simple meditation schedule system loaded
+2025-09-22 00:38:29 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-22 00:38:29 - app - INFO - State loaded from file
+2025-09-22 00:38:29 - app - INFO - TurtleBot Web UI starting up
+2025-09-22 00:38:29 - app - INFO - ROS Bridge configured: 10.101.110.248:9090
+2025-09-22 00:38:29 - app - INFO - Starting Telegram bot polling worker
+2025-09-22 00:38:29 - app - INFO - Telegram bot polling started
+2025-09-22 00:38:29 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-22 00:38:29 - app - INFO - pan_tilt_ros_onefile started
+2025-09-22 00:38:29 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 10.101.110.248:9090
+2025-09-22 00:38:30 - app - INFO - HumanFallDetection initialized successfully
+2025-09-22 00:46:16 - app - INFO - Simple meditation schedule system loaded
+2025-09-22 00:46:16 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-22 00:46:16 - app - INFO - State loaded from file
+2025-09-22 00:46:16 - app - INFO - TurtleBot Web UI starting up
+2025-09-22 00:46:16 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-22 00:46:16 - app - INFO - Starting Telegram bot polling worker
+2025-09-22 00:46:17 - app - INFO - Telegram bot polling started
+2025-09-22 00:46:17 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-22 00:46:17 - app - INFO - pan_tilt_ros_onefile started
+2025-09-22 00:46:17 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-22 00:46:17 - app - INFO - HumanFallDetection initialized successfully
+2025-09-22 01:10:11 - app - INFO - Simple meditation schedule system loaded
+2025-09-22 01:10:11 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-22 01:10:11 - app - INFO - State loaded from file
+2025-09-22 01:10:11 - app - INFO - TurtleBot Web UI starting up
+2025-09-22 01:10:11 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-22 01:10:11 - app - INFO - Starting Telegram bot polling worker
+2025-09-22 01:10:11 - app - INFO - Telegram bot polling started
+2025-09-22 01:10:11 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-22 01:10:11 - app - INFO - pan_tilt_ros_onefile started
+2025-09-22 01:10:11 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-22 01:10:14 - app - INFO - HumanFallDetection initialized successfully
+2025-09-22 01:21:52 - app - INFO - Simple meditation schedule system loaded
+2025-09-22 01:21:52 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-22 01:21:52 - app - INFO - State loaded from file
+2025-09-22 01:21:52 - app - INFO - TurtleBot Web UI starting up
+2025-09-22 01:21:52 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-22 01:21:52 - app - INFO - Starting Telegram bot polling worker
+2025-09-22 01:21:52 - app - INFO - Telegram bot polling started
+2025-09-22 01:21:52 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-22 01:21:52 - app - INFO - pan_tilt_ros_onefile started
+2025-09-22 01:21:52 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-22 01:21:53 - app - INFO - HumanFallDetection initialized successfully
+2025-09-22 01:23:43 - app - INFO - Simple meditation schedule system loaded
+2025-09-22 01:23:43 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-22 01:23:43 - app - INFO - State loaded from file
+2025-09-22 01:23:43 - app - INFO - TurtleBot Web UI starting up
+2025-09-22 01:23:43 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-22 01:23:43 - app - INFO - Starting Telegram bot polling worker
+2025-09-22 01:23:43 - app - INFO - Telegram bot polling started
+2025-09-22 01:23:43 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-22 01:23:43 - app - INFO - pan_tilt_ros_onefile started
+2025-09-22 01:23:44 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-22 01:24:21 - app - INFO - Simple meditation schedule system loaded
+2025-09-22 01:24:21 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-22 01:24:21 - app - INFO - State loaded from file
+2025-09-22 01:24:21 - app - INFO - TurtleBot Web UI starting up
+2025-09-22 01:24:21 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-22 01:24:21 - app - INFO - Starting Telegram bot polling worker
+2025-09-22 01:24:21 - app - INFO - Telegram bot polling started
+2025-09-22 01:24:22 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-22 01:24:22 - app - INFO - pan_tilt_ros_onefile started
+2025-09-22 01:24:22 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-22 01:37:58 - app - INFO - Simple meditation schedule system loaded
+2025-09-22 01:37:58 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-22 01:37:58 - app - INFO - State loaded from file
+2025-09-22 01:37:58 - app - INFO - TurtleBot Web UI starting up
+2025-09-22 01:37:58 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-22 01:37:58 - app - INFO - Starting Telegram bot polling worker
+2025-09-22 01:37:58 - app - INFO - Telegram bot polling started
+2025-09-22 01:37:58 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-22 01:37:59 - app - INFO - pan_tilt_ros_onefile started
+2025-09-22 01:37:59 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-22 01:38:01 - app - INFO - HumanFallDetection initialized successfully
+2025-09-22 01:40:02 - app - INFO - Processing video test with model_type: internal
+2025-09-22 01:54:17 - app - INFO - Simple meditation schedule system loaded
+2025-09-22 01:54:17 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-22 01:54:17 - app - INFO - State loaded from file
+2025-09-22 01:54:17 - app - INFO - TurtleBot Web UI starting up
+2025-09-22 01:54:17 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-22 01:54:17 - app - INFO - Starting Telegram bot polling worker
+2025-09-22 01:54:18 - app - INFO - Telegram bot polling started
+2025-09-22 01:54:18 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-22 01:54:18 - app - INFO - pan_tilt_ros_onefile started
+2025-09-22 01:54:18 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-22 01:54:19 - app - INFO - HumanFallDetection initialized successfully
+2025-09-22 01:59:47 - app - INFO - Simple meditation schedule system loaded
+2025-09-22 01:59:47 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-22 01:59:47 - app - INFO - State loaded from file
+2025-09-22 01:59:47 - app - INFO - TurtleBot Web UI starting up
+2025-09-22 01:59:47 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-22 01:59:47 - app - INFO - Starting Telegram bot polling worker
+2025-09-22 01:59:47 - app - INFO - Telegram bot polling started
+2025-09-22 01:59:47 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-22 01:59:47 - app - INFO - pan_tilt_ros_onefile started
+2025-09-22 01:59:47 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-22 01:59:47 - app - INFO - HumanFallDetection initialized successfully
+2025-09-22 02:03:43 - app - INFO - Simple meditation schedule system loaded
+2025-09-22 02:03:43 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-22 02:03:43 - app - INFO - State loaded from file
+2025-09-22 02:03:43 - app - INFO - TurtleBot Web UI starting up
+2025-09-22 02:03:43 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-22 02:03:43 - app - INFO - Starting Telegram bot polling worker
+2025-09-22 02:03:43 - app - INFO - Telegram bot polling started
+2025-09-22 02:03:43 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-22 02:03:43 - app - INFO - pan_tilt_ros_onefile started
+2025-09-22 02:03:43 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-22 02:03:43 - app - INFO - HumanFallDetection initialized successfully
+2025-09-22 02:05:41 - app - INFO - Simple meditation schedule system loaded
+2025-09-22 02:05:41 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-22 02:05:41 - app - INFO - State loaded from file
+2025-09-22 02:05:41 - app - INFO - TurtleBot Web UI starting up
+2025-09-22 02:05:41 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-22 02:05:41 - app - INFO - Starting Telegram bot polling worker
+2025-09-22 02:05:41 - app - INFO - Telegram bot polling started
+2025-09-22 02:05:41 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-22 02:05:41 - app - INFO - pan_tilt_ros_onefile started
+2025-09-22 02:05:41 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-22 02:05:41 - app - INFO - HumanFallDetection initialized successfully
+2025-09-22 02:07:25 - app - INFO - Simple meditation schedule system loaded
+2025-09-22 02:07:25 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-22 02:07:25 - app - INFO - State loaded from file
+2025-09-22 02:07:25 - app - INFO - TurtleBot Web UI starting up
+2025-09-22 02:07:25 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-22 02:07:25 - app - INFO - Starting Telegram bot polling worker
+2025-09-22 02:07:25 - app - INFO - Telegram bot polling started
+2025-09-22 02:07:25 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-22 02:07:25 - app - INFO - pan_tilt_ros_onefile started
+2025-09-22 02:07:25 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-22 02:07:25 - app - INFO - HumanFallDetection initialized successfully
+2025-09-22 03:26:51 - app - INFO - Simple meditation schedule system loaded
+2025-09-22 03:26:51 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-22 03:26:51 - app - INFO - State loaded from file
+2025-09-22 03:26:51 - app - INFO - TurtleBot Web UI starting up
+2025-09-22 03:26:51 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-22 03:26:51 - app - INFO - Starting Telegram bot polling worker
+2025-09-22 03:26:51 - app - INFO - Telegram bot polling started
+2025-09-22 03:26:51 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-22 03:26:51 - app - INFO - pan_tilt_ros_onefile started
+2025-09-22 03:26:51 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-22 03:26:53 - app - INFO - HumanFallDetection initialized successfully
+2025-09-22 04:22:49 - app - INFO - Simple meditation schedule system loaded
+2025-09-22 04:22:49 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-22 04:22:49 - app - INFO - State loaded from file
+2025-09-22 04:22:49 - app - INFO - TurtleBot Web UI starting up
+2025-09-22 04:22:49 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-22 04:22:49 - app - INFO - Starting Telegram bot polling worker
+2025-09-22 04:22:49 - app - INFO - Telegram bot polling started
+2025-09-22 04:22:49 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-22 04:22:49 - app - INFO - pan_tilt_ros_onefile started
+2025-09-22 04:22:49 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-22 04:22:51 - app - INFO - HumanFallDetection initialized successfully
+2025-09-22 04:36:37 - app - INFO - Simple meditation schedule system loaded
+2025-09-22 04:36:37 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-22 04:36:37 - app - INFO - State loaded from file
+2025-09-22 04:36:37 - app - INFO - TurtleBot Web UI starting up
+2025-09-22 04:36:37 - app - INFO - ROS Bridge configured: 10.101.110.248:9090
+2025-09-22 04:36:37 - app - INFO - Starting Telegram bot polling worker
+2025-09-22 04:36:37 - app - INFO - Telegram bot polling started
+2025-09-22 04:36:37 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-22 04:36:37 - app - INFO - pan_tilt_ros_onefile started
+2025-09-22 04:36:37 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 10.101.110.248:9090
+2025-09-22 04:36:39 - app - INFO - HumanFallDetection initialized successfully
+2025-09-22 04:38:55 - app - INFO - Simple meditation schedule system loaded
+2025-09-22 04:38:55 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-22 04:38:55 - app - INFO - State loaded from file
+2025-09-22 04:38:55 - app - INFO - TurtleBot Web UI starting up
+2025-09-22 04:38:55 - app - INFO - ROS Bridge configured: 10.101.110.248:9090
+2025-09-22 04:38:55 - app - INFO - Starting Telegram bot polling worker
+2025-09-22 04:38:55 - app - INFO - Telegram bot polling started
+2025-09-22 04:38:55 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-22 04:38:55 - app - INFO - pan_tilt_ros_onefile started
+2025-09-22 04:38:55 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 10.101.110.248:9090
+2025-09-22 04:38:56 - app - INFO - HumanFallDetection initialized successfully
+2025-09-22 05:03:46 - app - INFO - Simple meditation schedule system loaded
+2025-09-22 05:03:46 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-22 05:03:46 - app - INFO - State loaded from file
+2025-09-22 05:03:46 - app - INFO - TurtleBot Web UI starting up
+2025-09-22 05:03:46 - app - INFO - ROS Bridge configured: 10.101.110.248:9090
+2025-09-22 05:03:46 - app - INFO - Starting Telegram bot polling worker
+2025-09-22 05:03:46 - app - INFO - Telegram bot polling started
+2025-09-22 05:03:46 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-22 05:03:46 - app - INFO - pan_tilt_ros_onefile started
+2025-09-22 05:03:46 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 10.101.110.248:9090
+2025-09-22 05:03:46 - app - INFO - Telegram message from 6028252083: /start
+2025-09-22 05:03:47 - app - INFO - HumanFallDetection initialized successfully
+2025-09-22 05:04:01 - app - INFO - Telegram message from 6028252083: /start
+2025-09-22 05:04:04 - app - INFO - Telegram message from 6028252083: /help
+2025-09-22 05:04:11 - app - INFO - Telegram message from 6028252083: /status
+2025-09-22 05:04:14 - app - INFO - Telegram message from 6028252083: /photo
+2025-09-22 05:04:23 - app - INFO - Telegram message from 6028252083: /status
+2025-09-22 05:05:43 - app - INFO - Telegram message from 6028252083: /status
+2025-09-22 05:05:47 - app - INFO - Telegram message from 6028252083: /photo
+2025-09-22 05:06:06 - app - INFO - Telegram message from 6028252083: /status
+2025-09-22 05:06:10 - app - INFO - Telegram message from 6028252083: /photo
+2025-09-22 05:06:24 - app - INFO - Telegram message from 6028252083: /chat
+2025-09-22 05:06:56 - app - INFO - Telegram message from 6028252083: How are you? Can you tell me some jokes? Perhaps could you guide me to live better?
+2025-09-22 05:13:38 - app - INFO - Simple meditation schedule system loaded
+2025-09-22 05:13:38 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-22 05:13:38 - app - INFO - State loaded from file
+2025-09-22 05:13:38 - app - INFO - TurtleBot Web UI starting up
+2025-09-22 05:13:38 - app - INFO - ROS Bridge configured: 10.101.110.248:9090
+2025-09-22 05:13:38 - app - INFO - Starting Telegram bot polling worker
+2025-09-22 05:13:38 - app - INFO - Telegram bot polling started
+2025-09-22 05:13:38 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-22 05:13:38 - app - INFO - pan_tilt_ros_onefile started
+2025-09-22 05:13:38 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 10.101.110.248:9090
+2025-09-22 05:13:39 - app - INFO - HumanFallDetection initialized successfully
+2025-09-22 05:13:45 - app - INFO - Telegram message from 6028252083: How are you? Can you tell me some jokes? Perhaps could you guide me to live better?
+2025-09-22 05:15:14 - app - INFO - Simple meditation schedule system loaded
+2025-09-22 05:15:14 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-22 05:15:14 - app - INFO - State loaded from file
+2025-09-22 05:15:14 - app - INFO - TurtleBot Web UI starting up
+2025-09-22 05:15:14 - app - INFO - ROS Bridge configured: 10.100.110.248:9090
+2025-09-22 05:15:14 - app - INFO - Starting Telegram bot polling worker
+2025-09-22 05:15:14 - app - INFO - Telegram bot polling started
+2025-09-22 05:15:14 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-22 05:15:14 - app - INFO - pan_tilt_ros_onefile started
+2025-09-22 05:15:14 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 10.100.110.248:9090
+2025-09-22 05:15:15 - app - INFO - HumanFallDetection initialized successfully
+2025-09-22 05:15:21 - app - INFO - Telegram message from 6028252083: How are you? Can you tell me some jokes? Perhaps could you guide me to live better?
+2025-09-22 05:17:19 - app - INFO - Simple meditation schedule system loaded
+2025-09-22 05:17:19 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-22 05:17:19 - app - INFO - State loaded from file
+2025-09-22 05:17:19 - app - INFO - TurtleBot Web UI starting up
+2025-09-22 05:17:19 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-22 05:17:19 - app - INFO - Starting Telegram bot polling worker
+2025-09-22 05:17:19 - app - INFO - Telegram bot polling started
+2025-09-22 05:17:19 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-22 05:17:19 - app - INFO - pan_tilt_ros_onefile started
+2025-09-22 05:17:19 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-22 05:17:19 - app - INFO - HumanFallDetection initialized successfully
+2025-09-22 05:17:47 - app - INFO - Telegram message from 6028252083: How are you? Can you tell me some jokes? Perhaps could you guide me to live better?
+2025-09-22 05:17:48 - app - INFO - Telegram message from 6028252083: How are you? Can you tell me some jokes? Perhaps could you guide me to live better?
+2025-09-23 01:04:13 - app - INFO - Simple meditation schedule system loaded
+2025-09-23 01:04:13 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-23 01:04:13 - app - INFO - State loaded from file
+2025-09-23 01:04:13 - app - INFO - TurtleBot Web UI starting up
+2025-09-23 01:04:13 - app - INFO - ROS Bridge configured: 10.101.110.248:9090
+2025-09-23 01:04:13 - app - INFO - Starting Telegram bot polling worker
+2025-09-23 01:04:13 - app - INFO - Telegram bot polling started
+2025-09-23 01:04:13 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-23 01:04:13 - app - INFO - pan_tilt_ros_onefile started
+2025-09-23 01:04:13 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 10.101.110.248:9090
+2025-09-23 01:04:17 - app - INFO - HumanFallDetection initialized successfully
+2025-09-23 01:20:05 - app - INFO - Simple meditation schedule system loaded
+2025-09-23 01:20:05 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-23 01:20:05 - app - INFO - State loaded from file
+2025-09-23 01:20:05 - app - INFO - TurtleBot Web UI starting up
+2025-09-23 01:20:05 - app - INFO - ROS Bridge configured: 10.101.110.248:9090
+2025-09-23 01:20:05 - app - INFO - Starting Telegram bot polling worker
+2025-09-23 01:20:05 - app - INFO - Telegram bot polling started
+2025-09-23 01:20:05 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-23 01:20:05 - app - INFO - pan_tilt_ros_onefile started
+2025-09-23 01:20:05 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 10.101.110.248:9090
+2025-09-23 01:20:10 - app - INFO - HumanFallDetection initialized successfully
+2025-09-23 01:26:15 - app - INFO - Simple meditation schedule system loaded
+2025-09-23 01:26:15 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-23 01:26:15 - app - INFO - State loaded from file
+2025-09-23 01:26:15 - app - INFO - TurtleBot Web UI starting up
+2025-09-23 01:26:15 - app - INFO - ROS Bridge configured: 10.101.110.248:9090
+2025-09-23 01:26:15 - app - INFO - Starting Telegram bot polling worker
+2025-09-23 01:26:15 - app - INFO - Telegram bot polling started
+2025-09-23 01:26:15 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-23 01:26:15 - app - INFO - pan_tilt_ros_onefile started
+2025-09-23 01:26:15 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 10.101.110.248:9090
+2025-09-23 01:26:19 - app - INFO - HumanFallDetection initialized successfully
+2025-09-23 01:29:34 - app - INFO - Simple meditation schedule system loaded
+2025-09-23 01:29:34 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-23 01:29:34 - app - INFO - State loaded from file
+2025-09-23 01:29:34 - app - INFO - TurtleBot Web UI starting up
+2025-09-23 01:29:34 - app - INFO - ROS Bridge configured: 10.101.110.248:9090
+2025-09-23 01:29:34 - app - INFO - Starting Telegram bot polling worker
+2025-09-23 01:29:34 - app - INFO - Telegram bot polling started
+2025-09-23 01:29:34 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-23 01:29:34 - app - INFO - pan_tilt_ros_onefile started
+2025-09-23 01:29:34 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 10.101.110.248:9090
+2025-09-23 01:29:35 - app - INFO - HumanFallDetection initialized successfully
+2025-09-23 01:43:20 - app - INFO - Simple meditation schedule system loaded
+2025-09-23 01:43:20 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-23 01:43:20 - app - INFO - State loaded from file
+2025-09-23 01:43:20 - app - INFO - TurtleBot Web UI starting up
+2025-09-23 01:43:20 - app - INFO - ROS Bridge configured: 10.101.110.248:9090
+2025-09-23 01:43:20 - app - INFO - Starting Telegram bot polling worker
+2025-09-23 01:43:20 - app - INFO - Telegram bot polling started
+2025-09-23 01:43:20 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-23 01:43:21 - app - INFO - pan_tilt_ros_onefile started
+2025-09-23 01:43:21 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 10.101.110.248:9090
+2025-09-23 01:43:25 - app - INFO - HumanFallDetection initialized successfully
+2025-09-23 11:10:09 - app - INFO - Simple meditation schedule system loaded
+2025-09-23 11:10:09 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-23 11:10:09 - app - INFO - State loaded from file
+2025-09-23 11:10:09 - app - INFO - TurtleBot Web UI starting up
+2025-09-23 11:10:09 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-23 11:10:09 - app - INFO - Starting Telegram bot polling worker
+2025-09-23 11:10:09 - app - INFO - Telegram bot polling started
+2025-09-23 11:10:09 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-23 11:10:09 - app - INFO - pan_tilt_ros_onefile started
+2025-09-23 11:10:09 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-23 11:10:11 - app - INFO - HumanFallDetection initialized successfully
+2025-09-23 11:13:14 - app - INFO - Simple meditation schedule system loaded
+2025-09-23 11:13:14 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-23 11:13:14 - app - INFO - State loaded from file
+2025-09-23 11:13:14 - app - INFO - TurtleBot Web UI starting up
+2025-09-23 11:13:14 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-23 11:13:14 - app - INFO - Starting Telegram bot polling worker
+2025-09-23 11:13:14 - app - INFO - Telegram bot polling started
+2025-09-23 11:13:14 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-23 11:13:14 - app - INFO - pan_tilt_ros_onefile started
+2025-09-23 11:13:14 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-23 11:13:14 - app - INFO - HumanFallDetection initialized successfully
+2025-09-23 11:22:12 - app - INFO - Simple meditation schedule system loaded
+2025-09-23 11:22:12 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-23 11:22:12 - app - INFO - State loaded from file
+2025-09-23 11:22:12 - app - INFO - TurtleBot Web UI starting up
+2025-09-23 11:22:12 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-23 11:22:12 - app - INFO - Starting Telegram bot polling worker
+2025-09-23 11:22:12 - app - INFO - Telegram bot polling started
+2025-09-23 11:22:12 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-23 11:22:12 - app - INFO - pan_tilt_ros_onefile started
+2025-09-23 11:22:12 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-23 11:22:13 - app - INFO - HumanFallDetection initialized successfully
+2025-09-23 11:30:15 - app - INFO - Simple meditation schedule system loaded
+2025-09-23 11:30:15 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-23 11:30:15 - app - INFO - State loaded from file
+2025-09-23 11:30:15 - app - INFO - TurtleBot Web UI starting up
+2025-09-23 11:30:15 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-23 11:30:15 - app - INFO - Starting Telegram bot polling worker
+2025-09-23 11:30:15 - app - INFO - Telegram bot polling started
+2025-09-23 11:30:15 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-23 11:30:15 - app - INFO - pan_tilt_ros_onefile started
+2025-09-23 11:30:15 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-23 11:30:16 - app - INFO - HumanFallDetection initialized successfully
+2025-09-23 11:34:31 - app - INFO - Processing video test with model_type: both
+2025-09-23 11:37:32 - app - INFO - Telegram message from 5388617645: /start
+2025-09-23 11:37:43 - app - INFO - Telegram message from 5388617645: /help
+2025-09-23 11:37:49 - app - INFO - Telegram message from 5388617645: /help
+2025-09-23 11:37:52 - app - INFO - Telegram message from 5388617645: /status
+2025-09-23 11:38:06 - app - INFO - Telegram message from 5388617645: /chat
+2025-09-23 11:38:24 - app - INFO - Telegram message from 5388617645: How are you, greet me in good way.
+2025-09-23 11:38:43 - app - INFO - Telegram message from 5388617645: /test
+2025-09-23 11:38:48 - app - INFO - Telegram message from 5388617645: /photo
+2025-09-23 12:18:15 - app - INFO - Simple meditation schedule system loaded
+2025-09-23 12:18:15 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-23 12:18:15 - app - INFO - State loaded from file
+2025-09-23 12:18:15 - app - INFO - TurtleBot Web UI starting up
+2025-09-23 12:18:15 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-23 12:18:15 - app - INFO - Starting Telegram bot polling worker
+2025-09-23 12:18:15 - app - INFO - Telegram bot polling started
+2025-09-23 12:18:15 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-23 12:18:15 - app - INFO - pan_tilt_ros_onefile started
+2025-09-23 12:18:15 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-23 12:18:19 - app - INFO - HumanFallDetection initialized successfully
+2025-09-23 12:22:53 - app - INFO - Processing video test with model_type: humanfall
+2025-09-23 12:26:53 - app - INFO - Telegram message from 5388617645: /start
+2025-09-23 12:27:12 - app - INFO - Telegram message from 5388617645: /help
+2025-09-23 12:27:15 - app - INFO - Telegram message from 5388617645: /status
+2025-09-23 12:27:23 - app - INFO - Telegram message from 5388617645: /photo
+2025-09-23 12:27:28 - app - INFO - Telegram message from 5388617645: /chat
+2025-09-25 23:27:46 - app - INFO - Simple meditation schedule system loaded
+2025-09-25 23:27:46 - app - INFO - Simple meditation manager initialized with Telegram function
+2025-09-25 23:27:46 - app - INFO - State loaded from file
+2025-09-25 23:27:46 - app - INFO - TurtleBot Web UI starting up
+2025-09-25 23:27:46 - app - INFO - ROS Bridge configured: 192.168.1.100:9090
+2025-09-25 23:27:47 - app - INFO - Starting Telegram bot polling worker
+2025-09-25 23:27:47 - app - INFO - Telegram bot polling started
+2025-09-25 23:27:47 - app - INFO - stt_tts_bridge started with enhanced voice bridge functionality
+2025-09-25 23:27:47 - app - INFO - pan_tilt_ros_onefile started
+2025-09-25 23:27:47 - app - INFO - Web UI hosting at http://0.0.0.0:5000  |  ROSBridge: 192.168.1.100:9090
+2025-09-25 23:27:48 - app - INFO - HumanFallDetection initialized successfully

@@ -1,0 +1,776 @@
+{% extends "layout.html" %}
+
+{% block title %}Robot Control - Ellie Companion Robot{% endblock %}
+
+{% block header %}
+<div class="page-header">
+    <h1>🤖 Robot Control</h1>
+    <p>Control robot movement and camera with unified interface</p>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .control-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .video-container {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        background-color: #000;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+    }
+
+    .video-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .controls-panel {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .control-section {
+        background-color: var(--card-background);
+        border-radius: var(--border-radius);
+        padding: 1.5rem;
+        box-shadow: var(--box-shadow);
+    }
+
+    .control-section h3 {
+        margin-bottom: 1rem;
+        color: var(--text-color);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .section-icon {
+        font-size: 1.5rem;
+    }
+
+    /* Robot Movement Controls */
+    .speed-control {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .speed-slider {
+        width: 100%;
+        height: 8px;
+        -webkit-appearance: none;
+        appearance: none;
+        background: #e2e8f0;
+        border-radius: 4px;
+        outline: none;
+    }
+
+    .speed-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        background: var(--primary-color);
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .speed-value {
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--primary-color);
+    }
+
+    .two-column-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .movement-controls {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .control-spacer {
+        width: 100%;
+        height: 100%;
+    }
+
+    .control-key {
+        aspect-ratio: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--background-color);
+        border: 2px solid var(--primary-color);
+        border-radius: var(--border-radius);
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        cursor: pointer;
+        transition: all 0.2s ease;
+        user-select: none;
+    }
+
+    .control-key:hover {
+        background-color: var(--primary-color);
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    .control-key.active {
+        background-color: var(--primary-color);
+        color: white;
+        transform: scale(0.95);
+    }
+
+    /* Pan Tilt Controls */
+    .pan-tilt-status {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        padding: 0.75rem;
+        background-color: #f8fafc;
+        border-radius: var(--border-radius);
+        border: 1px solid #e5e7eb;
+    }
+
+    .status-item {
+        text-align: center;
+    }
+
+    .status-label {
+        font-size: 0.875rem;
+        color: #6b7280;
+        margin-bottom: 0.25rem;
+    }
+
+    .status-value {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: var(--primary-color);
+    }
+
+    .status-indicator {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #ef4444;
+        margin-left: 0.5rem;
+        display: inline-block;
+    }
+
+    .status-indicator.connected {
+        background-color: #10b981;
+    }
+
+    .pan-tilt-controls {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .pan-controls, .tilt-controls {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .control-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+
+    .pan-tilt-button {
+        aspect-ratio: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--background-color);
+        border: 2px solid var(--warning-color);
+        border-radius: var(--border-radius);
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--warning-color);
+        cursor: pointer;
+        transition: all 0.2s ease;
+        user-select: none;
+    }
+
+    .pan-tilt-button:hover {
+        background-color: var(--warning-color);
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    .pan-tilt-button.active {
+        background-color: var(--warning-color);
+        color: white;
+        transform: scale(0.95);
+    }
+
+    .preset-buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .preset-button {
+        padding: 0.75rem;
+        background-color: var(--background-color);
+        border: 1px solid #e5e7eb;
+        border-radius: var(--border-radius);
+        color: var(--text-color);
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-align: center;
+        font-weight: 500;
+        font-size: 0.875rem;
+    }
+
+    .preset-button:hover {
+        background-color: var(--warning-color);
+        color: white;
+        border-color: var(--warning-color);
+        transform: translateY(-1px);
+    }
+
+    .keyboard-info {
+        background-color: #f8fafc;
+        border: 1px solid #e5e7eb;
+        border-radius: var(--border-radius);
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
+    .keyboard-info h4 {
+        margin-bottom: 0.75rem;
+        color: var(--text-color);
+        font-size: 1rem;
+    }
+
+    .keyboard-info ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .keyboard-info li {
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    .keyboard-info kbd {
+        background-color: #f1f5f9;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-family: monospace;
+        font-size: 0.75rem;
+        border: 1px solid #d1d5db;
+    }
+
+    .controls-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .control-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .control-label {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: #6b7280;
+        text-align: center;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 1024px) {
+        .control-container {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        .two-column-layout {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .pan-tilt-controls {
+            grid-template-columns: 1fr;
+        }
+        
+        .preset-buttons {
+            grid-template-columns: 1fr;
+        }
+        
+        .controls-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .control-row {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="control-container">
+    <div class="video-container">
+        <img src="{{ url_for('video_feed') }}" alt="Robot Camera Feed">
+    </div>
+
+    <div class="controls-panel">
+        <!-- Two Column Layout -->
+        <div class="two-column-layout">
+            <!-- Column 1: Robot Movement -->
+            <div class="control-section">
+                <h3><span class="section-icon">🤖</span>Robot Movement</h3>
+                
+                <div class="speed-control">
+                    <label for="speed-slider">Movement Speed</label>
+                    <input type="range" class="speed-slider" min="0.1" max="1.0" step="0.1" value="0.1" id="speed-slider">
+                    <div class="speed-value" id="speed-value">10%</div>
+                </div>
+
+                <div class="movement-controls">
+                    <!-- Row 1: Forward -->
+                    <div class="control-row">
+                        <div class="control-spacer"></div>
+                        <button class="control-key" data-direction="forward" title="Move Forward (W/↑)">↑</button>
+                        <div class="control-spacer"></div>
+                    </div>
+                    <!-- Row 2: Left, Stop, Right -->
+                    <div class="control-row">
+                        <button class="control-key" data-direction="left" title="Turn Left (A/←)">←</button>
+                        <button class="control-key" data-direction="stop" title="Stop (Space)">⏹</button>
+                        <button class="control-key" data-direction="right" title="Turn Right (D/→)">→</button>
+                    </div>
+                    <!-- Row 3: Backward -->
+                    <div class="control-row">
+                        <div class="control-spacer"></div>
+                        <button class="control-key" data-direction="backward" title="Move Backward (S/↓)">↓</button>
+                        <div class="control-spacer"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2: Camera Pan/Tilt -->
+            <div class="control-section">
+                <h3><span class="section-icon">📹</span>Camera Pan/Tilt</h3>
+            
+            <!-- Status Display -->
+            <div class="pan-tilt-status">
+                <div class="status-item">
+                    <div class="status-label">Connection</div>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <span id="connection-status">Disconnected</span>
+                        <div class="status-indicator" id="connection-indicator"></div>
+                    </div>
+                </div>
+                <div class="status-item">
+                    <div class="status-label">Pan Angle</div>
+                    <div class="status-value" id="pan-angle">90°</div>
+                </div>
+                <div class="status-item">
+                    <div class="status-label">Tilt Angle</div>
+                    <div class="status-value" id="tilt-angle">90°</div>
+                </div>
+            </div>
+
+            <!-- Pan Tilt Controls -->
+            <div class="pan-tilt-controls">
+                <!-- Pan Controls -->
+                <div class="pan-controls">
+                    <div class="control-label">Pan (Q/E)</div>
+                    <div class="control-row">
+                        <button class="pan-tilt-button" id="pan-left" data-action="pan" data-direction="left" title="Pan Left (Q)">←</button>
+                        <button class="pan-tilt-button" id="pan-center" data-action="pan" data-direction="center" title="Center Pan (C)">⏹</button>
+                        <button class="pan-tilt-button" id="pan-right" data-action="pan" data-direction="right" title="Pan Right (E)">→</button>
+                    </div>
+                </div>
+
+                <!-- Tilt Controls -->
+                <div class="tilt-controls">
+                    <div class="control-label">Tilt (R/F)</div>
+                    <div class="control-row">
+                        <button class="pan-tilt-button" id="tilt-up" data-action="tilt" data-direction="up" title="Tilt Up (R)">↑</button>
+                        <button class="pan-tilt-button" id="tilt-center" data-action="tilt" data-direction="center" title="Center Tilt (C)">⏹</button>
+                        <button class="pan-tilt-button" id="tilt-down" data-action="tilt" data-direction="down" title="Tilt Down (F)">↓</button>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Preset Positions -->
+                <div class="preset-buttons">
+                    <button class="preset-button" id="preset-center">Center (90°, 90°)</button>
+                    <button class="preset-button" id="preset-forward">Look Forward (90°, 45°)</button>
+                    <button class="preset-button" id="preset-up">Look Up (90°, 135°)</button>
+                    <button class="preset-button" id="preset-down">Look Down (90°, 0°)</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Keyboard Controls (merged at bottom) -->
+        <div class="keyboard-info">
+            <h4>⌨️ Keyboard Controls</h4>
+            <div class="controls-grid">
+                <div class="control-group">
+                    <h5>Robot Movement:</h5>
+                    <ul>
+                        <li><kbd>W</kbd> / <kbd>↑</kbd> - Move Forward</li>
+                        <li><kbd>S</kbd> / <kbd>↓</kbd> - Move Backward</li>
+                        <li><kbd>A</kbd> / <kbd>←</kbd> - Turn Left</li>
+                        <li><kbd>D</kbd> / <kbd>→</kbd> - Turn Right</li>
+                        <li><kbd>Space</kbd> - Stop All</li>
+                    </ul>
+                </div>
+                <div class="control-group">
+                    <h5>Camera Pan/Tilt:</h5>
+                    <ul>
+                        <li><kbd>Q</kbd> - Pan Left</li>
+                        <li><kbd>E</kbd> - Pan Right</li>
+                        <li><kbd>R</kbd> - Tilt Up</li>
+                        <li><kbd>F</kbd> - Tilt Down</li>
+                        <li><kbd>C</kbd> - Center Both</li>
+                        <li><kbd>1</kbd> - Look Forward</li>
+                        <li><kbd>2</kbd> - Look Up</li>
+                        <li><kbd>3</kbd> - Look Down</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Global variables
+    let currentSpeed = 0.1;
+    let activeKeys = new Set();
+    let panAngle = 90;
+    let tiltAngle = 90;
+    let isConnected = false;
+    let statusUpdateInterval;
+
+    // Initialize the page
+    document.addEventListener('DOMContentLoaded', () => {
+        initializeControls();
+        setupEventListeners();
+        startStatusUpdates();
+    });
+
+    function initializeControls() {
+        loadInitialSpeed();
+        checkPanTiltConnection();
+    }
+
+    // Speed Control Functions
+    async function loadInitialSpeed() {
+        try {
+            await turtlebotApp.loadState();
+            currentSpeed = turtlebotApp.state.speed || 0.1;
+            updateSpeedDisplay();
+        } catch (error) {
+            console.error('Error loading initial speed:', error);
+        }
+    }
+
+    function updateSpeedDisplay() {
+        const speedSlider = document.getElementById('speed-slider');
+        const speedValue = document.getElementById('speed-value');
+        
+        speedSlider.value = currentSpeed;
+        speedValue.textContent = turtlebotApp.formatSpeed(currentSpeed);
+    }
+
+    const debouncedSaveSpeed = turtlebotApp.debounce(async (speed) => {
+        try {
+            await turtlebotApp.saveState('speed', speed);
+        } catch (error) {
+            console.error('Error saving speed:', error);
+        }
+    }, 500);
+
+    // Robot Movement Functions
+    function sendCommand(direction, speed = 0.1) {
+        fetch(`/api/command/${direction}/${speed}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.status !== 'success') {
+                    console.error('Command failed:', data.status);
+                }
+            })
+            .catch(error => {
+                console.error('Error sending command:', error);
+            });
+    }
+
+    // Pan Tilt Functions
+    function checkPanTiltConnection() {
+        fetch('/api/pantilt/status')
+        .then(response => response.json())
+        .then(data => {
+            isConnected = data.connected;
+            if (data.connected) {
+                panAngle = data.pan_angle || 90;
+                tiltAngle = data.tilt_angle || 90;
+            }
+            updatePanTiltDisplay();
+        })
+        .catch(error => {
+            console.error('Error checking pan tilt connection:', error);
+            isConnected = false;
+            updatePanTiltDisplay();
+        });
+    }
+
+    function updatePanTiltDisplay() {
+        document.getElementById('connection-status').textContent = isConnected ? 'Connected' : 'Disconnected';
+        document.getElementById('connection-indicator').classList.toggle('connected', isConnected);
+        document.getElementById('pan-angle').textContent = `${panAngle}°`;
+        document.getElementById('tilt-angle').textContent = `${tiltAngle}°`;
+
+        // Enable/disable controls based on connection
+        const controls = document.querySelectorAll('.pan-tilt-button, .preset-button');
+        controls.forEach(control => {
+            control.disabled = !isConnected;
+        });
+    }
+
+    function sendPanStep(steps) {
+        if (!isConnected) return;
+        
+        fetch('/api/pantilt/pan/step', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ steps: steps })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.ok) {
+                panAngle = data.pan_angle;
+                updatePanTiltDisplay();
+            }
+        })
+        .catch(error => console.error('Pan step error:', error));
+    }
+
+    function sendTiltStep(steps) {
+        if (!isConnected) return;
+        
+        fetch('/api/pantilt/tilt/step', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ steps: steps })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.ok) {
+                tiltAngle = data.tilt_angle;
+                updatePanTiltDisplay();
+            }
+        })
+        .catch(error => console.error('Tilt step error:', error));
+    }
+
+    function setPresetPosition(pan, tilt) {
+        if (!isConnected) return;
+
+        fetch('/api/pantilt/set', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ pan: pan, tilt: tilt })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.ok) {
+                panAngle = pan;
+                tiltAngle = tilt;
+                updatePanTiltDisplay();
+            }
+        })
+        .catch(error => console.error('Preset position error:', error));
+    }
+
+    // Event Listeners Setup
+    function setupEventListeners() {
+        // Speed slider
+        document.getElementById('speed-slider').addEventListener('input', (e) => {
+            currentSpeed = parseFloat(e.target.value);
+            updateSpeedDisplay();
+            debouncedSaveSpeed(currentSpeed);
+        });
+
+        // Robot movement buttons
+        document.querySelectorAll('.control-key').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                const direction = button.dataset.direction;
+                sendCommand(direction, currentSpeed);
+                button.classList.add('active');
+            });
+
+            button.addEventListener('mouseup', () => {
+                sendCommand('stop');
+                button.classList.remove('active');
+            });
+
+            button.addEventListener('mouseleave', () => {
+                button.classList.remove('active');
+            });
+        });
+
+        // Pan tilt buttons
+        document.querySelectorAll('.pan-tilt-button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                const action = button.dataset.action;
+                const direction = button.dataset.direction;
+                
+                if (action === 'pan') {
+                    if (direction === 'left') sendPanStep(-1);
+                    else if (direction === 'right') sendPanStep(1);
+                    else if (direction === 'center') setPresetPosition(90, tiltAngle);
+                } else if (action === 'tilt') {
+                    if (direction === 'up') sendTiltStep(1);
+                    else if (direction === 'down') sendTiltStep(-1);
+                    else if (direction === 'center') setPresetPosition(panAngle, 90);
+                }
+                
+                button.classList.add('active');
+            });
+
+            button.addEventListener('mouseup', () => {
+                button.classList.remove('active');
+            });
+
+            button.addEventListener('mouseleave', () => {
+                button.classList.remove('active');
+            });
+        });
+
+        // Preset buttons
+        document.getElementById('preset-center').addEventListener('click', () => setPresetPosition(90, 90));
+        document.getElementById('preset-forward').addEventListener('click', () => setPresetPosition(90, 45));
+        document.getElementById('preset-up').addEventListener('click', () => setPresetPosition(90, 135));
+        document.getElementById('preset-down').addEventListener('click', () => setPresetPosition(90, 0));
+
+        // Keyboard controls
+        document.addEventListener('keydown', handleKeyDown);
+        document.addEventListener('keyup', handleKeyUp);
+    }
+
+    // Keyboard Event Handlers
+    function handleKeyDown(e) {
+        if (activeKeys.has(e.key)) return;
+        activeKeys.add(e.key);
+
+        const key = e.key.toLowerCase();
+        
+        // Robot movement controls
+        if (['w', 'arrowup'].includes(key)) {
+            sendCommand('forward', currentSpeed);
+            document.querySelector('[data-direction="forward"]').classList.add('active');
+        } else if (['s', 'arrowdown'].includes(key)) {
+            sendCommand('backward', currentSpeed);
+            document.querySelector('[data-direction="backward"]').classList.add('active');
+        } else if (['a', 'arrowleft'].includes(key)) {
+            sendCommand('left', currentSpeed);
+            document.querySelector('[data-direction="left"]').classList.add('active');
+        } else if (['d', 'arrowright'].includes(key)) {
+            sendCommand('right', currentSpeed);
+            document.querySelector('[data-direction="right"]').classList.add('active');
+        } else if (key === ' ') {
+            sendCommand('stop');
+            document.querySelector('[data-direction="stop"]').classList.add('active');
+        }
+        
+        // Pan tilt controls (using separate keys to avoid conflicts)
+        if (key === 'q') {
+            sendPanStep(-1);
+            document.getElementById('pan-left').classList.add('active');
+        } else if (key === 'e') {
+            sendPanStep(1);
+            document.getElementById('pan-right').classList.add('active');
+        } else if (key === 'r') {
+            sendTiltStep(1);
+            document.getElementById('tilt-up').classList.add('active');
+        } else if (key === 'f') {
+            sendTiltStep(-1);
+            document.getElementById('tilt-down').classList.add('active');
+        } else if (key === 'c') {
+            setPresetPosition(90, 90);
+        } else if (key === '1') {
+            setPresetPosition(90, 45);
+        } else if (key === '2') {
+            setPresetPosition(90, 135);
+        } else if (key === '3') {
+            setPresetPosition(90, 0);
+        }
+    }
+
+    function handleKeyUp(e) {
+        activeKeys.delete(e.key);
+        
+        const key = e.key.toLowerCase();
+        
+        // Stop robot movement
+        if (['w', 's', 'a', 'd', 'arrowup', 'arrowdown', 'arrowleft', 'arrowright', ' '].includes(key)) {
+            sendCommand('stop');
+            document.querySelectorAll('.control-key').forEach(btn => btn.classList.remove('active'));
+        }
+        
+        // Remove pan tilt active states
+        if (['q', 'e', 'r', 'f'].includes(key)) {
+            document.querySelectorAll('.pan-tilt-button').forEach(btn => btn.classList.remove('active'));
+        }
+    }
+
+    function startStatusUpdates() {
+        statusUpdateInterval = setInterval(() => {
+            checkPanTiltConnection();
+        }, 2000);
+    }
+
+    // Cleanup on page unload
+    window.addEventListener('beforeunload', () => {
+        if (statusUpdateInterval) {
+            clearInterval(statusUpdateInterval);
+        }
+    });
+</script>
+{% endblock %}

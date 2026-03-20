@@ -1,0 +1,134 @@
+{
+  "schedules": [
+    {
+      "schedule_id": "meditation_1758359419",
+      "title": "test2",
+      "time": "17:11",
+      "duration": 15,
+      "enabled": true,
+      "repeat_days": [],
+      "notification_sent": false,
+      "created_at": "2025-09-20T17:10:19.463287",
+      "last_notification": null,
+      "notification_count": 0
+    },
+    {
+      "schedule_id": "meditation_1758359931",
+      "title": "test3",
+      "time": "17:19",
+      "duration": 15,
+      "enabled": true,
+      "repeat_days": [],
+      "notification_sent": false,
+      "created_at": "2025-09-20T17:18:51.655273",
+      "last_notification": null,
+      "notification_count": 0
+    },
+    {
+      "schedule_id": "meditation_1758360137",
+      "title": "Test Meditation",
+      "time": "18:00",
+      "duration": 10,
+      "enabled": true,
+      "repeat_days": [
+        "monday",
+        "wednesday",
+        "friday"
+      ],
+      "notification_sent": false,
+      "created_at": "2025-09-20T17:22:17.943387",
+      "last_notification": null,
+      "notification_count": 0
+    },
+    {
+      "schedule_id": "meditation_1758360154",
+      "title": "Test Meditation",
+      "time": "18:00",
+      "duration": 10,
+      "enabled": true,
+      "repeat_days": [
+        "monday",
+        "wednesday",
+        "friday"
+      ],
+      "notification_sent": false,
+      "created_at": "2025-09-20T17:22:34.409041",
+      "last_notification": null,
+      "notification_count": 0
+    },
+    {
+      "schedule_id": "meditation_1758360287",
+      "title": "testnow",
+      "time": "17:25",
+      "duration": 5,
+      "enabled": true,
+      "repeat_days": [],
+      "notification_sent": false,
+      "created_at": "2025-09-20T17:24:47.800653",
+      "last_notification": null,
+      "notification_count": 0
+    },
+    {
+      "schedule_id": "meditation_1758360722",
+      "title": "snv",
+      "time": "22:32",
+      "duration": 15,
+      "enabled": true,
+      "repeat_days": [],
+      "notification_sent": false,
+      "created_at": "2025-09-20T17:32:02.569898",
+      "last_notification": null,
+      "notification_count": 0
+    },
+    {
+      "schedule_id": "meditation_1758360991",
+      "title": "test12312",
+      "time": "11:11",
+      "duration": 15,
+      "enabled": true,
+      "repeat_days": [],
+      "notification_sent": false,
+      "created_at": "2025-09-20T17:36:31.248217",
+      "last_notification": null,
+      "notification_count": 0
+    },
+    {
+      "schedule_id": "meditation_1758361000",
+      "title": "tttt",
+      "time": "12:31",
+      "duration": 15,
+      "enabled": true,
+      "repeat_days": [],
+      "notification_sent": false,
+      "created_at": "2025-09-20T17:36:40.043314",
+      "last_notification": null,
+      "notification_count": 0
+    },
+    {
+      "schedule_id": "meditation_1758598420",
+      "title": "Test11",
+      "time": "11:34",
+      "duration": 15,
+      "enabled": true,
+      "repeat_days": [],
+      "notification_sent": true,
+      "created_at": "2025-09-23T11:33:40.255307",
+      "last_notification": "2025-09-23T11:34:15.083601",
+      "notification_count": 1
+    },
+    {
+      "schedule_id": "meditation_1758601307",
+      "title": "Test99",
+      "time": "12:22",
+      "duration": 15,
+      "enabled": true,
+      "repeat_days": [],
+      "notification_sent": true,
+      "created_at": "2025-09-23T12:21:47.872990",
+      "last_notification": "2025-09-23T12:22:15.804250",
+      "notification_count": 1
+    }
+  ],
+  "last_updated": "2025-09-23T12:32:22.464339",
+  "version": "1.0"
+}

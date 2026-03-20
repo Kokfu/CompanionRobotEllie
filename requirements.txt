@@ -1,0 +1,42 @@
+# Core Web Framework
+flask==3.0.2
+werkzeug>=3.0.0
+
+# ROS Integration
+roslibpy==1.3.0
+rclpy>=3.3.0
+
+# Computer Vision & Image Processing
+opencv-python==4.9.0.80
+numpy==1.26.4
+Pillow==10.3.0
+tflite-runtime==2.14.0
+
+# Configuration & Environment
+python-dotenv==1.0.1
+pyyaml==6.0.1
+
+# HTTP & API
+requests>=2.31.0
+
+# STT/TTS Dependencies
+vosk>=0.3.45
+google-generativeai>=0.3.0
+pyaudio>=0.2.11
+
+# Hardware Control (Raspberry Pi)
+RPi.GPIO>=0.7.1
+
+# Navigation & ROS2
+nav2-simple-commander>=1.1.0
+geometry-msgs>=4.2.0
+
+# Fall Detection Dependencies
+scipy>=1.9.0
+matplotlib>=3.5.0
+pandas>=1.4.0
+
+# Additional Dependencies
+certifi>=2022.12.7
+urllib3>=1.26.0
+

@@ -1,0 +1,1429 @@
+{% extends "layout.html" %}
+
+{% block title %}STT/TTS Control - Ellie Companion Robot{% endblock %}
+
+{% block header %}
+<div class="page-header">
+    <h1>🎤 Speech-to-Text & Text-to-Speech</h1>
+    <p>Voice interaction with AI-powered speech recognition and synthesis</p>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .stt-tts-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .control-panel {
+        background: var(--card-background);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        padding: 1.5rem;
+    }
+
+    .voice-selection {
+        margin-bottom: 1.5rem;
+    }
+
+    .voice-options {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .voice-option {
+        padding: 1rem;
+        border: 2px solid #e5e7eb;
+        border-radius: var(--border-radius);
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        background: white;
+    }
+
+    .voice-option:hover {
+        border-color: var(--primary-color);
+        background: #f8fafc;
+    }
+
+    .voice-option.selected {
+        border-color: var(--primary-color);
+        background: #eff6ff;
+        color: var(--primary-color);
+    }
+
+    .voice-option .voice-icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .voice-option .voice-name {
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .test-voice-btn {
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        margin-top: 0.5rem;
+    }
+
+    .test-voice-btn:hover {
+        background: var(--primary-dark);
+        transform: translateY(-1px);
+    }
+
+    .test-voice-btn:disabled {
+        background: #9ca3af;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+    .language-selection {
+        margin-bottom: 1.5rem;
+    }
+
+    .language-options {
+        display: flex;
+        gap: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .language-option {
+        flex: 1;
+        padding: 0.75rem 1rem;
+        border: 2px solid #e5e7eb;
+        border-radius: var(--border-radius);
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        background: white;
+        font-weight: 500;
+    }
+
+    .language-option:hover {
+        border-color: var(--primary-color);
+        background: #f8fafc;
+    }
+
+    .language-option.selected {
+        border-color: var(--primary-color);
+        background: #eff6ff;
+        color: var(--primary-color);
+    }
+
+    .audio-output-selection {
+        margin-bottom: 1.5rem;
+    }
+
+    .output-options {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .output-option {
+        padding: 1rem;
+        border: 2px solid #e5e7eb;
+        border-radius: var(--border-radius);
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        background: white;
+    }
+
+    .output-option:hover {
+        border-color: var(--primary-color);
+        background: #f8fafc;
+    }
+
+    .output-option.selected {
+        border-color: var(--primary-color);
+        background: #eff6ff;
+        color: var(--primary-color);
+    }
+
+    .output-option .output-icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .output-option .output-name {
+        font-weight: 600;
+        font-size: 0.8rem;
+    }
+
+    .control-buttons {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn-large {
+        flex: 1;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: var(--border-radius);
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .btn-stt {
+        background: var(--success-color);
+        color: white;
+    }
+
+    .btn-stt:hover {
+        background: #15803d;
+        transform: translateY(-2px);
+    }
+
+    .btn-stt:disabled {
+        background: #9ca3af;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+    .btn-tts {
+        background: var(--primary-color);
+        color: white;
+    }
+
+    .btn-tts:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+    }
+
+    .btn-tts:disabled {
+        background: #9ca3af;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+    .text-input-section {
+        margin-bottom: 1.5rem;
+    }
+
+    .text-input {
+        width: 100%;
+        padding: 1rem;
+        border: 2px solid #e5e7eb;
+        border-radius: var(--border-radius);
+        font-size: 1rem;
+        resize: vertical;
+        min-height: 100px;
+        font-family: inherit;
+    }
+
+    .text-input:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    .status-display {
+        background: #f8fafc;
+        border: 1px solid #e5e7eb;
+        border-radius: var(--border-radius);
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        min-height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+    }
+
+    .status-recording {
+        background: #fef2f2;
+        border-color: var(--danger-color);
+        color: var(--danger-color);
+    }
+
+    .status-processing {
+        background: #fffbeb;
+        border-color: var(--warning-color);
+        color: var(--warning-color);
+    }
+
+    .status-ready {
+        background: #f0fdf4;
+        border-color: var(--success-color);
+        color: var(--success-color);
+    }
+
+    .monitoring-panel {
+        background: var(--card-background);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .monitor-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .monitor-section h4 {
+        margin: 0 0 1rem 0;
+        color: var(--text-color);
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .status-indicators {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .status-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem;
+        background: #f8fafc;
+        border-radius: 8px;
+        border: 1px solid #e5e7eb;
+    }
+
+    .status-icon {
+        font-size: 1.25rem;
+        width: 24px;
+        text-align: center;
+    }
+
+    .status-label {
+        flex: 1;
+        font-weight: 500;
+        color: var(--text-color);
+    }
+
+    .status-value {
+        padding: 0.25rem 0.75rem;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .status-value.available {
+        background: #dcfce7;
+        color: #166534;
+    }
+
+    .status-value.unavailable {
+        background: #fef2f2;
+        color: #dc2626;
+    }
+
+    .status-value.checking {
+        background: #fef3c7;
+        color: #d97706;
+    }
+
+    .activity-feed {
+        max-height: 200px;
+        overflow-y: auto;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        background: #f8fafc;
+    }
+
+    .activity-item {
+        display: flex;
+        gap: 0.75rem;
+        padding: 0.75rem;
+        border-bottom: 1px solid #e5e7eb;
+        font-size: 0.9rem;
+    }
+
+    .activity-item:last-child {
+        border-bottom: none;
+    }
+
+    .activity-time {
+        color: #6b7280;
+        font-weight: 500;
+        min-width: 60px;
+    }
+
+    .activity-text {
+        color: var(--text-color);
+        flex: 1;
+    }
+
+    .audio-level-container {
+        text-align: center;
+    }
+
+    .audio-level-bar {
+        width: 100%;
+        height: 20px;
+        background: #e5e7eb;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 0.5rem;
+        position: relative;
+    }
+
+    .audio-level-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #10b981, #f59e0b, #ef4444);
+        width: 0%;
+        transition: width 0.1s ease;
+        border-radius: 10px;
+    }
+
+    .audio-level-text {
+        font-size: 0.8rem;
+        color: #6b7280;
+        font-weight: 500;
+    }
+
+    .monitor-controls {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .logs-panel {
+        background: var(--card-background);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        padding: 1.5rem;
+    }
+
+    .logs-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .logs-list {
+        max-height: 400px;
+        overflow-y: auto;
+        border: 1px solid #e5e7eb;
+        border-radius: var(--border-radius);
+    }
+
+    .log-entry {
+        padding: 1rem;
+        border-bottom: 1px solid #e5e7eb;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .log-actions {
+        display: flex;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+
+    .btn-sm {
+        padding: 0.25rem 0.75rem;
+        font-size: 0.75rem;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+        background: var(--primary-color);
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background: var(--primary-dark);
+    }
+
+    .btn-primary:disabled {
+        background: #9ca3af;
+        cursor: not-allowed;
+    }
+
+    .log-entry:last-child {
+        border-bottom: none;
+    }
+
+    .log-content {
+        flex: 1;
+    }
+
+    .log-text {
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+    }
+
+    .log-meta {
+        font-size: 0.875rem;
+        color: #6b7280;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .log-timestamp {
+        font-family: monospace;
+    }
+
+    .log-language {
+        background: #e5e7eb;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.75rem;
+    }
+
+    .log-voice {
+        background: #dbeafe;
+        color: var(--primary-color);
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.75rem;
+    }
+
+    .loading-spinner {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #f3f3f3;
+        border-top: 2px solid var(--primary-color);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .recording-indicator {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        background: var(--danger-color);
+        border-radius: 50%;
+        animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+        0% { opacity: 1; }
+        50% { opacity: 0.5; }
+        100% { opacity: 1; }
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+        .stt-tts-container {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .voice-options {
+            grid-template-columns: 1fr;
+        }
+
+        .language-options {
+            flex-direction: column;
+        }
+
+        .output-options {
+            grid-template-columns: 1fr;
+        }
+
+        .control-buttons {
+            flex-direction: column;
+        }
+
+        .logs-header {
+            flex-direction: column;
+            gap: 1rem;
+            align-items: stretch;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="stt-tts-container">
+    <!-- Control Panel -->
+    <div class="control-panel">
+        <h2 class="card-title">🎤 STT/TTS Control</h2>
+        
+        <!-- Voice Selection -->
+        <div class="voice-selection">
+            <h3>Voice Selection</h3>
+            <div class="voice-options">
+                <div class="voice-option selected" data-voice="Kore">
+                    <div class="voice-icon">👨</div>
+                    <div class="voice-name">Men (Kore)</div>
+                    <button class="test-voice-btn" data-voice="Kore">🔊 Test</button>
+                </div>
+                <div class="voice-option" data-voice="Aoede">
+                    <div class="voice-icon">👩</div>
+                    <div class="voice-name">Girl (Aoede)</div>
+                    <button class="test-voice-btn" data-voice="Aoede">🔊 Test</button>
+                </div>
+                <div class="voice-option" data-voice="Charon">
+                    <div class="voice-icon">👶</div>
+                    <div class="voice-name">Soft Child (Charon)</div>
+                    <button class="test-voice-btn" data-voice="Charon">🔊 Test</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Language Selection -->
+        <div class="language-selection">
+            <h3>Language Selection</h3>
+            <div class="language-options">
+                <div class="language-option selected" data-lang="en">
+                    🇺🇸 English
+                </div>
+                <div class="language-option" data-lang="zh">
+                    🇨🇳 Chinese
+                </div>
+            </div>
+        </div>
+
+        <!-- Audio Output Selection -->
+        <div class="audio-output-selection">
+            <h3>Audio Output</h3>
+            <div class="output-options">
+                <div class="output-option selected" data-output="both">
+                    <div class="output-icon">🔊🤖</div>
+                    <div class="output-name">Both (Robot + WebUI)</div>
+                </div>
+                <div class="output-option" data-output="robot">
+                    <div class="output-icon">🤖</div>
+                    <div class="output-name">Robot Only</div>
+                </div>
+                <div class="output-option" data-output="webui">
+                    <div class="output-icon">🔊</div>
+                    <div class="output-name">WebUI Only</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Display -->
+        <div class="status-display status-ready" id="statusDisplay">
+            Ready to start STT/TTS
+        </div>
+
+        <!-- Control Buttons -->
+        <div class="control-buttons">
+            <button class="btn-large btn-stt" id="sttButton">
+                <span class="recording-indicator" style="display: none;"></span>
+                <span>🎤 Start STT (15s)</span>
+            </button>
+            <button class="btn-large btn-tts" id="ttsButton" disabled>
+                <span>🔊 Play TTS</span>
+            </button>
+        </div>
+
+        <!-- Text Input for Direct TTS -->
+        <div class="text-input-section">
+            <h3>Direct Text-to-Speech</h3>
+            <textarea 
+                class="text-input" 
+                id="textInput" 
+                placeholder="Type your text here for direct TTS output..."
+                rows="4"
+            ></textarea>
+            <button class="btn btn-tts" id="directTtsButton" style="margin-top: 0.5rem;">
+                🔊 Speak Text
+            </button>
+        </div>
+    </div>
+
+    <!-- Monitoring Panel -->
+    <div class="monitoring-panel">
+        <h3>🔍 System Monitoring</h3>
+        <div class="monitor-grid">
+            <div class="monitor-section">
+                <h4>Model Status</h4>
+                <div class="status-indicators">
+                    <div class="status-item" id="sttCoreStatus">
+                        <span class="status-icon">🎤</span>
+                        <span class="status-label">STT Core</span>
+                        <span class="status-value" id="sttCoreValue">Checking...</span>
+                    </div>
+                    <div class="status-item" id="audioCaptureStatus">
+                        <span class="status-icon">🎙️</span>
+                        <span class="status-label">Audio Capture</span>
+                        <span class="status-value" id="audioCaptureValue">Checking...</span>
+                    </div>
+                    <div class="status-item" id="enModelStatus">
+                        <span class="status-icon">🇺🇸</span>
+                        <span class="status-label">English Model</span>
+                        <span class="status-value" id="enModelValue">Checking...</span>
+                    </div>
+                    <div class="status-item" id="zhModelStatus">
+                        <span class="status-icon">🇨🇳</span>
+                        <span class="status-label">Chinese Model</span>
+                        <span class="status-value" id="zhModelValue">Checking...</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="monitor-section">
+                <h4>Audio Level</h4>
+                <div class="audio-level-container">
+                    <div class="audio-level-bar">
+                        <div class="audio-level-fill" id="audioLevelFill"></div>
+                    </div>
+                    <div class="audio-level-text" id="audioLevelText">No audio input</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Live Activity Section - Full Width Below Model Status -->
+        <div class="monitor-section" style="margin-top: 1.5rem;">
+            <h4>Live Activity</h4>
+            <div class="activity-feed" id="activityFeed" style="max-height: 300px;">
+                <div class="activity-item">
+                    <span class="activity-time">--:--:--</span>
+                    <span class="activity-text">Waiting for activity...</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="monitor-controls">
+            <button class="btn btn-secondary" id="refreshMonitorBtn">🔄 Refresh Status</button>
+            <button class="btn btn-secondary" id="toggleMonitorBtn">⏸️ Pause Monitoring</button>
+        </div>
+    </div>
+
+    <!-- Logs Panel -->
+    <div class="logs-panel">
+        <div class="logs-header">
+            <h2 class="card-title">📝 Voice Logs</h2>
+            <button class="btn btn-danger" id="clearLogsButton">Clear Logs</button>
+        </div>
+        <div class="logs-list" id="logsList">
+            <div style="padding: 2rem; text-align: center; color: #6b7280;">
+                No voice logs yet. Start using STT/TTS to see logs here.
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+class STTTTSController {
+    constructor() {
+        this.selectedVoice = 'Kore';
+        this.selectedLanguage = 'en';
+        this.selectedOutputMode = 'both';
+        this.isRecording = false;
+        this.isProcessing = false;
+        this.currentText = '';
+        this.audioContext = null;
+        this.monitoringActive = true;
+        this.monitorInterval = null;
+        
+        this.initializeEventListeners();
+        this.loadLogs();
+        this.initializeAudioContext();
+        this.startMonitoring();
+    }
+
+    initializeEventListeners() {
+        // Voice selection
+        document.querySelectorAll('.voice-option').forEach(option => {
+            option.addEventListener('click', (e) => {
+                document.querySelectorAll('.voice-option').forEach(o => o.classList.remove('selected'));
+                e.currentTarget.classList.add('selected');
+                this.selectedVoice = e.currentTarget.dataset.voice;
+            });
+        });
+
+        // Language selection
+        document.querySelectorAll('.language-option').forEach(option => {
+            option.addEventListener('click', (e) => {
+                document.querySelectorAll('.language-option').forEach(o => o.classList.remove('selected'));
+                e.currentTarget.classList.add('selected');
+                this.selectedLanguage = e.currentTarget.dataset.lang;
+            });
+        });
+
+        // Audio output selection
+        document.querySelectorAll('.output-option').forEach(option => {
+            option.addEventListener('click', (e) => {
+                document.querySelectorAll('.output-option').forEach(o => o.classList.remove('selected'));
+                e.currentTarget.classList.add('selected');
+                this.selectedOutputMode = e.currentTarget.dataset.output;
+            });
+        });
+
+        // Test voice buttons
+        document.querySelectorAll('.test-voice-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.stopPropagation(); // Prevent voice selection
+                const voice = e.currentTarget.dataset.voice;
+                this.testVoice(voice);
+            });
+        });
+
+        // STT Button
+        document.getElementById('sttButton').addEventListener('click', () => {
+            this.startSTT();
+        });
+
+        // TTS Button
+        document.getElementById('ttsButton').addEventListener('click', () => {
+            this.playTTS();
+        });
+
+        // Direct TTS Button
+        document.getElementById('directTtsButton').addEventListener('click', () => {
+            this.directTTS();
+        });
+
+        // Clear logs button
+        document.getElementById('clearLogsButton').addEventListener('click', () => {
+            this.clearLogs();
+        });
+
+        // Replay buttons (delegated event listener)
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('replay-btn')) {
+                const text = e.target.dataset.text;
+                const voice = e.target.dataset.voice;
+                this.replayLogEntry(text, voice, e.target);
+            }
+        });
+
+        // Monitoring controls
+        document.getElementById('refreshMonitorBtn').addEventListener('click', () => {
+            this.refreshMonitorData();
+        });
+
+        document.getElementById('toggleMonitorBtn').addEventListener('click', () => {
+            this.toggleMonitoring();
+        });
+    }
+
+    async startSTT() {
+        if (this.isRecording || this.isProcessing) return;
+
+        try {
+            this.setStatus('Starting 15-second recording...', 'recording');
+            this.isRecording = true;
+            this.updateSTTButton(true);
+            
+            // Start 15-second countdown
+            this.startCountdown(15);
+            
+            // Start audio level simulation
+            this.audioLevelInterval = setInterval(() => {
+                this.simulateAudioLevel();
+            }, 100);
+
+            const response = await fetch('/api/stt-tts/start-stt', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    language: this.selectedLanguage,
+                    voice: this.selectedVoice,
+                    output_mode: this.selectedOutputMode,
+                    duration: 15
+                })
+            });
+
+            const result = await response.json();
+            
+            if (result.success) {
+                this.currentText = result.text;
+                this.setStatus(`Recognized: "${result.text}"`, 'ready');
+                document.getElementById('ttsButton').disabled = false;
+                this.addLogEntry(result.text, '', this.selectedLanguage, this.selectedVoice, 'STT (15s)');
+            } else {
+                this.setStatus(`Error: ${result.error}`, 'ready');
+            }
+        } catch (error) {
+            console.error('STT Error:', error);
+            this.setStatus(`Error: ${error.message}`, 'ready');
+        } finally {
+            this.isRecording = false;
+            this.updateSTTButton(false);
+            
+            // Stop countdown
+            if (this.countdownInterval) {
+                clearInterval(this.countdownInterval);
+                this.countdownInterval = null;
+            }
+            
+            // Stop audio level simulation
+            if (this.audioLevelInterval) {
+                clearInterval(this.audioLevelInterval);
+                this.audioLevelInterval = null;
+            }
+            this.simulateAudioLevel(); // Reset to 0
+        }
+    }
+
+    async playTTS() {
+        if (!this.currentText || this.isProcessing) return;
+
+        try {
+            this.setStatus('Generating speech...', 'processing');
+            this.isProcessing = true;
+            this.updateTTSButton(true);
+
+            const response = await fetch('/api/stt-tts/play-tts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    text: this.currentText,
+                    voice: this.selectedVoice,
+                    language: this.selectedLanguage,
+                    output_mode: this.selectedOutputMode
+                })
+            });
+
+            const result = await response.json();
+            
+            if (result.success) {
+                this.setStatus('Speech played successfully', 'ready');
+                this.addLogEntry(this.currentText, result.response_text || this.currentText, this.selectedLanguage, this.selectedVoice, 'TTS');
+                
+                // Play audio in WebUI if audio data is provided
+                if (result.audio_data && this.selectedOutputMode !== 'robot') {
+                    this.playAudioData(result.audio_data);
+                }
+            } else {
+                this.setStatus(`Error: ${result.error}`, 'ready');
+            }
+        } catch (error) {
+            console.error('TTS Error:', error);
+            this.setStatus(`Error: ${error.message}`, 'ready');
+        } finally {
+            this.isProcessing = false;
+            this.updateTTSButton(false);
+        }
+    }
+
+    async directTTS() {
+        const text = document.getElementById('textInput').value.trim();
+        if (!text || this.isProcessing) return;
+
+        try {
+            this.setStatus('Generating speech...', 'processing');
+            this.isProcessing = true;
+            this.updateDirectTTSButton(true);
+
+            const response = await fetch('/api/stt-tts/direct-tts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    text: text,
+                    voice: this.selectedVoice,
+                    language: this.selectedLanguage,
+                    output_mode: this.selectedOutputMode
+                })
+            });
+
+            const result = await response.json();
+            
+            if (result.success) {
+                this.setStatus('Speech played successfully', 'ready');
+                this.addLogEntry('', text, this.selectedLanguage, this.selectedVoice, 'Direct TTS');
+                document.getElementById('textInput').value = '';
+                
+                // Play audio in WebUI if audio data is provided
+                if (result.audio_data && this.selectedOutputMode !== 'robot') {
+                    this.playAudioData(result.audio_data);
+                }
+            } else {
+                this.setStatus(`Error: ${result.error}`, 'ready');
+            }
+        } catch (error) {
+            console.error('Direct TTS Error:', error);
+            this.setStatus(`Error: ${error.message}`, 'ready');
+        } finally {
+            this.isProcessing = false;
+            this.updateDirectTTSButton(false);
+        }
+    }
+
+    async clearLogs() {
+        if (!confirm('Are you sure you want to clear all voice logs?')) return;
+
+        try {
+            const response = await fetch('/api/stt-tts/clear-logs', {
+                method: 'POST'
+            });
+
+            const result = await response.json();
+            
+            if (result.success) {
+                document.getElementById('logsList').innerHTML = `
+                    <div style="padding: 2rem; text-align: center; color: #6b7280;">
+                        No voice logs yet. Start using STT/TTS to see logs here.
+                    </div>
+                `;
+            }
+        } catch (error) {
+            console.error('Clear logs error:', error);
+        }
+    }
+
+    async replayLogEntry(text, voice, button) {
+        if (this.isProcessing) return;
+
+        try {
+            button.disabled = true;
+            button.textContent = '⏳ Playing...';
+            this.setStatus(`Replaying: "${text}"`, 'processing');
+            this.isProcessing = true;
+
+            const response = await fetch('/api/stt-tts/direct-tts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    text: text,
+                    voice: voice,
+                    language: this.selectedLanguage,
+                    output_mode: this.selectedOutputMode
+                })
+            });
+
+            const result = await response.json();
+            
+            if (result.success) {
+                this.setStatus('Replay completed', 'ready');
+                
+                // Play audio in WebUI if audio data is provided
+                if (result.audio_data && this.selectedOutputMode !== 'robot') {
+                    this.playAudioData(result.audio_data);
+                }
+            } else {
+                this.setStatus(`Replay error: ${result.error}`, 'ready');
+            }
+        } catch (error) {
+            console.error('Replay error:', error);
+            this.setStatus(`Replay error: ${error.message}`, 'ready');
+        } finally {
+            this.isProcessing = false;
+            button.disabled = false;
+            button.textContent = '🔊 Replay';
+        }
+    }
+
+    async testVoice(voice) {
+        if (this.isProcessing) return;
+
+        try {
+            this.setStatus(`Testing ${voice} voice...`, 'processing');
+            this.isProcessing = true;
+            this.updateTestVoiceButtons(true);
+
+            const response = await fetch('/api/stt-tts/test-voice', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    voice: voice,
+                    language: this.selectedLanguage,
+                    output_mode: this.selectedOutputMode
+                })
+            });
+
+            const result = await response.json();
+            
+            if (result.success) {
+                this.setStatus(`Voice test completed for ${voice}`, 'ready');
+                this.addLogEntry('', result.response_text, this.selectedLanguage, voice, 'Voice Test');
+                
+                // Play audio in WebUI if audio data is provided
+                if (result.audio_data && this.selectedOutputMode !== 'robot') {
+                    this.playAudioData(result.audio_data);
+                }
+            } else {
+                this.setStatus(`Voice test error: ${result.error}`, 'ready');
+            }
+        } catch (error) {
+            console.error('Voice test error:', error);
+            this.setStatus(`Voice test error: ${error.message}`, 'ready');
+        } finally {
+            this.isProcessing = false;
+            this.updateTestVoiceButtons(false);
+        }
+    }
+
+    initializeAudioContext() {
+        try {
+            this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        } catch (error) {
+            console.warn('Web Audio API not supported:', error);
+        }
+    }
+
+    async playAudioData(base64AudioData) {
+        if (!this.audioContext) {
+            console.warn('Audio context not available');
+            return;
+        }
+
+        try {
+            // Decode base64 audio data
+            const audioData = atob(base64AudioData);
+            const audioBuffer = new Uint8Array(audioData.length);
+            for (let i = 0; i < audioData.length; i++) {
+                audioBuffer[i] = audioData.charCodeAt(i);
+            }
+
+            // Convert to ArrayBuffer and decode
+            const arrayBuffer = audioBuffer.buffer;
+            const audioBufferSource = await this.audioContext.decodeAudioData(arrayBuffer);
+            
+            // Create and play audio
+            const source = this.audioContext.createBufferSource();
+            source.buffer = audioBufferSource;
+            source.connect(this.audioContext.destination);
+            source.start();
+        } catch (error) {
+            console.error('Audio playback error:', error);
+            // Fallback: try using HTML5 audio element
+            this.playAudioFallback(base64AudioData);
+        }
+    }
+
+    playAudioFallback(base64AudioData) {
+        try {
+            const audio = new Audio(`data:audio/wav;base64,${base64AudioData}`);
+            audio.play().catch(error => {
+                console.error('Fallback audio playback error:', error);
+            });
+        } catch (error) {
+            console.error('Fallback audio creation error:', error);
+        }
+    }
+
+    updateTestVoiceButtons(processing) {
+        document.querySelectorAll('.test-voice-btn').forEach(button => {
+            if (processing) {
+                button.disabled = true;
+                button.textContent = '⏳ Testing...';
+            } else {
+                button.disabled = false;
+                button.textContent = '🔊 Test';
+            }
+        });
+    }
+
+    setStatus(message, type) {
+        const statusDisplay = document.getElementById('statusDisplay');
+        statusDisplay.textContent = message;
+        statusDisplay.className = `status-display status-${type}`;
+    }
+
+    updateSTTButton(recording) {
+        const button = document.getElementById('sttButton');
+        const indicator = button.querySelector('.recording-indicator');
+        const text = button.querySelector('span:last-child');
+        
+        if (recording) {
+            button.disabled = true;
+            indicator.style.display = 'inline-block';
+            text.textContent = ' Recording...';
+        } else {
+            button.disabled = false;
+            indicator.style.display = 'none';
+            text.textContent = '🎤 Start STT (15s)';
+        }
+    }
+
+    updateTTSButton(processing) {
+        const button = document.getElementById('ttsButton');
+        const text = button.querySelector('span');
+        
+        if (processing) {
+            button.disabled = true;
+            text.innerHTML = '<span class="loading-spinner"></span> Processing...';
+        } else {
+            button.disabled = !this.currentText;
+            text.textContent = '🔊 Play TTS';
+        }
+    }
+
+    updateDirectTTSButton(processing) {
+        const button = document.getElementById('directTtsButton');
+        
+        if (processing) {
+            button.disabled = true;
+            button.innerHTML = '<span class="loading-spinner"></span> Processing...';
+        } else {
+            button.disabled = false;
+            button.textContent = '🔊 Speak Text';
+        }
+    }
+
+    addLogEntry(inputText, outputText, language, voice, source) {
+        const logsList = document.getElementById('logsList');
+        
+        // Remove "no logs" message if it exists
+        const noLogsMsg = logsList.querySelector('div[style*="text-align: center"]');
+        if (noLogsMsg) {
+            noLogsMsg.remove();
+        }
+
+        const logEntry = document.createElement('div');
+        logEntry.className = 'log-entry';
+        
+        const timestamp = new Date().toLocaleString();
+        const langFlag = language === 'zh' ? '🇨🇳' : '🇺🇸';
+        const langName = language === 'zh' ? 'Chinese' : 'English';
+        
+        logEntry.innerHTML = `
+            <div class="log-content">
+                ${inputText ? `<div class="log-text">📝 Input: "${inputText}"</div>` : ''}
+                ${outputText ? `<div class="log-text">🔊 Output: "${outputText}"</div>` : ''}
+                <div class="log-meta">
+                    <span class="log-timestamp">${timestamp}</span>
+                    <span class="log-language">${langFlag} ${langName}</span>
+                    <span class="log-voice">${voice}</span>
+                    <span style="background: #e5e7eb; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem;">${source}</span>
+                </div>
+            </div>
+        `;
+        
+        logsList.insertBefore(logEntry, logsList.firstChild);
+    }
+
+    async loadLogs() {
+        try {
+            const response = await fetch('/api/stt-tts/logs');
+            const result = await response.json();
+            
+            if (result.success && result.logs.length > 0) {
+                const logsList = document.getElementById('logsList');
+                logsList.innerHTML = '';
+                
+                result.logs.forEach(log => {
+                    const logEntry = document.createElement('div');
+                    logEntry.className = 'log-entry';
+                    
+                    const timestamp = new Date(log.ts * 1000).toLocaleString();
+                    const langFlag = log.lang === 'zh' ? '🇨🇳' : '🇺🇸';
+                    const langName = log.lang === 'zh' ? 'Chinese' : 'English';
+                    
+                    logEntry.innerHTML = `
+                        <div class="log-content">
+                            ${log.text_in ? `<div class="log-text">📝 Input: "${log.text_in}"</div>` : ''}
+                            ${log.text_out ? `<div class="log-text">🔊 Output: "${log.text_out}"</div>` : ''}
+                            <div class="log-meta">
+                                <span class="log-timestamp">${timestamp}</span>
+                                <span class="log-language">${langFlag} ${langName}</span>
+                                <span class="log-voice">${log.voice}</span>
+                                <span style="background: #e5e7eb; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem;">${log.source}</span>
+                            </div>
+                        </div>
+                        <div class="log-actions">
+                            ${log.text_out ? `<button class="btn btn-sm btn-primary replay-btn" data-text="${log.text_out}" data-voice="${log.voice}">🔊 Replay</button>` : ''}
+                        </div>
+                    `;
+                    
+                    logsList.appendChild(logEntry);
+                });
+            }
+        } catch (error) {
+            console.error('Load logs error:', error);
+        }
+    }
+
+    // Monitoring methods
+    startMonitoring() {
+        this.refreshMonitorData();
+        this.monitorInterval = setInterval(() => {
+            if (this.monitoringActive) {
+                this.refreshMonitorData();
+            }
+        }, 2000); // Update every 2 seconds
+    }
+
+    stopMonitoring() {
+        if (this.monitorInterval) {
+            clearInterval(this.monitorInterval);
+            this.monitorInterval = null;
+        }
+    }
+
+    toggleMonitoring() {
+        this.monitoringActive = !this.monitoringActive;
+        const toggleBtn = document.getElementById('toggleMonitorBtn');
+        
+        if (this.monitoringActive) {
+            toggleBtn.textContent = '⏸️ Pause Monitoring';
+            this.startMonitoring();
+        } else {
+            toggleBtn.textContent = '▶️ Resume Monitoring';
+            this.stopMonitoring();
+        }
+    }
+
+    async refreshMonitorData() {
+        try {
+            const response = await fetch('/api/stt-tts/monitor');
+            const result = await response.json();
+            
+            if (result.success) {
+                this.updateModelStatus(result.models);
+                this.updateActivityFeed(result.recent_activity);
+                this.updateSystemStatus(result.system_status);
+            }
+        } catch (error) {
+            console.error('Monitor data error:', error);
+            this.updateModelStatus({
+                stt_core: false,
+                audio_capture: false,
+                en_model: false,
+                zh_model: false
+            });
+        }
+    }
+
+    updateModelStatus(models) {
+        // Update STT Core status
+        const sttCoreValue = document.getElementById('sttCoreValue');
+        sttCoreValue.textContent = models.stt_core ? 'Available' : 'Unavailable';
+        sttCoreValue.className = `status-value ${models.stt_core ? 'available' : 'unavailable'}`;
+
+        // Update Audio Capture status
+        const audioCaptureValue = document.getElementById('audioCaptureValue');
+        audioCaptureValue.textContent = models.audio_capture ? 'Available' : 'Unavailable';
+        audioCaptureValue.className = `status-value ${models.audio_capture ? 'available' : 'unavailable'}`;
+
+        // Update English Model status
+        const enModelValue = document.getElementById('enModelValue');
+        enModelValue.textContent = models.en_model ? 'Loaded' : 'Missing';
+        enModelValue.className = `status-value ${models.en_model ? 'available' : 'unavailable'}`;
+
+        // Update Chinese Model status
+        const zhModelValue = document.getElementById('zhModelValue');
+        zhModelValue.textContent = models.zh_model ? 'Loaded' : 'Missing';
+        zhModelValue.className = `status-value ${models.zh_model ? 'available' : 'unavailable'}`;
+    }
+
+    updateActivityFeed(activities) {
+        const activityFeed = document.getElementById('activityFeed');
+        
+        if (!activities || activities.length === 0) {
+            activityFeed.innerHTML = `
+                <div class="activity-item">
+                    <span class="activity-time">--:--:--</span>
+                    <span class="activity-text">No recent activity</span>
+                </div>
+            `;
+            return;
+        }
+
+        activityFeed.innerHTML = '';
+        activities.slice(0, 5).forEach(activity => {
+            const activityItem = document.createElement('div');
+            activityItem.className = 'activity-item';
+            
+            const time = new Date(activity.ts * 1000);
+            const timeStr = time.toLocaleTimeString();
+            
+            let activityText = '';
+            if (activity.text_in && activity.text_out) {
+                activityText = `STT: "${activity.text_in}" → TTS: "${activity.text_out}"`;
+            } else if (activity.text_in) {
+                activityText = `STT: "${activity.text_in}"`;
+            } else if (activity.text_out) {
+                activityText = `TTS: "${activity.text_out}"`;
+            } else {
+                activityText = activity.source || 'Activity';
+            }
+            
+            activityItem.innerHTML = `
+                <span class="activity-time">${timeStr}</span>
+                <span class="activity-text">${activityText}</span>
+            `;
+            
+            activityFeed.appendChild(activityItem);
+        });
+    }
+
+    updateSystemStatus(status) {
+        // Update the main status display if needed
+        if (status === 'error') {
+            this.setStatus('System error - check model status', 'error');
+        }
+    }
+
+    // Start countdown timer
+    startCountdown(seconds) {
+        let remaining = seconds;
+        this.countdownInterval = setInterval(() => {
+            if (remaining > 0) {
+                this.setStatus(`Recording... ${remaining} seconds remaining`, 'recording');
+                remaining--;
+            } else {
+                this.setStatus('Processing audio...', 'processing');
+                clearInterval(this.countdownInterval);
+                this.countdownInterval = null;
+            }
+        }, 1000);
+    }
+
+    // Simulate audio level for demonstration
+    simulateAudioLevel() {
+        const audioLevelFill = document.getElementById('audioLevelFill');
+        const audioLevelText = document.getElementById('audioLevelText');
+        
+        if (this.isRecording) {
+            // Simulate varying audio levels during recording
+            const level = Math.random() * 100;
+            audioLevelFill.style.width = `${level}%`;
+            audioLevelText.textContent = `Recording... ${Math.round(level)}%`;
+        } else {
+            audioLevelFill.style.width = '0%';
+            audioLevelText.textContent = 'No audio input';
+        }
+    }
+}
+
+// Initialize the controller when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    new STTTTSController();
+});
+</script>
+{% endblock %}
