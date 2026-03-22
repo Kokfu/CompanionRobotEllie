@@ -1,0 +1,7 @@
+camera:
+  ros__parameters:
+    format: BGR888     # or RGB888 / XRGB8888
+    width: 640
+    height: 480
+    framerate: 30
+
