@@ -62,27 +62,7 @@ Access the dashboard at http://192.168.1.102:5000.
 
 ---
 
-### 2. Guidance for Images & Assets
-To make the page look modern, you should upload the following files to an `/assets` or `/images` folder in your repo:
-
-* **Web Dashboard:** Take a screenshot of the main monitoring page and the navigation page.
-* **Telegram Alerts:** Take a screenshot of a "Fall Detected" notification on your phone.
-* **The Robot:** A high-quality photo of your physical TurtleBot3 with the Pan-Tilt kit and camera attached.
-* **System Architecture:** Export the system flow diagram from your report as a `.png`.
-
+### Images & Assets
+# Refer to /images directory to check for related images
 ---
 
-### 3. Building Your GitHub Profile
-Since you mentioned your interest in **AI, Robotics, and Firmware Engineering**, I recommend setting up a **GitHub Profile README**:
-1. Create a new repository with the exact same name as your GitHub username (e.g., `Kokfu/Kokfu`).
-2. Add a bio: "Bachelor of Information Technology (Honours) Communications and Networking graduate with a focus on AI and Robotics."
-3. **Pin Project Ellie:** This ensures it’s the first project recruiters see.
-
----
-
-### 4. What additional information is required?
-To make this documentation 100% complete, I need the following from you:
-1.  **Dependencies:** Do you have a `requirements.txt` or a list of specific Python libraries (e.g., `opencv-python`, `flask-socketio`) that need to be installed?
-2.  **License Preference:** Do you want to license this as **MIT** (open for anyone to use) or keep it private/restricted?
-3.  **Video Demo:** Do you have a video of the robot navigating or detecting a fall? I can show you how to embed a GIF or a link to a YouTube demo in the README.
-4.  **Specific Repositories:** Is your code split across multiple repos (e.g., one for the robot, one for the web dashboard), or is it all in one?
